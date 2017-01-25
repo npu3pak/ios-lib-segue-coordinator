@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010E1EB9A1E5D5E098DE2D791921234E /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A5887EDED033870AE54331E4077C9D /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13A603C17607CB4B07A1EE0EB51484FC /* NSExceptionCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C328644299327994AA3FF3EEFD2EC1 /* NSExceptionCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2014BB9D13C3E1FEF6CEEFFD29F02BC5 /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */; };
+		2275A7F2FA32BAE4BCA8DC8EEF24F049 /* NSExceptionCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAD936F6FE3EFA91AC59DE97EEC5598 /* NSExceptionCatch.m */; };
 		3F44B386011D1A58B6E8D882026A538F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		5A8C8310D7342856A5EE0398CDA97510 /* Pods-SegueCoordinator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A2BB4C3D8FA934D6E5CFBE66A41C0C /* Pods-SegueCoordinator_Example-dummy.m */; };
 		6AD18EBBA19094B36E0D0ABBE19A0CAD /* Pods-SegueCoordinator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7E668A508CF133551398DD18DFB148 /* Pods-SegueCoordinator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E9DC5668E2A8541D10A3734E03B34E3 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A5887EDED033870AE54331E4077C9D /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A79373194E56C8458E8AA667E787252 /* Pods-SegueCoordinator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F601F4FF0907BA4938E97C7549E5BD0 /* Pods-SegueCoordinator_Tests-dummy.m */; };
+		7E1CD32D0CB9138C3982981D13FA6F08 /* SegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE00F09EB3C27986AE0F1DF068D4294 /* SegueCoordinator.swift */; };
 		8D580FDD742029A9D53D075796437B74 /* Pods-SegueCoordinator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 646C1A267D20BF8692D1BD1D4BDDA71C /* Pods-SegueCoordinator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3BF772085B09B3362ED248E5DAD3A17 /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */; };
+		B478007BE2F96E728641B0D886361D1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8069CEFC78DF0D97F622936B05B076 /* Extensions.swift */; };
 		B63F745D5C5B1FDDCAC4F1A696D539EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		CB692C0BDC29DF87C733B59A82332A68 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6D6711B45032FEA3EFEE8A431EFD88 /* ReplaceMe.swift */; };
 		D655FEE22D2FC0ADA2BB32C551703F65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,7 @@
 /* Begin PBXFileReference section */
 		01663AC48197F83BB880CC115F04A90A /* Pods-SegueCoordinator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Tests-resources.sh"; sourceTree = "<group>"; };
 		03429B2BD377BA73DA459C6D07CC9DB7 /* Pods-SegueCoordinator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Example-resources.sh"; sourceTree = "<group>"; };
+		11C328644299327994AA3FF3EEFD2EC1 /* NSExceptionCatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSExceptionCatch.h; sourceTree = "<group>"; };
 		16F0C73BB2A186885C47257457BA6DE3 /* Pods-SegueCoordinator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		1EACCE0AD5B5C538FF4EAC23AFD3CED2 /* Pods-SegueCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2FBD10134D247F22EEAEFCDDC7186D84 /* SegueCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-prefix.pch"; sourceTree = "<group>"; };
@@ -40,28 +44,30 @@
 		4C0B5B51AA75B5093E59A71FCB2C77D9 /* Pods-SegueCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4FE4A70E53CA3CB440E0D3720A63AE2E /* Pods-SegueCoordinator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B7E668A508CF133551398DD18DFB148 /* Pods-SegueCoordinator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinator_Example-umbrella.h"; sourceTree = "<group>"; };
+		5BAD936F6FE3EFA91AC59DE97EEC5598 /* NSExceptionCatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSExceptionCatch.m; sourceTree = "<group>"; };
 		5F601F4FF0907BA4938E97C7549E5BD0 /* Pods-SegueCoordinator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinator_Tests-dummy.m"; sourceTree = "<group>"; };
 		62D16CBD0E5D87F912A92B9E8C0D6595 /* Pods-SegueCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
 		646C1A267D20BF8692D1BD1D4BDDA71C /* Pods-SegueCoordinator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinator_Tests-umbrella.h"; sourceTree = "<group>"; };
-		691F31FDA5EE4240E935B1A1A6741E8C /* Pods_SegueCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		691F31FDA5EE4240E935B1A1A6741E8C /* Pods_SegueCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinator_Tests.framework; path = "Pods-SegueCoordinator_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		695EA2F2F1FDD4C0F2872FA91DE5CF65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B88E470B338DDC5F198828C4AED8CDE /* Pods-SegueCoordinator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SegueCoordinator_Tests.modulemap"; sourceTree = "<group>"; };
+		6B88E470B338DDC5F198828C4AED8CDE /* Pods-SegueCoordinator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SegueCoordinator_Tests.modulemap"; sourceTree = "<group>"; };
 		76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SegueCoordinator.xcconfig; sourceTree = "<group>"; };
 		7ED54BCFEBE76D04E90BCB041CB988A5 /* Pods-SegueCoordinator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SegueCoordinator-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F95E9770B78405635A51C8CEA5114AB /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
+		8DE00F09EB3C27986AE0F1DF068D4294 /* SegueCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SegueCoordinator.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B8069CEFC78DF0D97F622936B05B076 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9F95E9770B78405635A51C8CEA5114AB /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
 		A5EF43C71DB06F25444DE5F9D4B8C1AD /* Pods-SegueCoordinator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7DEFAD5AA96951D6EE375DFBB9CF21F /* Pods-SegueCoordinator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AA920AC7EE2B5EF88C88708FAD2AAC00 /* Pods-SegueCoordinator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AF6D6711B45032FEA3EFEE8A431EFD88 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		B8BAEDC4CDB8BE20EA6C3C004B913587 /* Pods-SegueCoordinator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C869340F18497ACC0A2A606ECC4D6463 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E9536BCCEA8CCB3E0224C1C25E730F18 /* Pods-SegueCoordinator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SegueCoordinator_Example.modulemap"; sourceTree = "<group>"; };
+		E9536BCCEA8CCB3E0224C1C25E730F18 /* Pods-SegueCoordinator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SegueCoordinator_Example.modulemap"; sourceTree = "<group>"; };
 		EB825546AF158581EC66E975B5445585 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F698F4A5EA4C6CE61E5D01C92BB7D447 /* SegueCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegueCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6993875F0B1A5901F8EA82004A34018 /* Pods_SegueCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F698F4A5EA4C6CE61E5D01C92BB7D447 /* SegueCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SegueCoordinator.framework; path = SegueCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6993875F0B1A5901F8EA82004A34018 /* Pods_SegueCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinator_Example.framework; path = "Pods-SegueCoordinator_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +129,7 @@
 		3BC06385E55AAE2FFD6CF72C5D89F0DF /* SegueCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				C8671EE6B9BF66B28BC6A3CA81C38A55 /* SegueCoordinator */,
+				9B2C922E6266672DAD901121DB64B243 /* SegueCoordinator */,
 				DEBDC0A842BB67B89468DCA4B3577B26 /* Support Files */,
 			);
 			name = SegueCoordinator;
@@ -148,6 +154,18 @@
 			path = "Target Support Files/Pods-SegueCoordinator_Tests";
 			sourceTree = "<group>";
 		};
+		6D878FAB44BE3A7549EBEC4D5F93C5BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9B8069CEFC78DF0D97F622936B05B076 /* Extensions.swift */,
+				11C328644299327994AA3FF3EEFD2EC1 /* NSExceptionCatch.h */,
+				5BAD936F6FE3EFA91AC59DE97EEC5598 /* NSExceptionCatch.m */,
+				8DE00F09EB3C27986AE0F1DF068D4294 /* SegueCoordinator.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +185,15 @@
 			);
 			sourceTree = "<group>";
 		};
+		9B2C922E6266672DAD901121DB64B243 /* SegueCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				6D878FAB44BE3A7549EBEC4D5F93C5BC /* Classes */,
+			);
+			name = SegueCoordinator;
+			path = SegueCoordinator;
+			sourceTree = "<group>";
+		};
 		A8929AC148DB163BB9D2EF468108E446 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,28 +211,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C8671EE6B9BF66B28BC6A3CA81C38A55 /* SegueCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				DE703E4A3CBAC19B0E51C8E1E9B89916 /* Classes */,
-			);
-			path = SegueCoordinator;
-			sourceTree = "<group>";
-		};
 		C91F7E7454F1A2B919980BC6CF245100 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
 				3BC06385E55AAE2FFD6CF72C5D89F0DF /* SegueCoordinator */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		DE703E4A3CBAC19B0E51C8E1E9B89916 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				AF6D6711B45032FEA3EFEE8A431EFD88 /* ReplaceMe.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		DEBDC0A842BB67B89468DCA4B3577B26 /* Support Files */ = {
@@ -233,11 +244,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31B9D1C2A5D53E89C32D001C32FEC1EE /* Headers */ = {
+		3026C0B9AEB2CEBB140C7D01CF809DE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				010E1EB9A1E5D5E098DE2D791921234E /* SegueCoordinator-umbrella.h in Headers */,
+				13A603C17607CB4B07A1EE0EB51484FC /* NSExceptionCatch.h in Headers */,
+				6E9DC5668E2A8541D10A3734E03B34E3 /* SegueCoordinator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,9 +268,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E40B2E1BF4BE0B224EAA801A611C00A /* Build configuration list for PBXNativeTarget "SegueCoordinator" */;
 			buildPhases = (
-				64E56DA7F78E6DF9050DD2D805982347 /* Sources */,
+				392A35D9745E9F0EB82050EDF96C1A98 /* Sources */,
 				21D7F8EB63FD25181BB03A632B25DA12 /* Frameworks */,
-				31B9D1C2A5D53E89C32D001C32FEC1EE /* Headers */,
+				3026C0B9AEB2CEBB140C7D01CF809DE0 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -312,14 +324,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					1CA8727978DD39A8C86027DAFD4ADEA9 = {
-						LastSwiftMigration = 0820;
-					};
-					E5A0C995DF64060F93FCA0C0A0B021EE = {
-						LastSwiftMigration = 0820;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -341,20 +345,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		392A35D9745E9F0EB82050EDF96C1A98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B478007BE2F96E728641B0D886361D1D /* Extensions.swift in Sources */,
+				2275A7F2FA32BAE4BCA8DC8EEF24F049 /* NSExceptionCatch.m in Sources */,
+				2014BB9D13C3E1FEF6CEEFFD29F02BC5 /* SegueCoordinator-dummy.m in Sources */,
+				7E1CD32D0CB9138C3982981D13FA6F08 /* SegueCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B15367AF555C69A5D3D547BE7AB46FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5A8C8310D7342856A5EE0398CDA97510 /* Pods-SegueCoordinator_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		64E56DA7F78E6DF9050DD2D805982347 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB692C0BDC29DF87C733B59A82332A68 /* ReplaceMe.swift in Sources */,
-				A3BF772085B09B3362ED248E5DAD3A17 /* SegueCoordinator-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,39 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		120A87F9D17A61C5D1BD41CA7896B2A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SegueCoordinator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		1CE7C19624B5616CF453408510AA8380 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7DEFAD5AA96951D6EE375DFBB9CF21F /* Pods-SegueCoordinator_Example.debug.xcconfig */;
@@ -441,12 +414,43 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		585FE923C9054C61B89D5C2C0D9C4305 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SegueCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		5E13FC83CEF7EAAFDAB46EDB01EBCACB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -512,7 +516,6 @@
 				PRODUCT_NAME = Pods_SegueCoordinator_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -638,7 +641,7 @@
 			};
 			name = Debug;
 		};
-		F4B057475E5AF493DAEF45B102A75893 /* Release */ = {
+		E210E81C865E633170E39FD481323DBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */;
 			buildSettings = {
@@ -646,7 +649,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -659,16 +662,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SegueCoordinator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -685,8 +689,8 @@
 		2E40B2E1BF4BE0B224EAA801A611C00A /* Build configuration list for PBXNativeTarget "SegueCoordinator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				120A87F9D17A61C5D1BD41CA7896B2A8 /* Debug */,
-				F4B057475E5AF493DAEF45B102A75893 /* Release */,
+				E210E81C865E633170E39FD481323DBD /* Debug */,
+				585FE923C9054C61B89D5C2C0D9C4305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
