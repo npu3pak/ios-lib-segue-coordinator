@@ -1,0 +1,22 @@
+{
+  "name": "SegueCoordinator",
+  "version": "0.1.0",
+  "summary": "A short description of SegueCoordinator.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/SegueCoordinator",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Евгений Сафронов": "evsafronov.personal@yandex.ru"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/SegueCoordinator.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SegueCoordinator/Classes/**/*"
+}
