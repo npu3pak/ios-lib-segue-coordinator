@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SegueCoordinator_Example' do
+  pod 'SegueCoordinator', :path => '../'
+
+  target 'SegueCoordinator_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
