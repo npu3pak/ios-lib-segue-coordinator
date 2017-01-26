@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4012361D1E39B5F7004549DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4012361C1E39B5F7004549DE /* MainCoordinator.swift */; };
+		40BDDE5D1E39ACAC00ABF10D /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE5C1E39ACAC00ABF10D /* RootViewController.swift */; };
+		40BDDE5F1E39ACB500ABF10D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE5E1E39ACB500ABF10D /* FirstViewController.swift */; };
+		40BDDE611E39ACC100ABF10D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE601E39ACC100ABF10D /* SecondViewController.swift */; };
+		40BDDE631E39ACC900ABF10D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE621E39ACC900ABF10D /* ThirdViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -30,11 +34,15 @@
 /* Begin PBXFileReference section */
 		14B5C274B36D982B2F1DF60F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		249589E2795DD76141D80ADB /* Pods-SegueCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4012361C1E39B5F7004549DE /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		40BDDE5C1E39ACAC00ABF10D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		40BDDE5E1E39ACB500ABF10D /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		40BDDE601E39ACC100ABF10D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		40BDDE621E39ACC900ABF10D /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5F7C5BF111DEA57BBD03DB3F /* Pods-SegueCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SegueCoordinator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueCoordinator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40BDDE5B1E39AC7200ABF10D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				40BDDE5C1E39ACAC00ABF10D /* RootViewController.swift */,
+				40BDDE5E1E39ACB500ABF10D /* FirstViewController.swift */,
+				40BDDE601E39ACC100ABF10D /* SecondViewController.swift */,
+				40BDDE621E39ACC900ABF10D /* ThirdViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,11 +112,9 @@
 		607FACD21AFB9204008FA782 /* Example for SegueCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				40BDDE5B1E39AC7200ABF10D /* ViewControllers */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				4012361C1E39B5F7004549DE /* MainCoordinator.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SegueCoordinator";
@@ -107,6 +124,9 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -361,8 +381,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				4012361D1E39B5F7004549DE /* MainCoordinator.swift in Sources */,
+				40BDDE5D1E39ACAC00ABF10D /* RootViewController.swift in Sources */,
+				40BDDE611E39ACC100ABF10D /* SecondViewController.swift in Sources */,
+				40BDDE631E39ACC900ABF10D /* ThirdViewController.swift in Sources */,
+				40BDDE5F1E39ACB500ABF10D /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
