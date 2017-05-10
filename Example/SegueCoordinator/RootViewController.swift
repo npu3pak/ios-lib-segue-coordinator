@@ -20,10 +20,6 @@ class RootViewController: UIViewController {
         coordinator = MainCoordinator(rootViewController: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        coordinator?.prepareForSegue(segue, sender: sender)
-    }
-    
     @IBAction func onShowFirst(_ sender: Any) {
         showFirst?()
     }
@@ -35,5 +31,4 @@ class RootViewController: UIViewController {
     @IBAction func onShowThird(_ sender: Any) {
         showThird?()
     }
-    
 }

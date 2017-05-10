@@ -10,10 +10,10 @@ import UIKit
 import SegueCoordinator
 
 class FirstViewController: UIViewController {
-    var coordinator: SegueCoordinator?
+    var onShowSecond: (() -> Void)?
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        coordinator?.prepareForSegue(segue, sender: sender)
+    @IBAction func onShowSecondButtonClick(_ sender: Any) {
+        onShowSecond?()
     }
 }
 

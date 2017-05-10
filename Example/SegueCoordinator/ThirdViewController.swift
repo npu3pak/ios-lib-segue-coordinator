@@ -10,9 +10,4 @@ import UIKit
 import SegueCoordinator
 
 class ThirdViewController: UIViewController {
-    var coordinator: SegueCoordinator?
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        coordinator?.prepareForSegue(segue, sender: sender)
-    }
 }

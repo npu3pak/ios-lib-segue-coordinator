@@ -15,15 +15,21 @@ open class SegueCoordinator {
     var controllerPreparationCallbacks: Dictionary<String, ((UIViewController) -> Void)> = [:]
     
     public init(storyboardName: String, rootNavigationController: UINavigationController, rootViewControllerId: String? = nil) {
+        UIViewController.swizzlePrepareForSegue()
+        
         self.rootNavigationController = rootNavigationController
         self.rootViewControllerId = rootViewControllerId
         storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
     }
     
     public init(rootViewController: UIViewController) {
+        UIViewController.swizzlePrepareForSegue()
+        
         storyboard = rootViewController.storyboard!
         rootNavigationController = rootViewController.navigationController!
         rootViewControllerId = rootViewController.restorationIdentifier
+        
+        rootViewController.__segueCoordinator = self
     }
     
     //MARK: API
@@ -62,6 +68,7 @@ open class SegueCoordinator {
     }
     
     private func push(_ controller: UIViewController, clearStack: Bool = false, prepareController: (UIViewController) -> Void) {
+        controller.__segueCoordinator = self
         prepareController(controller)
         if clearStack {
             getCurrentNavigationController().viewControllers = [controller]
@@ -71,6 +78,7 @@ open class SegueCoordinator {
     }
     
     private func modal(_ controller: UIViewController, style: UIModalPresentationStyle = .formSheet, prepareController: (UIViewController) -> Void) {
+        controller.__segueCoordinator = self
         controller.addCancelButton(self.closeModal)
         let modalNavController = UINavigationController(rootViewController: controller)
         modalNavController.modalPresentationStyle = style
@@ -90,6 +98,7 @@ open class SegueCoordinator {
     public func popoverOrPush(_ controllerId: String, anchor: UIBarButtonItem? = nil, prepareController: @escaping (UIViewController) -> Void) {
         modalOrPush(controllerId, style: .popover) {
             [weak anchor, unowned self] controller in
+            controller.__segueCoordinator = self
             controller.navigationController?.popoverPresentationController?.barButtonItem = anchor
             if !self.isPhone {
                 controller.addCloseButton(self.closeModal)
@@ -197,7 +206,7 @@ open class SegueCoordinator {
     
     //MARK: Реализация
     
-    public func prepareForSegue(_ segue: UIStoryboardSegue, sender: Any?) {
+    func prepareForSegue(_ segue: UIStoryboardSegue, sender: Any?) {
         for (segueId, callback) in controllerPreparationCallbacks {
             if segue.identifier == segueId {
                 let nextController: UIViewController
@@ -206,6 +215,7 @@ open class SegueCoordinator {
                 } else {
                     nextController = segue.destination
                 }
+                nextController.__segueCoordinator = self
                 callback(nextController)
                 controllerPreparationCallbacks.removeValue(forKey: segueId)
             }

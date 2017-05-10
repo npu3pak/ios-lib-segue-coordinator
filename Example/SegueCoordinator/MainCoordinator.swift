@@ -20,23 +20,31 @@ class MainCoordinator: SegueCoordinator {
     }
     
     func showFirst() {
-        segue("ShowFirst") { [weak self] controller in
-            let firstController = controller as! FirstViewController
-            firstController.coordinator = self
+        segue("ShowFirst") {
+            let controller = $0 as! FirstViewController
+            controller.title = "First"
+            controller.onShowSecond = self.showSecondFromFirst
+        }
+    }
+    
+    func showSecondFromFirst() {
+        segue("ShowSecond") {
+            let controller = $0 as! SecondViewController
+            controller.title = "Second"
         }
     }
     
     func showSecond() {
-        push("Second") { [weak self] controller in
-            let secondController = controller as! SecondViewController
-            secondController.coordinator = self
+        push("Second") {
+            let controller = $0 as! SecondViewController
+            controller.title = "Second"
         }
     }
     
     func showThird() {
-        modal("Third") { [weak self] controller in
-            let thirdController = controller as! ThirdViewController
-            thirdController.coordinator = self
+        modal("Third") {
+            let controller = $0 as! ThirdViewController
+            controller.title = "Third"
         }
     }
 }
