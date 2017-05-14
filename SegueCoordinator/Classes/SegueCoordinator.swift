@@ -34,6 +34,56 @@ open class SegueCoordinator {
     
     //MARK: API
     
+    //generic методы
+    public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
+        pushInitial(clearStack: clearStack) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func modalInitial<T: UIViewController>(type: T.Type, style: UIModalPresentationStyle = .formSheet, prepareController: (T) -> Void) {
+        modalInitial(style) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func modalOrPushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, style: UIModalPresentationStyle = .formSheet, prepareController: (T) -> Void) {
+        modalOrPushInitial(clearStack: clearStack, style: style) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func push<T: UIViewController>(_ controllerId: String, type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
+        push(controllerId, clearStack: clearStack) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func modal<T: UIViewController>(_ controllerId: String, type: T.Type, style: UIModalPresentationStyle = .formSheet, prepareController: (T) -> Void) {
+        modal(controllerId, style: style) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func modalOrPush<T: UIViewController>(_ controllerId: String, type: T.Type, clearStack: Bool = false, style: UIModalPresentationStyle = .formSheet, prepareController: (T) -> Void) {
+        modalOrPush(controllerId, clearStack: clearStack, style: style) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func popoverOrPush<T: UIViewController>(_ controllerId: String, type: T.Type, anchor: UIBarButtonItem? = nil, prepareController: @escaping (T) -> Void) {
+        popoverOrPush(controllerId, anchor: anchor) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    public func segue<T: UIViewController>(_ segueId: String, type: T.Type, prepareController: @escaping (T) -> Void) {
+        segue(segueId) {
+            prepareController($0 as! T)
+        }
+    }
+    
+    //Не generic методы
     public func pushInitial(clearStack: Bool = false, prepareController: (UIViewController) -> Void) {
         let controller = storyboard.instantiateInitialViewController()!
         push(controller, clearStack: clearStack, prepareController: prepareController)
@@ -120,6 +170,7 @@ open class SegueCoordinator {
         }
     }
     
+    //Закрытие
     @objc func closeModal() {
         closeModal() {
             
