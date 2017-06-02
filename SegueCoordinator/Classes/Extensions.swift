@@ -10,11 +10,11 @@ import Foundation
 private var closureTargets = [ClosureWrapper]()
 
 extension UIViewController {
-    func addCancelButton(_ action: @escaping () -> Void) {
+    public func addCancelButton(_ action: @escaping () -> Void) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .cancel, closure: action)
     }
     
-    func addCloseButton(_ action: @escaping () -> Void) {
+    public func addCloseButton(_ action: @escaping () -> Void) {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Закрыть", style: .plain, closure: action)
     }
 }
