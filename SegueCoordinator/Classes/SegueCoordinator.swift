@@ -35,6 +35,10 @@ open class SegueCoordinator {
     //MARK: API
     
     //generic методы
+    public func initialController() -> UIViewController {
+        return storyboard.instantiateInitialViewController()!
+    }
+    
     public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
         pushInitial(clearStack: clearStack) {
             prepareController($0 as! T)
