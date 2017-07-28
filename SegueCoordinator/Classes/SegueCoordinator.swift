@@ -284,11 +284,11 @@ open class SegueCoordinator {
     }
     
     public func getCurrentNavigationController() -> UINavigationController {
-        let controller = rootNavigationController.presentedViewController?.presentedViewController?.presentedViewController
-            ?? rootNavigationController.presentedViewController?.presentedViewController
-            ?? rootNavigationController.presentedViewController
+        let controller = rootNavigationController.presentedViewController?.presentedViewController?.presentedViewController as? UINavigationController
+            ?? rootNavigationController.presentedViewController?.presentedViewController as? UINavigationController
+            ?? rootNavigationController.presentedViewController as? UINavigationController
             ?? rootNavigationController
-        return controller as! UINavigationController
+        return controller
     }
     
     public func getRootNavigationControllerRecursively() -> UINavigationController {
