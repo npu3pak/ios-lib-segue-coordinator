@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class SegueCoordinator {
+open class SegueCoordinator: NSObject {
     let storyboard: UIStoryboard
     let rootNavigationController: UINavigationController
     let rootViewControllerId: String?
@@ -20,6 +20,8 @@ open class SegueCoordinator {
         self.rootNavigationController = rootNavigationController
         self.rootViewControllerId = rootViewControllerId
         storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
+        
+        super.init()
     }
     
     public init(rootViewController: UIViewController) {
@@ -29,6 +31,7 @@ open class SegueCoordinator {
         rootNavigationController = rootViewController.navigationController!
         rootViewControllerId = rootViewController.restorationIdentifier
         
+        super.init()
         rootViewController.__segueCoordinator = self
     }
     
