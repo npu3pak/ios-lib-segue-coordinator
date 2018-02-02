@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13A603C17607CB4B07A1EE0EB51484FC /* NSExceptionCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E00D51ACE259477124C63E4BED0FE8D /* NSExceptionCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3DE3DF44CDA698DA74B61E8AAB26DC24 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D18F88DF3D712F07E7D9F05363DEDA /* ViewControllerExtension.swift */; };
 		5A8C8310D7342856A5EE0398CDA97510 /* Pods-SegueCoordinator_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A2BB4C3D8FA934D6E5CFBE66A41C0C /* Pods-SegueCoordinator_Example-dummy.m */; };
-		60C690EE81EFCEA573916A78293D8034 /* NSExceptionCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = D8434FE621A4102B4E02F58E184CED84 /* NSExceptionCatch.m */; };
+		698623C60E491834C16E184716ABDEEB /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C258D09AAA8DFC3764CD9299A666538 /* SegueCoordinator-dummy.m */; };
 		6AD18EBBA19094B36E0D0ABBE19A0CAD /* Pods-SegueCoordinator_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7E668A508CF133551398DD18DFB148 /* Pods-SegueCoordinator_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E9DC5668E2A8541D10A3734E03B34E3 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31A5887EDED033870AE54331E4077C9D /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7A79373194E56C8458E8AA667E787252 /* Pods-SegueCoordinator_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F601F4FF0907BA4938E97C7549E5BD0 /* Pods-SegueCoordinator_Tests-dummy.m */; };
 		8D580FDD742029A9D53D075796437B74 /* Pods-SegueCoordinator_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 646C1A267D20BF8692D1BD1D4BDDA71C /* Pods-SegueCoordinator_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DD4EC4064590ED5DA4C3ED1C882C086 /* SegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83323B432E3BF31C494F2D6D79A5E9F /* SegueCoordinator.swift */; };
 		92F1DD24AAD6C52520ECFC247A156B1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		A677B6B61AB7C01E07E0A4F3564D22EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E693C485B51BD0C6B67D0650554B3E /* Extensions.swift */; };
+		9651F7048397A2D4A3D093A021263A4A /* NSExceptionCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 066449FA93D5B2CDBB3702087E12FAA2 /* NSExceptionCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB97EFB43BCFDCA2F050B0C723732B74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		ABE92E6686660C554AE4082E9A3F8752 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D618B11EECE71A9B056B886582B897F /* ViewControllerExtension.swift */; };
 		BF07E4764CB9BA738D88EE903F36EA41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D79B3048D0B0DEBE9DE0F254317061F3 /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */; };
-		D97381B364D1710C4FEEE209FC63A394 /* SegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB89C6F2D13455DEEDA1983DFB6F05F /* SegueCoordinator.swift */; };
+		D5C1254E503BA4C60B80F75C62D01697 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */; };
+		E0395120AED0ECD0824ED5F57DEBF300 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B34495FFF7660A8825AF2F65D6A2E5F /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFD1E303B46A28BEEA539B4AC28EACBD /* NSExceptionCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 662031EF82D30CD74640BAB870AA0010 /* NSExceptionCatch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,40 +36,43 @@
 /* Begin PBXFileReference section */
 		01663AC48197F83BB880CC115F04A90A /* Pods-SegueCoordinator_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Tests-resources.sh"; sourceTree = "<group>"; };
 		03429B2BD377BA73DA459C6D07CC9DB7 /* Pods-SegueCoordinator_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Example-resources.sh"; sourceTree = "<group>"; };
+		066449FA93D5B2CDBB3702087E12FAA2 /* NSExceptionCatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSExceptionCatch.h; path = SegueCoordinator/Classes/NSExceptionCatch.h; sourceTree = "<group>"; };
+		112E57156BE86F6961F530E3711707BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F0C73BB2A186885C47257457BA6DE3 /* Pods-SegueCoordinator_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		1D618B11EECE71A9B056B886582B897F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		1EACCE0AD5B5C538FF4EAC23AFD3CED2 /* Pods-SegueCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2FBD10134D247F22EEAEFCDDC7186D84 /* SegueCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-prefix.pch"; sourceTree = "<group>"; };
-		31A5887EDED033870AE54331E4077C9D /* SegueCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-umbrella.h"; sourceTree = "<group>"; };
+		1F1E9F4299FA24A33EC3DA0FD10C9E4A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		42A2BB4C3D8FA934D6E5CFBE66A41C0C /* Pods-SegueCoordinator_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinator_Example-dummy.m"; sourceTree = "<group>"; };
+		4481B7FDA285CD16F17A21C98E1AB32A /* SegueCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-prefix.pch"; sourceTree = "<group>"; };
 		4C0B5B51AA75B5093E59A71FCB2C77D9 /* Pods-SegueCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4FE4A70E53CA3CB440E0D3720A63AE2E /* Pods-SegueCoordinator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B7E668A508CF133551398DD18DFB148 /* Pods-SegueCoordinator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinator_Example-umbrella.h"; sourceTree = "<group>"; };
+		5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SegueCoordinator/Classes/Extensions.swift; sourceTree = "<group>"; };
 		5F601F4FF0907BA4938E97C7549E5BD0 /* Pods-SegueCoordinator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinator_Tests-dummy.m"; sourceTree = "<group>"; };
+		6288D0DA33062DFABB1C2A004DC258E8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		62D16CBD0E5D87F912A92B9E8C0D6595 /* Pods-SegueCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
 		646C1A267D20BF8692D1BD1D4BDDA71C /* Pods-SegueCoordinator_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinator_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		662031EF82D30CD74640BAB870AA0010 /* NSExceptionCatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NSExceptionCatch.m; path = SegueCoordinator/Classes/NSExceptionCatch.m; sourceTree = "<group>"; };
 		691F31FDA5EE4240E935B1A1A6741E8C /* Pods_SegueCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinator_Tests.framework; path = "Pods-SegueCoordinator_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		695EA2F2F1FDD4C0F2872FA91DE5CF65 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B34495FFF7660A8825AF2F65D6A2E5F /* SegueCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-umbrella.h"; sourceTree = "<group>"; };
 		6B88E470B338DDC5F198828C4AED8CDE /* Pods-SegueCoordinator_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SegueCoordinator_Tests.modulemap"; sourceTree = "<group>"; };
-		76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SegueCoordinator.xcconfig; sourceTree = "<group>"; };
+		6C258D09AAA8DFC3764CD9299A666538 /* SegueCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SegueCoordinator-dummy.m"; sourceTree = "<group>"; };
 		7ED54BCFEBE76D04E90BCB041CB988A5 /* Pods-SegueCoordinator_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinator_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SegueCoordinator-dummy.m"; sourceTree = "<group>"; };
+		82AC7303EF79CA30C21DB724D255BA5B /* SegueCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SegueCoordinator.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E00D51ACE259477124C63E4BED0FE8D /* NSExceptionCatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NSExceptionCatch.h; sourceTree = "<group>"; };
-		9F95E9770B78405635A51C8CEA5114AB /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
+		9789BF3F2C078199EF8DC1521F0F9EA2 /* SegueCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SegueCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5EF43C71DB06F25444DE5F9D4B8C1AD /* Pods-SegueCoordinator_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinator_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A7DEFAD5AA96951D6EE375DFBB9CF21F /* Pods-SegueCoordinator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A8D18F88DF3D712F07E7D9F05363DEDA /* ViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewControllerExtension.swift; path = SegueCoordinator/Classes/ViewControllerExtension.swift; sourceTree = "<group>"; };
 		AA920AC7EE2B5EF88C88708FAD2AAC00 /* Pods-SegueCoordinator_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinator_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B83323B432E3BF31C494F2D6D79A5E9F /* SegueCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegueCoordinator.swift; path = SegueCoordinator/Classes/SegueCoordinator.swift; sourceTree = "<group>"; };
 		B8BAEDC4CDB8BE20EA6C3C004B913587 /* Pods-SegueCoordinator_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinator_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C869340F18497ACC0A2A606ECC4D6463 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBB89C6F2D13455DEEDA1983DFB6F05F /* SegueCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SegueCoordinator.swift; sourceTree = "<group>"; };
-		D8434FE621A4102B4E02F58E184CED84 /* NSExceptionCatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NSExceptionCatch.m; sourceTree = "<group>"; };
+		DC7FED50783E583564DC923770E0852E /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
 		E9536BCCEA8CCB3E0224C1C25E730F18 /* Pods-SegueCoordinator_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SegueCoordinator_Example.modulemap"; sourceTree = "<group>"; };
 		EB825546AF158581EC66E975B5445585 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F698F4A5EA4C6CE61E5D01C92BB7D447 /* SegueCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SegueCoordinator.framework; path = SegueCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6993875F0B1A5901F8EA82004A34018 /* Pods_SegueCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinator_Example.framework; path = "Pods-SegueCoordinator_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6E693C485B51BD0C6B67D0650554B3E /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,16 +131,6 @@
 			path = "Target Support Files/Pods-SegueCoordinator_Example";
 			sourceTree = "<group>";
 		};
-		3BC06385E55AAE2FFD6CF72C5D89F0DF /* SegueCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				5D9509C1763AEED62711A51CEA658CF1 /* SegueCoordinator */,
-				DEBDC0A842BB67B89468DCA4B3577B26 /* Support Files */,
-			);
-			name = SegueCoordinator;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		3CB7265DD2E4680198ECA1AA17A9E170 /* Pods-SegueCoordinator_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,33 +149,21 @@
 			path = "Target Support Files/Pods-SegueCoordinator_Tests";
 			sourceTree = "<group>";
 		};
-		5ADF2E4388EB5F704334E2A2F4C02AE7 /* Classes */ = {
+		4AB107408CDA3CDF40AAA39F337B618C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				F6E693C485B51BD0C6B67D0650554B3E /* Extensions.swift */,
-				9E00D51ACE259477124C63E4BED0FE8D /* NSExceptionCatch.h */,
-				D8434FE621A4102B4E02F58E184CED84 /* NSExceptionCatch.m */,
-				CBB89C6F2D13455DEEDA1983DFB6F05F /* SegueCoordinator.swift */,
-				1D618B11EECE71A9B056B886582B897F /* ViewControllerExtension.swift */,
+				6288D0DA33062DFABB1C2A004DC258E8 /* LICENSE */,
+				1F1E9F4299FA24A33EC3DA0FD10C9E4A /* README.md */,
+				9789BF3F2C078199EF8DC1521F0F9EA2 /* SegueCoordinator.podspec */,
 			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5D9509C1763AEED62711A51CEA658CF1 /* SegueCoordinator */ = {
-			isa = PBXGroup;
-			children = (
-				5ADF2E4388EB5F704334E2A2F4C02AE7 /* Classes */,
-			);
-			name = SegueCoordinator;
-			path = SegueCoordinator;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				C91F7E7454F1A2B919980BC6CF245100 /* Development Pods */,
+				B8CEF141661E4775A590501264862762 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				23FD8EA20985ED6590BB1F8BA98DDD3F /* Products */,
 				A8929AC148DB163BB9D2EF468108E446 /* Targets Support Files */,
@@ -198,6 +179,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		B8CEF141661E4775A590501264862762 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE41B4CB68D7B96130F1BBEE96C531 /* SegueCoordinator */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,12 +195,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C91F7E7454F1A2B919980BC6CF245100 /* Development Pods */ = {
+		C9AE41B4CB68D7B96130F1BBEE96C531 /* SegueCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				3BC06385E55AAE2FFD6CF72C5D89F0DF /* SegueCoordinator */,
+				5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */,
+				066449FA93D5B2CDBB3702087E12FAA2 /* NSExceptionCatch.h */,
+				662031EF82D30CD74640BAB870AA0010 /* NSExceptionCatch.m */,
+				B83323B432E3BF31C494F2D6D79A5E9F /* SegueCoordinator.swift */,
+				A8D18F88DF3D712F07E7D9F05363DEDA /* ViewControllerExtension.swift */,
+				4AB107408CDA3CDF40AAA39F337B618C /* Pod */,
+				FF893EBD09E0FBBFAF859A5A1F5A3365 /* Support Files */,
 			);
-			name = "Development Pods";
+			name = SegueCoordinator;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -222,15 +218,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DEBDC0A842BB67B89468DCA4B3577B26 /* Support Files */ = {
+		FF893EBD09E0FBBFAF859A5A1F5A3365 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				695EA2F2F1FDD4C0F2872FA91DE5CF65 /* Info.plist */,
-				9F95E9770B78405635A51C8CEA5114AB /* SegueCoordinator.modulemap */,
-				76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */,
-				8184D1A8078CCD4DF0F755BD9A027422 /* SegueCoordinator-dummy.m */,
-				2FBD10134D247F22EEAEFCDDC7186D84 /* SegueCoordinator-prefix.pch */,
-				31A5887EDED033870AE54331E4077C9D /* SegueCoordinator-umbrella.h */,
+				112E57156BE86F6961F530E3711707BE /* Info.plist */,
+				DC7FED50783E583564DC923770E0852E /* SegueCoordinator.modulemap */,
+				82AC7303EF79CA30C21DB724D255BA5B /* SegueCoordinator.xcconfig */,
+				6C258D09AAA8DFC3764CD9299A666538 /* SegueCoordinator-dummy.m */,
+				4481B7FDA285CD16F17A21C98E1AB32A /* SegueCoordinator-prefix.pch */,
+				6B34495FFF7660A8825AF2F65D6A2E5F /* SegueCoordinator-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/SegueCoordinator";
@@ -247,20 +243,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3026C0B9AEB2CEBB140C7D01CF809DE0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13A603C17607CB4B07A1EE0EB51484FC /* NSExceptionCatch.h in Headers */,
-				6E9DC5668E2A8541D10A3734E03B34E3 /* SegueCoordinator-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		979B6E70FB39193EE1B04CD7F086EA18 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6AD18EBBA19094B36E0D0ABBE19A0CAD /* Pods-SegueCoordinator_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA11DC38BFFF2B784488536920C43CE2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9651F7048397A2D4A3D093A021263A4A /* NSExceptionCatch.h in Headers */,
+				E0395120AED0ECD0824ED5F57DEBF300 /* SegueCoordinator-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,9 +267,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E40B2E1BF4BE0B224EAA801A611C00A /* Build configuration list for PBXNativeTarget "SegueCoordinator" */;
 			buildPhases = (
-				41A3145A4138684E0997F757B708E331 /* Sources */,
+				03074ED20511D0D6012C48931265A3F7 /* Sources */,
 				21D7F8EB63FD25181BB03A632B25DA12 /* Frameworks */,
-				3026C0B9AEB2CEBB140C7D01CF809DE0 /* Headers */,
+				EA11DC38BFFF2B784488536920C43CE2 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -348,23 +344,23 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		03074ED20511D0D6012C48931265A3F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5C1254E503BA4C60B80F75C62D01697 /* Extensions.swift in Sources */,
+				FFD1E303B46A28BEEA539B4AC28EACBD /* NSExceptionCatch.m in Sources */,
+				698623C60E491834C16E184716ABDEEB /* SegueCoordinator-dummy.m in Sources */,
+				8DD4EC4064590ED5DA4C3ED1C882C086 /* SegueCoordinator.swift in Sources */,
+				3DE3DF44CDA698DA74B61E8AAB26DC24 /* ViewControllerExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B15367AF555C69A5D3D547BE7AB46FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5A8C8310D7342856A5EE0398CDA97510 /* Pods-SegueCoordinator_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41A3145A4138684E0997F757B708E331 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A677B6B61AB7C01E07E0A4F3564D22EB /* Extensions.swift in Sources */,
-				60C690EE81EFCEA573916A78293D8034 /* NSExceptionCatch.m in Sources */,
-				D79B3048D0B0DEBE9DE0F254317061F3 /* SegueCoordinator-dummy.m in Sources */,
-				D97381B364D1710C4FEEE209FC63A394 /* SegueCoordinator.swift in Sources */,
-				ABE92E6686660C554AE4082E9A3F8752 /* ViewControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,278 +384,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		15FB599A17C1CB18C61E13359C054F93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SegueCoordinator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7B90F06EBDF446891E5AA369E8395CB4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62D16CBD0E5D87F912A92B9E8C0D6595 /* Pods-SegueCoordinator_Example.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SegueCoordinator_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8F90C3EFCAF8D11A3E2D9486E5B32DCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76E6A20AA7729F978192E0D32D523B7C /* SegueCoordinator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SegueCoordinator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A7442DFA182D076077463281FCCA352F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EACCE0AD5B5C538FF4EAC23AFD3CED2 /* Pods-SegueCoordinator_Tests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SegueCoordinator_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C76B7E26A6BD359C30D5645E32AB33FC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C0B5B51AA75B5093E59A71FCB2C77D9 /* Pods-SegueCoordinator_Tests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SegueCoordinator_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		FD6A1DD4B825E0AD253E49CCD5332A45 /* Debug */ = {
+		0AF1EA2E7E541747B1F6484D7333DE0B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7DEFAD5AA96951D6EE375DFBB9CF21F /* Pods-SegueCoordinator_Example.debug.xcconfig */;
 			buildSettings = {
@@ -668,20 +393,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -690,6 +411,282 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		11AD6F8240963FBEB39C0068146DA7C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EACCE0AD5B5C538FF4EAC23AFD3CED2 /* Pods-SegueCoordinator_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SegueCoordinator_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1CDAB5613991E411E5990BAF694995C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2842FE7936854749509F201DC67DEC41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AC7303EF79CA30C21DB724D255BA5B /* SegueCoordinator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
+				PRODUCT_NAME = SegueCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64384202B49C3C02C7D3120044BAAC64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62D16CBD0E5D87F912A92B9E8C0D6595 /* Pods-SegueCoordinator_Example.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SegueCoordinator_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7B62A85C412D689EF418FA67DA770A41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		91F5428EE9815FA93A66F91338FE4D8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0B5B51AA75B5093E59A71FCB2C77D9 /* Pods-SegueCoordinator_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SegueCoordinator_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A41BB52264B6EAAFD03F205EB818CD5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AC7303EF79CA30C21DB724D255BA5B /* SegueCoordinator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SegueCoordinator/SegueCoordinator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SegueCoordinator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SegueCoordinator/SegueCoordinator.modulemap";
+				PRODUCT_NAME = SegueCoordinator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -704,8 +701,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
-				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+				1CDAB5613991E411E5990BAF694995C5 /* Debug */,
+				7B62A85C412D689EF418FA67DA770A41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -713,8 +710,8 @@
 		2E40B2E1BF4BE0B224EAA801A611C00A /* Build configuration list for PBXNativeTarget "SegueCoordinator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				15FB599A17C1CB18C61E13359C054F93 /* Debug */,
-				8F90C3EFCAF8D11A3E2D9486E5B32DCC /* Release */,
+				A41BB52264B6EAAFD03F205EB818CD5B /* Debug */,
+				2842FE7936854749509F201DC67DEC41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -722,8 +719,8 @@
 		C12A7545E0D9CC7B16853D6119689358 /* Build configuration list for PBXNativeTarget "Pods-SegueCoordinator_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD6A1DD4B825E0AD253E49CCD5332A45 /* Debug */,
-				7B90F06EBDF446891E5AA369E8395CB4 /* Release */,
+				0AF1EA2E7E541747B1F6484D7333DE0B /* Debug */,
+				64384202B49C3C02C7D3120044BAAC64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -731,8 +728,8 @@
 		CFCFDA43BD7A5CFF6C6EE8513B13BEAA /* Build configuration list for PBXNativeTarget "Pods-SegueCoordinator_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7442DFA182D076077463281FCCA352F /* Debug */,
-				C76B7E26A6BD359C30D5645E32AB33FC /* Release */,
+				11AD6F8240963FBEB39C0068146DA7C6 /* Debug */,
+				91F5428EE9815FA93A66F91338FE4D8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

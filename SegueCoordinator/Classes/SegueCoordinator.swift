@@ -14,12 +14,12 @@ open class SegueCoordinator: NSObject {
     let rootViewControllerId: String?
     var controllerPreparationCallbacks: Dictionary<String, ((UIViewController) -> Void)> = [:]
     
-    public init(storyboardName: String, rootNavigationController: UINavigationController, rootViewControllerId: String? = nil) {
+    public init(storyboardName: String, bundle: Bundle = Bundle.main, rootNavigationController: UINavigationController, rootViewControllerId: String? = nil) {
         UIViewController.swizzlePrepareForSegue()
         
         self.rootNavigationController = rootNavigationController
         self.rootViewControllerId = rootViewControllerId
-        storyboard = UIStoryboard.init(name: storyboardName, bundle: Bundle.main)
+        storyboard = UIStoryboard.init(name: storyboardName, bundle: bundle)
         
         super.init()
     }
