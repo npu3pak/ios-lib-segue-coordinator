@@ -9,9 +9,10 @@
 import Foundation
 
 open class SegueCoordinator: NSObject {
-    let storyboard: UIStoryboard
-    let rootNavigationController: UINavigationController
-    let rootViewControllerId: String?
+    public let storyboard: UIStoryboard
+    public let rootNavigationController: UINavigationController
+    public let rootViewControllerId: String?
+    
     var controllerPreparationCallbacks: Dictionary<String, ((UIViewController) -> Void)> = [:]
     
     public init(storyboardName: String, bundle: Bundle = Bundle.main, rootNavigationController: UINavigationController, rootViewControllerId: String? = nil) {
