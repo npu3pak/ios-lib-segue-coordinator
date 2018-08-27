@@ -40,11 +40,15 @@ open class SegueCoordinator: NSObject {
     
     //generic методы
     public func initialController() -> UIViewController {
-        return storyboard.instantiateInitialViewController()!
+        let controller = storyboard.instantiateInitialViewController()!
+        controller.__segueCoordinator = self
+        return controller
     }
     
     public func instantiateController<T: UIViewController>(_ storyboardId: String, type: T.Type) -> T {
-        return storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
+        let controller = storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
+        controller.__segueCoordinator = self
+        return controller
     }
     
     public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
