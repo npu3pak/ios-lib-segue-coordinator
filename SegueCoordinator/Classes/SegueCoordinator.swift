@@ -47,8 +47,9 @@ open class SegueCoordinator {
                 self.currentController.performSegue(withIdentifier: segueId, sender: self)
             }
         } catch _ {
-            self.currentController.pendingSegueCoordinator = nil
-            print("Невозможно выполнить segue \(segueId) у контроллера \(currentController)")
+            currentController.pendingSegueCoordinator = nil
+            seguePreparationActions.removeValue(forKey: segueId)
+            print("Unable to execute segue \(segueId) from \(currentController)")
         }
     }
 
@@ -57,6 +58,7 @@ open class SegueCoordinator {
             return
         }
 
+        seguePreparationActions.removeValue(forKey: segueId)
         currentController.pendingSegueCoordinator = nil
 
         let nextController: UIViewController
@@ -67,10 +69,9 @@ open class SegueCoordinator {
         }
 
         action(nextController)
-        seguePreparationActions.removeValue(forKey: segueId)
     }
 
-    // MARK: - Создание
+    // MARK: - Creation
 
     public func instantiateInitial<T: UIViewController>(type: T.Type) -> T {
         return storyboard.instantiateInitialViewController() as! T
@@ -80,7 +81,7 @@ open class SegueCoordinator {
         return storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
     }
 
-    // MARK: - Переходы
+    // MARK: - Navigation
 
     public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
         let controller = storyboard.instantiateInitialViewController() as! T
@@ -127,7 +128,7 @@ open class SegueCoordinator {
     private func modal<T: UIViewController>(_ controller: T, style: UIModalPresentationStyle, prepareController: (T) -> Void) {
         let modalNavController = UINavigationController(rootViewController: controller)
         modalNavController.modalPresentationStyle = style
-        //Порядок важен. Это позволит добраться до NavigationController в prepareController()
+        // We must allow to get modal navigationController from prepareController()
         prepareController(controller)
         rootNavigationController.present(modalNavController, animated: true, completion: nil)
     }
@@ -146,20 +147,17 @@ open class SegueCoordinator {
         }
     }
 
-    // MARK: - Вспомогательные методы
+    // MARK: - Utility
 
     public var currentController: UIViewController {
         return rootNavigationController.viewControllers.last!
     }
 }
 
-// MARK: - Свиззлинг prepareForSegue
+// MARK: - Swizzling of prepareForSegue
 
-// Хэндлер для ссылки на segueCoordinator
 private var segueCoordinatorPropertyHandle: UInt8 = 0
 
-// Подменяем prepareForSegue.
-// Поскольку dispatch_once убрали, приходится использовать глобальную константу, чтобы убедиться что код выполнится один раз.
 private let swizzling: () = {
     let originalSelector = #selector(UIViewController.prepare(for:sender:))
     let swizzledSelector = #selector(UIViewController.swizzled_prepare(for:sender:))
@@ -171,12 +169,10 @@ private let swizzling: () = {
 }()
 
 fileprivate extension UIViewController {
-    //Выполняем подмену
     static func swizzlePrepareForSegue() {
         _ = swizzling
     }
 
-    //Добавляем новое свойство - слабую ссылку на SegueCoordinator
     weak var pendingSegueCoordinator: SegueCoordinator? {
         get {
             return objc_getAssociatedObject(self, &segueCoordinatorPropertyHandle) as? SegueCoordinator
@@ -186,7 +182,6 @@ fileprivate extension UIViewController {
         }
     }
 
-    //Пробрасываем prepareForSegue в координатор
     @objc func swizzled_prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.swizzled_prepare(for: segue, sender: sender)
         pendingSegueCoordinator?.prepareForSegue(segue, sender: sender)

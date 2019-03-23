@@ -15,15 +15,15 @@ class MainCoordinator: SegueCoordinator {
         super.init(rootViewController: rootViewController)
         
         let root = rootViewController as! RootViewController
-        root.showFirst = { [unowned self] in self.showFirst() }
-        root.showSecond = { [unowned self] in self.showSecond() }
-        root.showThird = { [unowned self] in self.showThird() }
+        root.showFirst = showFirst
+        root.showSecond = showSecond
+        root.showThird = showThird
     }
     
     func showFirst() {
         segue("ShowFirst", type: FirstViewController.self) {
             $0.title = "First"
-            $0.onShowSecond = { [unowned self] in self.showSecondFromFirst() }
+            $0.onShowSecond = self.showSecondFromFirst
         }
     }
     
