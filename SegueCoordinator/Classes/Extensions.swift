@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 private var closureTargets = [ClosureWrapper]()
 
 extension UIViewController {
@@ -14,23 +14,23 @@ extension UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(systemItem: .cancel, closure: action)
     }
     
-    public func addCloseButton(_ action: @escaping () -> Void) {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Закрыть", style: .plain, closure: action)
+    public func addLeftBarButton(_ title: String, action: @escaping () -> Void) {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: title, style: .plain, closure: action)
     }
 }
 
 extension UIBarButtonItem {
-    convenience init(image: UIImage?, style: UIBarButtonItemStyle, closure: @escaping () -> ()) {
+    convenience init(image: UIImage?, style: UIBarButtonItem.Style, closure: @escaping () -> ()) {
         closureTargets.append(ClosureWrapper(closure))
         self.init(image: image, style: style, target: closureTargets.last!, action: #selector(ClosureWrapper.invoke))
     }
     
-    convenience init(title: String?, style: UIBarButtonItemStyle, closure: @escaping () -> ()) {
+    convenience init(title: String?, style: UIBarButtonItem.Style, closure: @escaping () -> ()) {
         closureTargets.append(ClosureWrapper(closure))
         self.init(title: title, style: style, target: closureTargets.last!, action: #selector(ClosureWrapper.invoke))
     }
     
-    convenience init(systemItem: UIBarButtonSystemItem, closure: @escaping () -> ()) {
+    convenience init(systemItem: UIBarButtonItem.SystemItem, closure: @escaping () -> ()) {
         closureTargets.append(ClosureWrapper(closure))
         self.init(barButtonSystemItem: systemItem, target: closureTargets.last!, action: #selector(ClosureWrapper.invoke))
     }
@@ -39,7 +39,7 @@ extension UIBarButtonItem {
 private class ClosureWrapper {
     private var closure: () -> ()
     
-    init(_ closure:@escaping () -> ()) {
+    init(_ closure: @escaping () -> ()) {
         self.closure = closure
     }
     
