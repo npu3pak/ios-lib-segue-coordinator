@@ -10,15 +10,10 @@ import UIKit
 import SegueCoordinator
 
 class RootViewController: UIViewController {
-    var coordinator: SegueCoordinator?
     
     var showFirst: (() -> Void)?
     var showSecond: (() -> Void)?
     var showThird: (() -> Void)?
-    
-    override func viewDidLoad() {
-        coordinator = MainCoordinator(rootViewController: self)
-    }
     
     @IBAction func onShowFirst(_ sender: Any) {
         showFirst?()

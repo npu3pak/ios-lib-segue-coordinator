@@ -11,18 +11,25 @@ import SegueCoordinator
 
 class MainCoordinator: SegueCoordinator {
 
-    override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
-        
-        let root = rootViewController as! RootViewController
-        root.showFirst = showFirst
-        root.showSecond = showSecond
-        root.showThird = showThird
+    init(rootNavigationController: UINavigationController) {
+        super.init(storyboardName: "Main", rootNavigationController: rootNavigationController)
+    }
+
+    func start() {
+        // Fill empty rootNavigationController with initial view controller
+        setInitial(type: RootViewController.self) {
+            $0.showFirst = showFirst
+            $0.showSecond = showSecond
+            $0.showThird = showThird
+        }
     }
     
     func showFirst() {
+        // Perform segue with identifier "ShowFirst"
         segue("ShowFirst", type: FirstViewController.self) {
+            // Initialize controller. This it prepareForSegue replacement
             $0.title = "First"
+            // It's unnecessary to make weak/unowned capturing here, but be careful.
             $0.onShowSecond = self.showSecondFromFirst
         }
     }
@@ -34,13 +41,16 @@ class MainCoordinator: SegueCoordinator {
     }
     
     func showSecond() {
+        // Push controller with identifier "Second"
         push("Second", type: SecondViewController.self) {
             $0.title = "Second"
         }
     }
     
     func showThird() {
+        // Display controller with identifier "Third" modally
         modal("Third", type: ThirdViewController.self, style: .formSheet) {
+            // We can add close button here
             $0.addLeftBarButton("Close") { [unowned self] in self.closeModal() }
             $0.title = "Third"
         }

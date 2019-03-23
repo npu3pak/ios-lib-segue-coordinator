@@ -24,12 +24,6 @@ open class SegueCoordinator {
         storyboard = UIStoryboard.init(name: storyboardName, bundle: bundle)
     }
 
-    public init(rootViewController: UIViewController) {
-        UIViewController.swizzlePrepareForSegue()
-        rootNavigationController = rootViewController.navigationController!
-        storyboard = rootViewController.storyboard!
-    }
-
     // MARK: - Segues
 
     public func segue<T: UIViewController>(_ segueId: String, type: T.Type, prepareController: @escaping (T) -> Void) {
@@ -82,6 +76,10 @@ open class SegueCoordinator {
     }
 
     // MARK: - Navigation
+
+    public func setInitial<T: UIViewController>(type: T.Type, prepareController: (T) -> Void) {
+        pushInitial(type: type, clearStack: true, prepareController: prepareController)
+    }
 
     public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
         let controller = storyboard.instantiateInitialViewController() as! T

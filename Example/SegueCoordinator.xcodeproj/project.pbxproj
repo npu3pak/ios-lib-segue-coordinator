@@ -90,6 +90,7 @@
 				40BDDE5B1E39AC7200ABF10D /* ViewControllers */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				4012361C1E39B5F7004549DE /* MainCoordinator.swift */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SegueCoordinator";
@@ -99,7 +100,6 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
