@@ -8,35 +8,24 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SegueCoordinator'
-  s.version          = '0.7.0'
-  s.summary          = 'A short description of SegueCoordinator.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.version          = '0.8.0'
+  s.summary          = 'Keeps your navigation logic separated'
+  s.homepage         = 'https://github.com/npu3pak/ios-lib-segue-coordinator'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Evgeniy Safronov' => 'evsafronov.personal@yandex.ru' }
+  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SegueCoordinator.git', :tag => s.version.to_s }
+  s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
+  s.source_files = 'SegueCoordinator/Classes/**/*'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+It is alternative to Application Coordinator pattern.
+
+1. Separates navigation from view controllers.
+Controllers no longer need to know anything about other controllers and navigation. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.
+
+2. Removes the boilerplate code.
+SegueCoordinator allows you to perform typical navigation tasks like  push, segue, modal in a compact and consistent manner. Also, you can create multiple coordinators for different busines processes and reuse them. SegueCoordinator can become good entry point for this processes.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/SegueCoordinator'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Евгений Сафронов' => 'evsafronov.personal@yandex.ru' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/SegueCoordinator.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'SegueCoordinator/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SegueCoordinator' => ['SegueCoordinator/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
