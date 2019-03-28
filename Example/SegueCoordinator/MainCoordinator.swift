@@ -6,7 +6,6 @@
 //  Copyright © 2017 CocoaPods. All rights reserved.
 //
 
-import Foundation
 import SegueCoordinator
 
 class MainCoordinator: SegueCoordinator {
@@ -16,7 +15,7 @@ class MainCoordinator: SegueCoordinator {
     }
 
     func start() {
-        // Fill empty rootNavigationController with initial view controller
+        // Fill empty rootNavigationController with initial view controller of storyboard
         setInitial(type: RootViewController.self) {
             // Controllers are captured by SegueCoordinator in rootNavigationController.
             // You should use weak/unowned to avoid memory leaks

@@ -24,7 +24,71 @@ open class SegueCoordinator {
         storyboard = UIStoryboard.init(name: storyboardName, bundle: bundle)
     }
 
-    // MARK: - Segues
+    // MARK: - Instantiate
+
+    public func instantiateInitial<T: UIViewController>(type: T.Type) -> T {
+        return storyboard.instantiateInitialViewController() as! T
+    }
+
+    public func instantiate<T: UIViewController>(_ storyboardId: String, type: T.Type) -> T {
+        return storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
+    }
+
+    // MARK: - Set
+
+    public func setInitial<T: UIViewController>(type: T.Type, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateInitialViewController() as! T
+        setController(controller, prepareController: prepareController)
+    }
+
+    public func set<T: UIViewController>(_ controllerId: String, type: T.Type, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
+        setController(controller, prepareController: prepareController)
+    }
+
+    public func setController<T: UIViewController>(_ controller: T, prepareController: (T) -> Void) {
+        prepareController(controller)
+        rootNavigationController.viewControllers = [controller]
+    }
+
+    // MARK: - Push
+
+    public func pushInitial<T: UIViewController>(type: T.Type, animated: Bool = true, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateInitialViewController() as! T
+        pushController(controller, animated: animated, prepareController: prepareController)
+    }
+
+    public func push<T: UIViewController>(_ controllerId: String, type: T.Type, animated: Bool = true, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
+        pushController(controller, animated: animated, prepareController: prepareController)
+    }
+
+    public func pushController<T: UIViewController>(_ controller: T, animated: Bool = true, prepareController: (T) -> Void) {
+        prepareController(controller)
+        rootNavigationController.pushViewController(controller, animated: animated)
+    }
+
+    // MARK: - Modal
+
+    public func modalInitial<T: UIViewController>(type: T.Type, style: UIModalPresentationStyle = .formSheet, animated: Bool = true, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateInitialViewController() as! T
+        modalController(controller, style: style, animated: animated, prepareController: prepareController)
+    }
+
+    public func modal<T: UIViewController>(_ controllerId: String, type: T.Type, style: UIModalPresentationStyle, animated: Bool = true, prepareController: (T) -> Void) {
+        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
+        modalController(controller, style: style, animated: animated, prepareController: prepareController)
+    }
+
+    public func modalController<T: UIViewController>(_ controller: T, style: UIModalPresentationStyle, animated: Bool = true, prepareController: (T) -> Void) {
+        let modalNavController = UINavigationController(rootViewController: controller)
+        modalNavController.modalPresentationStyle = style
+        // We must allow to get modal navigationController from prepareController()
+        prepareController(controller)
+        rootNavigationController.present(modalNavController, animated: animated, completion: nil)
+    }
+
+    // MARK: - Segue
 
     public func segue<T: UIViewController>(_ segueId: String, type: T.Type, prepareController: @escaping (T) -> Void) {
         segue(segueId) {
@@ -65,84 +129,18 @@ open class SegueCoordinator {
         action(nextController)
     }
 
-    // MARK: - Creation
+    // MARK: - Back actions
 
-    public func instantiateInitial<T: UIViewController>(type: T.Type) -> T {
-        return storyboard.instantiateInitialViewController() as! T
+    public func closeModal(animated: Bool = true, _ completion: @escaping (() -> Void) = {}) {
+        currentController.dismiss(animated: animated, completion: completion)
     }
 
-    public func instantiate<T: UIViewController>(_ storyboardId: String, type: T.Type) -> T {
-        return storyboard.instantiateViewController(withIdentifier: storyboardId) as! T
+    public func pop(animated: Bool = true) {
+        rootNavigationController.popViewController(animated: animated)
     }
 
-    // MARK: - Navigation
-
-    public func setInitial<T: UIViewController>(type: T.Type, prepareController: (T) -> Void) {
-        pushInitial(type: type, clearStack: true, prepareController: prepareController)
-    }
-
-    public func pushInitial<T: UIViewController>(type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
-        let controller = storyboard.instantiateInitialViewController() as! T
-        push(controller, clearStack: clearStack, prepareController: prepareController)
-    }
-
-    public func modalInitial<T: UIViewController>(type: T.Type, style: UIModalPresentationStyle = .formSheet, prepareController: (T) -> Void) {
-        let controller = storyboard.instantiateInitialViewController() as! T
-        modal(controller, style: style, prepareController: prepareController)
-    }
-
-    public func push<T: UIViewController>(_ controllerId: String, type: T.Type, clearStack: Bool = false, prepareController: (T) -> Void) {
-        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
-        push(controller, clearStack: clearStack, prepareController: prepareController)
-    }
-
-    public func replaceTop<T: UIViewController>(_ controllerId: String, type: T.Type, animated: Bool, prepareController: (T) -> Void) {
-        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
-        replaceTop(controller, animated: animated, prepareController: prepareController)
-    }
-
-    public func modal<T: UIViewController>(_ controllerId: String, type: T.Type, style: UIModalPresentationStyle, prepareController: (T) -> Void) {
-        let controller = storyboard.instantiateViewController(withIdentifier: controllerId) as! T
-        modal(controller, style: style, prepareController: prepareController)
-    }
-
-    private func push<T: UIViewController>(_ controller: T, clearStack: Bool = false, prepareController: (T) -> Void) {
-        prepareController(controller)
-        if clearStack {
-            rootNavigationController.viewControllers = [controller]
-        } else {
-            rootNavigationController.pushViewController(controller, animated: true)
-        }
-    }
-
-    private func replaceTop<T: UIViewController>(_ controller: T, animated: Bool, prepareController: (T) -> Void) {
-        prepareController(controller)
-        var controllers = rootNavigationController.viewControllers
-        controllers.removeLast()
-        controllers.append(controller)
-        rootNavigationController.setViewControllers(controllers, animated: animated)
-    }
-
-    private func modal<T: UIViewController>(_ controller: T, style: UIModalPresentationStyle, prepareController: (T) -> Void) {
-        let modalNavController = UINavigationController(rootViewController: controller)
-        modalNavController.modalPresentationStyle = style
-        // We must allow to get modal navigationController from prepareController()
-        prepareController(controller)
-        rootNavigationController.present(modalNavController, animated: true, completion: nil)
-    }
-
-    public func closeModal(_ completion: @escaping (() -> Void) = {}) {
-        currentController.dismiss(animated: true, completion: completion)
-    }
-
-    public func pop() {
-        rootNavigationController.popViewController(animated: true)
-    }
-
-    public func popTo(_ restorationId: String) {
-        if let controller = rootNavigationController.viewControllers.first(where: { $0.restorationIdentifier == restorationId }) {
-            rootNavigationController.popToViewController(controller, animated: true)
-        }
+    public func popToController(_ controller: UIViewController, animated: Bool = true) {
+        rootNavigationController.popToViewController(controller, animated: animated)
     }
 
     // MARK: - Utility
@@ -171,7 +169,8 @@ fileprivate extension UIViewController {
         _ = swizzling
     }
 
-    weak var pendingSegueCoordinator: SegueCoordinator? {
+    // weak reference
+    var pendingSegueCoordinator: SegueCoordinator? {
         get {
             return objc_getAssociatedObject(self, &segueCoordinatorPropertyHandle) as? SegueCoordinator
         }
