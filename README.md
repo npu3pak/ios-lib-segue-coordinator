@@ -6,10 +6,12 @@
 
 It is alternative to Application Coordinator pattern.
 
-1. Separates navigation from view controllers.
+### Separate navigation from view controllers
+
 Controllers no longer need to know anything about other controllers and navigation. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.
 
-2. Removes the boilerplate code.
+### Remove the boilerplate code
+
 SegueCoordinator allows you to perform typical navigation tasks like  push, segue, modal in a compact and consistent manner. Also, you can create multiple coordinators for different busines processes and reuse them. SegueCoordinator can become good entry point for this processes.
 
 ## Requirements
@@ -28,7 +30,7 @@ pod 'SegueCoordinator', :git => 'https://github.com/npu3pak/ios-lib-segue-coordi
 
 ## Usage
 
-1. Prepare controllers.
+### 1. Prepare controllers
 
 Create Main.storyboard with initial ListViewController and DetailsViewController. Add segue with identifier "ShowDetails" from list to details.
 
@@ -53,8 +55,19 @@ class DetailsViewController: UIViewController {
     }
 }
 ```
+---
+**IMPORTANT**
 
-2. Create coordinator
+If you override prepareForSegue method, be sure to call super.prepareForSegue
+
+```swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+}
+```
+---
+
+### 2. Create coordinator
 ```swift
 import SegueCoordinator
 
@@ -77,7 +90,7 @@ class MainCoordinator: SegueCoordinator {
 }
 ```
 
-3. Configure AppDelegate
+### 3. Configure AppDelegate
 ```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
