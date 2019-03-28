@@ -55,6 +55,17 @@ class DetailsViewController: UIViewController {
     }
 }
 ```
+---
+**IMPORTANT**
+
+If you override prepareForSegue method, be sure to call super.prepareForSegue
+
+```swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    super.prepare(for: segue, sender: sender)
+}
+```
+---
 
 ### 2. Create coordinator
 ```swift
