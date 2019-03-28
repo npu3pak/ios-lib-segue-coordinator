@@ -17,7 +17,6 @@
 		9651F7048397A2D4A3D093A021263A4A /* NSExceptionCatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 066449FA93D5B2CDBB3702087E12FAA2 /* NSExceptionCatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB97EFB43BCFDCA2F050B0C723732B74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		BF07E4764CB9BA738D88EE903F36EA41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D5C1254E503BA4C60B80F75C62D01697 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */; };
 		E0395120AED0ECD0824ED5F57DEBF300 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B34495FFF7660A8825AF2F65D6A2E5F /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FFD1E303B46A28BEEA539B4AC28EACBD /* NSExceptionCatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 662031EF82D30CD74640BAB870AA0010 /* NSExceptionCatch.m */; };
 /* End PBXBuildFile section */
@@ -45,7 +44,6 @@
 		4C0B5B51AA75B5093E59A71FCB2C77D9 /* Pods-SegueCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4FE4A70E53CA3CB440E0D3720A63AE2E /* Pods-SegueCoordinator_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinator_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B7E668A508CF133551398DD18DFB148 /* Pods-SegueCoordinator_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinator_Example-umbrella.h"; sourceTree = "<group>"; };
-		5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = SegueCoordinator/Classes/Extensions.swift; sourceTree = "<group>"; };
 		5F601F4FF0907BA4938E97C7549E5BD0 /* Pods-SegueCoordinator_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinator_Tests-dummy.m"; sourceTree = "<group>"; };
 		6288D0DA33062DFABB1C2A004DC258E8 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		62D16CBD0E5D87F912A92B9E8C0D6595 /* Pods-SegueCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 		C9AE41B4CB68D7B96130F1BBEE96C531 /* SegueCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				5F5D3BA92B9B674D3009D55E319E56F3 /* Extensions.swift */,
 				066449FA93D5B2CDBB3702087E12FAA2 /* NSExceptionCatch.h */,
 				662031EF82D30CD74640BAB870AA0010 /* NSExceptionCatch.m */,
 				B83323B432E3BF31C494F2D6D79A5E9F /* SegueCoordinator.swift */,
@@ -354,7 +351,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5C1254E503BA4C60B80F75C62D01697 /* Extensions.swift in Sources */,
 				FFD1E303B46A28BEEA539B4AC28EACBD /* NSExceptionCatch.m in Sources */,
 				698623C60E491834C16E184716ABDEEB /* SegueCoordinator-dummy.m in Sources */,
 				8DD4EC4064590ED5DA4C3ED1C882C086 /* SegueCoordinator.swift in Sources */,

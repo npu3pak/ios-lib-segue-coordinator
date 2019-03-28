@@ -10,5 +10,10 @@ import UIKit
 import SegueCoordinator
 
 class ThirdViewController: UIViewController {
-    
+
+    var onCancel: (() -> Void)?
+
+    @IBAction func onCancelButtonClick(_ sender: Any) {
+        onCancel?()
+    }
 }

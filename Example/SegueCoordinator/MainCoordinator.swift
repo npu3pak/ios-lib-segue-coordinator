@@ -18,9 +18,11 @@ class MainCoordinator: SegueCoordinator {
     func start() {
         // Fill empty rootNavigationController with initial view controller
         setInitial(type: RootViewController.self) {
-            $0.showFirst = showFirst
-            $0.showSecond = showSecond
-            $0.showThird = showThird
+            // Controllers are captured by SegueCoordinator in rootNavigationController.
+            // You should use weak/unowned to avoid memory leaks
+            $0.showFirst =  { [unowned self] in self.showFirst() }
+            $0.showSecond =  { [unowned self] in self.showSecond() }
+            $0.showThird =  { [unowned self] in self.showThird() }
         }
     }
     
@@ -29,8 +31,7 @@ class MainCoordinator: SegueCoordinator {
         segue("ShowFirst", type: FirstViewController.self) {
             // Initialize controller. This it prepareForSegue replacement
             $0.title = "First"
-            // It's unnecessary to make weak/unowned capturing here, but be careful.
-            $0.onShowSecond = self.showSecondFromFirst
+            $0.onShowSecond = { [unowned self] in self.showSecondFromFirst() }
         }
     }
     
@@ -50,8 +51,7 @@ class MainCoordinator: SegueCoordinator {
     func showThird() {
         // Display controller with identifier "Third" modally
         modal("Third", type: ThirdViewController.self, style: .formSheet) {
-            // We can add close button here
-            $0.addLeftBarButton("Close") { [unowned self] in self.closeModal() }
+            $0.onCancel = { [unowned self] in self.closeModal() }
             $0.title = "Third"
         }
     }
