@@ -6,10 +6,12 @@
 
 It is alternative to Application Coordinator pattern.
 
-1. Separates navigation from view controllers.
+### Separate navigation from view controllers.
+
 Controllers no longer need to know anything about other controllers and navigation. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.
 
-2. Removes the boilerplate code.
+### Remove the boilerplate code.
+
 SegueCoordinator allows you to perform typical navigation tasks like  push, segue, modal in a compact and consistent manner. Also, you can create multiple coordinators for different busines processes and reuse them. SegueCoordinator can become good entry point for this processes.
 
 ## Requirements
