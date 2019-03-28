@@ -115,7 +115,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Author
 
-Evgeniy Ssfronov, evsafronov.personal@yandex.ru
+Evgeniy Safronov, evsafronov.personal@yandex.ru
 
 ## License
 
