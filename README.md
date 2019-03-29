@@ -12,7 +12,7 @@ Controllers no longer need to know anything about other controllers and navigati
 
 ### Remove the boilerplate code
 
-SegueCoordinator allows you to perform typical navigation tasks like  push, segue, modal in a compact and consistent manner. Also, you can create multiple coordinators for different busines processes and reuse them. SegueCoordinator can become good entry point for this processes.
+SegueCoordinator allows you to perform typical navigation tasks like **push, segue, modal** in a compact and consistent manner. Also, you can create multiple coordinators for different busines processes and reuse them. SegueCoordinator can become good entry point for this processes.
 
 ## Requirements
 - iOS 9+
