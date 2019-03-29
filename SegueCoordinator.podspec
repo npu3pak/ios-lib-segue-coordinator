@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Evgeniy Safronov' => 'evsafronov.personal@yandex.ru' }
   s.source           = { :git => 'https://github.com/npu3pak/ios-lib-segue-coordinator.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
+  s.swift_version = '5.0'
   s.source_files = 'SegueCoordinator/Classes/**/*'
 
   s.description      = <<-DESC
