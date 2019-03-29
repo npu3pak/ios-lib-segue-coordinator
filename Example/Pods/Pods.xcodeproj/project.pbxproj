@@ -322,7 +322,7 @@
 						LastSwiftMigration = 1020;
 					};
 					E5A0C995DF64060F93FCA0C0A0B021EE = {
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
