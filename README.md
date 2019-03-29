@@ -8,7 +8,7 @@ It is alternative to Application Coordinator pattern.
 
 ### Separate navigation from view controllers
 
-Controllers no longer need to know anything about other controllers and navigation. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.
+Controllers no longer need to know anything about other controllers or navigation. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.
 
 ### Remove the boilerplate code
 
