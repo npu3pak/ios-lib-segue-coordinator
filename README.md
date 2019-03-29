@@ -78,13 +78,13 @@ class MainCoordinator: SegueCoordinator {
 
     func start() {
         setInitial(type: ListViewController.self) {
-            $0.showDetails =  { [unowned self] in self.showDetails($0) }
+            $0.onShowDetails =  { [unowned self] in self.showDetails($0) }
         }
     }
-    
+
     func showDetails(_ details: String) {
         segue("ShowDetails", type: DetailsViewController.self) {
-            $0.data = details
+            $0.details = details
         }
     }
 }
