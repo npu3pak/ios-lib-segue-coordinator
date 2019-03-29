@@ -25,7 +25,7 @@ SegueCoordinator is available through [CocoaPods](http://cocoapods.org). To inst
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SegueCoordinator', :git => 'https://github.com/npu3pak/ios-lib-segue-coordinator.git'
+pod 'SegueCoordinator'
 ```
 
 ## Usage
