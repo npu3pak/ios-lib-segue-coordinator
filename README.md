@@ -41,22 +41,22 @@ Create Main.storyboard with initial ListViewController and DetailsViewController
 ```swift
 class ListViewController: UIViewController {
 
-var onShowDetails: ((String)->Void)?
-
-func showDetails() {
-onShowDetails?("Data")
-}
+    var onShowDetails: ((String)->Void)?
+    
+    func showDetails() {
+        onShowDetails?("Data")
+    }
 }
 
 class DetailsViewController: UIViewController {
 
-var details: String!
+    var details: String!
 
-override func viewDidLoad() {
-super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-// show details text here
-}
+        // show details text here
+    }
 }
 ```
 ---
@@ -66,7 +66,7 @@ If you override prepareForSegue method, be sure to call super.prepareForSegue
 
 ```swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-super.prepare(for: segue, sender: sender)
+    super.prepare(for: segue, sender: sender)
 }
 ```
 ---
@@ -76,21 +76,21 @@ super.prepare(for: segue, sender: sender)
 import SegueCoordinator
 
 class MainCoordinator: SegueCoordinator {
-init(rootNavigationController: UINavigationController) {
-super.init(storyboardName: "Main", rootNavigationController: rootNavigationController)
-}
+    init(rootNavigationController: UINavigationController) {
+        super.init(storyboardName: "Main", rootNavigationController: rootNavigationController)
+    }
 
-func start() {
-setInitial(type: ListViewController.self) {
-$0.onShowDetails =  { [unowned self] in self.showDetails($0) }
-}
-}
+    func start() {
+        setInitial(type: ListViewController.self) {
+            $0.onShowDetails =  { [unowned self] in self.showDetails($0) }
+        }
+    }
 
-func showDetails(_ details: String) {
-segue("ShowDetails", type: DetailsViewController.self) {
-$0.details = details
-}
-}
+    func showDetails(_ details: String) {
+        segue("ShowDetails", type: DetailsViewController.self) {
+            $0.details = details
+        }
+    }
 }
 ```
 
@@ -98,18 +98,18 @@ $0.details = details
 ```swift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-var window: UIWindow?
-private var mainCoordinator: MainCoordinator?
+    var window: UIWindow?
+    private var mainCoordinator: MainCoordinator?
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-let rootNavigationController = UINavigationController()
-window?.rootViewController = rootNavigationController
-window?.makeKeyAndVisible()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let rootNavigationController = UINavigationController()
+        window?.rootViewController = rootNavigationController
+        window?.makeKeyAndVisible()
 
-mainCoordinator = MainCoordinator(rootNavigationController: rootNavigationController)
-mainCoordinator?.start()
-return true
-}
+        mainCoordinator = MainCoordinator(rootNavigationController: rootNavigationController)
+        mainCoordinator?.start()
+        return true
+    }
 }
 ```
 
