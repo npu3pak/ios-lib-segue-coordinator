@@ -51,7 +51,23 @@ class MainCoordinator: SegueCoordinator {
         // Display controller with identifier "Third" modally
         modal("Third", type: ThirdViewController.self, style: .formSheet) {
             $0.onCancel = { [unowned self] in self.closeModal() }
+            $0.onShowFourthWithPush = { [unowned self] in self.showFourthWithPush() }
+            $0.onShowFourthWithSegue = { [unowned self] in self.showFourthWithSegue() }
             $0.title = "Third"
+        }
+    }
+
+    func showFourthWithPush() {
+        // Push from modal controller
+        push("Fourth", type: FourthViewController.self) {
+            $0.title = "Fourth"
+        }
+    }
+
+    func showFourthWithSegue() {
+        // Push from modal controller
+        segue("ShowFourth", type: FourthViewController.self) {
+            $0.title = "Fourth"
         }
     }
 }

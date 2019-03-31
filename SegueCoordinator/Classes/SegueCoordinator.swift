@@ -64,7 +64,7 @@ open class SegueCoordinator {
     // MARK: - Set
 
     /**
-     Create the initial view controller from the storyboard and make it the root of the navigation controller.
+     Create the initial view controller from the storyboard and make it the root of the current navigation controller.
      All other presented controllers will be removed from navigation stack.
 
      - Parameter type: Expected type of view controller.
@@ -79,7 +79,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Create the view controller from the storyboard by identifier and make it the root of the navigation controller.
+     Create the view controller from the storyboard by identifier and make it the root of the current navigation controller.
      All other presented controllers will be removed from navigation stack.
 
      - Parameter storyboardId: Storyboard ID of view controller specified with identity inspector in Interface Builder.
@@ -95,7 +95,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Make view controller the root of the navigation controller.
+     Make view controller the root of the current navigation controller.
      All other presented controllers will be removed from navigation stack.
 
      - Parameter controller: Controller to be presented.
@@ -106,13 +106,13 @@ open class SegueCoordinator {
 
     public func setController<T: UIViewController>(_ controller: T, prepareController: (_ controller: T) -> Void) {
         prepareController(controller)
-        rootNavigationController.viewControllers = [controller]
+        currentNavigationController.viewControllers = [controller]
     }
 
     // MARK: - Push
 
     /**
-     Create the initial view controller from the storyboard and push it to navigation controller stack.
+     Create the initial view controller from the storyboard and push it to the stack of the current navigation controller.
 
      - Parameter type: Expected type of view controller.
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
@@ -127,7 +127,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Create the view controller from the storyboard by identifier and push it to navigation controller stack.
+     Create the view controller from the storyboard by identifier and push it to the stack of the current navigation controller.
 
      - Parameter storyboardId: Storyboard ID of view controller specified with identity inspector in Interface Builder.
      - Parameter type: Expected type of view controller.
@@ -143,7 +143,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Push view controller to navigation controller stack.
+     Push view controller to the stack of the current navigation controller.
 
      - Parameter controller: Controller to be presented.
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
@@ -154,13 +154,13 @@ open class SegueCoordinator {
 
     public func pushController<T: UIViewController>(_ controller: T, animated: Bool = true, prepareController: (_ controller: T) -> Void) {
         prepareController(controller)
-        rootNavigationController.pushViewController(controller, animated: animated)
+        currentNavigationController.pushViewController(controller, animated: animated)
     }
 
     // MARK: - Modal
 
     /**
-     Create the initial view controller from the storyboard and present it modally from navigation controller.
+     Create the initial view controller from the storyboard and present it modally from the current navigation controller.
 
      - Parameter type: Expected type of view controller.
      - Parameter style: Modal presentation style.
@@ -177,7 +177,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Create the view controller from the storyboard by identifier and present it modally from navigation controller.
+     Create the view controller from the storyboard by identifier and present it modally from the current navigation controller.
 
      - Parameter storyboardId: Storyboard ID of view controller specified with identity inspector in Interface Builder.
      - Parameter type: Expected type of view controller.
@@ -195,7 +195,7 @@ open class SegueCoordinator {
     }
 
     /**
-     Present controller modally from navigation controller.
+     Present controller modally from the current navigation controller.
 
      - Parameter controller: Controller to be presented.
      - Parameter style: Modal presentation style.
@@ -212,11 +212,11 @@ open class SegueCoordinator {
             modalNavController.modalPresentationStyle = style
             // We should wrap before preparation callback to give access to modal navigationController from prepareController()
             prepareController(controller)
-            rootNavigationController.present(modalNavController, animated: animated, completion: nil)
+            currentNavigationController.present(modalNavController, animated: animated, completion: nil)
         } else {
             controller.modalPresentationStyle = style
             prepareController(controller)
-            rootNavigationController.present(controller, animated: animated, completion: nil)
+            currentNavigationController.present(controller, animated: animated, completion: nil)
         }
     }
 
@@ -251,13 +251,13 @@ open class SegueCoordinator {
 
         do {
             try NSExceptionCatch.catchException {
-                self.lastController.pendingSegueCoordinator = self
-                self.lastController.performSegue(withIdentifier: segueId, sender: self)
+                self.currentController.pendingSegueCoordinator = self
+                self.currentController.performSegue(withIdentifier: segueId, sender: self)
             }
         } catch _ {
-            lastController.pendingSegueCoordinator = nil
+            currentController.pendingSegueCoordinator = nil
             seguePreparationActions.removeValue(forKey: segueId)
-            print("Unable to execute segue \(segueId) from \(lastController)")
+            print("Unable to execute segue \(segueId) from \(currentController)")
         }
     }
 
@@ -267,7 +267,7 @@ open class SegueCoordinator {
         }
 
         seguePreparationActions.removeValue(forKey: segueId)
-        lastController.pendingSegueCoordinator = nil
+        currentController.pendingSegueCoordinator = nil
 
         let nextController: UIViewController
         if let targetNavigationController = segue.destination as? UINavigationController {
@@ -277,10 +277,6 @@ open class SegueCoordinator {
         }
 
         action(nextController)
-    }
-
-    private var lastController: UIViewController {
-        return rootNavigationController.viewControllers.last!
     }
 
     // MARK: - Back actions
@@ -293,27 +289,57 @@ open class SegueCoordinator {
      */
 
     public func closeModal(animated: Bool = true, _ completion: @escaping (() -> Void) = {}) {
-        rootNavigationController.dismiss(animated: animated, completion: completion)
+        currentController.dismiss(animated: animated, completion: completion)
     }
 
     /**
-     Pop current view controller from navigation controller stack.
+     Pops view controller from the stack of the current navigation controller.
 
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
      */
 
     public func pop(animated: Bool = true) {
-        rootNavigationController.popViewController(animated: animated)
+        currentNavigationController.popViewController(animated: animated)
     }
 
     /**
-     Pops view controllers from navigation controller until the specified view controller is at the top of the navigation stack.
+     Pops view controllers from current navigation controller until the specified view controller is at the top of the navigation stack.
 
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
      */
 
     public func popToController(_ controller: UIViewController, animated: Bool = true) {
-        rootNavigationController.popToViewController(controller, animated: animated)
+        currentNavigationController.popToViewController(controller, animated: animated)
+    }
+
+    // MARK: - Utility
+
+    var currentController: UIViewController {
+        // View controllers are presented from Navigation Controller if it exists
+        var controller: UIViewController = rootNavigationController
+
+        while let presented = controller.presentedViewController {
+            controller = presented
+        }
+
+        if let topNavigationController = controller as? UINavigationController {
+            return topNavigationController.viewControllers.last ?? topNavigationController
+        } else {
+            return controller
+        }
+    }
+
+    var currentNavigationController: UINavigationController {
+        var navigationController = rootNavigationController
+        var controller: UIViewController = rootNavigationController
+
+        while let presented = controller.presentedViewController {
+            if presented is UINavigationController {
+                navigationController = presented as! UINavigationController
+            }
+            controller = presented
+        }
+        return navigationController
     }
 }
 

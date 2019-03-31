@@ -154,11 +154,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6X-HK-GZ8">
+                                <rect key="frame" x="83" y="310" width="154" height="30"/>
+                                <state key="normal" title="Show fourth with push"/>
+                                <connections>
+                                    <action selector="onShowFourthButtonWithPushClick:" destination="26D-dS-UcA" eventType="touchUpInside" id="voY-Xz-Fjn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCg-7D-Jqu">
+                                <rect key="frame" x="79" y="348" width="162" height="30"/>
+                                <state key="normal" title="Show fourth with segue"/>
+                                <connections>
+                                    <action selector="onShowFourthButtonWithSegueClick:" destination="26D-dS-UcA" eventType="touchUpInside" id="Qxt-dy-opG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OwX-zk-cBi" firstAttribute="centerX" secondItem="MTG-pH-7ye" secondAttribute="centerX" id="98T-SS-GWO"/>
+                            <constraint firstItem="U6X-HK-GZ8" firstAttribute="top" secondItem="OwX-zk-cBi" secondAttribute="bottom" constant="8" id="CER-JD-WGI"/>
+                            <constraint firstItem="KCg-7D-Jqu" firstAttribute="top" secondItem="U6X-HK-GZ8" secondAttribute="bottom" constant="8" id="Gfg-hf-7ct"/>
+                            <constraint firstItem="KCg-7D-Jqu" firstAttribute="centerX" secondItem="MTG-pH-7ye" secondAttribute="centerX" id="Gjf-oZ-hXd"/>
                             <constraint firstItem="OwX-zk-cBi" firstAttribute="centerY" secondItem="MTG-pH-7ye" secondAttribute="centerY" id="ayn-6j-TUH"/>
+                            <constraint firstItem="U6X-HK-GZ8" firstAttribute="centerX" secondItem="MTG-pH-7ye" secondAttribute="centerX" id="vON-jM-Q8C"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xpV-de-Ivg">
@@ -169,10 +187,31 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="gi0-z0-6ms" kind="show" identifier="ShowFourth" id="Jzd-nw-oXA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZR-rz-FqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1343" y="300"/>
+        </scene>
+        <!--Fourth View Controller-->
+        <scene sceneID="fJa-qX-ABj">
+            <objects>
+                <viewController storyboardIdentifier="Fourth" id="gi0-z0-6ms" customClass="FourthViewController" customModule="SegueCoordinator_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="12E-FX-Mer"/>
+                        <viewControllerLayoutGuide type="bottom" id="wgP-iA-3kr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ode-C2-ox7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1k-OD-yq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-426" y="300"/>
         </scene>
     </scenes>
 </document>
