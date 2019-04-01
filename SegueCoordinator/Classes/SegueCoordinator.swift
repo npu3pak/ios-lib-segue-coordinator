@@ -312,6 +312,50 @@ open class SegueCoordinator {
         currentNavigationController.popToViewController(controller, animated: animated)
     }
 
+    // MARK: - Unwind
+
+    public func unwindToFirst<T: UIViewController>(type: T.Type, animated: Bool = true) {
+        unwindToFirst(animated: animated, where: {$0 is T})
+    }
+
+    public func unwindToLast<T: UIViewController>(type: T.Type, animated: Bool = true) {
+        unwindToLast(animated: animated, where: {$0 is T})
+    }
+
+    public func unwindToFirst(animated: Bool = true, where predicate: (UIViewController) -> Bool) {
+        guard let controller = findFirst(where: predicate) else {
+            print("Unable to find view controller")
+            return
+        }
+
+        unwindToController(controller, animated: animated)
+    }
+
+    public func unwindToLast(animated: Bool = true, where predicate: (UIViewController) -> Bool) {
+        guard let controller = findLast(where: predicate) else {
+            print("Unable to find view controller")
+            return
+        }
+
+        unwindToController(controller, animated: animated)
+    }
+
+    public func unwindToController(_ controller: UIViewController, animated: Bool = true) {
+        if controller.presentedViewController != nil {
+            controller.dismiss(animated: animated, completion: nil)
+        }
+
+        if controller is UINavigationController {
+            return
+        }
+
+        if let navigationController = controller.navigationController {
+            if navigationController.viewControllers.contains(controller) {
+                navigationController.popToViewController(controller, animated: animated)
+            }
+        }
+    }
+
     // MARK: - Search
 
     public func findFirst<T: UIViewController>(type: T) -> T? {

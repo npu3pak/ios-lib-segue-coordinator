@@ -206,7 +206,47 @@
                     <view key="view" contentMode="scaleToFill" id="ode-C2-ox7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z2Z-6g-QYD">
+                                <rect key="frame" x="72.5" y="212" width="175" height="144"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbz-Zq-uxq">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                        <state key="normal" title="Unwind to root"/>
+                                        <connections>
+                                            <action selector="onUnwindToRootButtonClick:" destination="gi0-z0-6ms" eventType="touchUpInside" id="9QG-td-2fa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k3-ZT-UMd">
+                                        <rect key="frame" x="0.0" y="38" width="175" height="30"/>
+                                        <state key="normal" title="Unwind to third"/>
+                                        <connections>
+                                            <action selector="onUnwindToThirdButtonClick:" destination="gi0-z0-6ms" eventType="touchUpInside" id="zYR-Un-oMh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v2-sE-7sp">
+                                        <rect key="frame" x="0.0" y="76" width="175" height="30"/>
+                                        <state key="normal" title="Unwind to fourth (to self)"/>
+                                        <connections>
+                                            <action selector="onUnwindToFourthButtonClick:" destination="gi0-z0-6ms" eventType="touchUpInside" id="MDo-Wd-REg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xA-pF-GX2">
+                                        <rect key="frame" x="0.0" y="114" width="175" height="30"/>
+                                        <state key="normal" title="Unwind to first navigation"/>
+                                        <connections>
+                                            <action selector="onUnwindToFirstNavigationButtonClick:" destination="gi0-z0-6ms" eventType="touchUpInside" id="6G5-jg-6cD"/>
+                                            <action selector="onUnwindToFourthButtonClick:" destination="gi0-z0-6ms" eventType="touchUpInside" id="85Y-bm-Pys"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z2Z-6g-QYD" firstAttribute="centerY" secondItem="ode-C2-ox7" secondAttribute="centerY" id="ytT-rv-T9l"/>
+                            <constraint firstItem="z2Z-6g-QYD" firstAttribute="centerX" secondItem="ode-C2-ox7" secondAttribute="centerX" id="zNn-rm-XG7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z1k-OD-yq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
