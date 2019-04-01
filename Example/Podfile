@@ -3,5 +3,4 @@ use_frameworks!
 target 'SegueCoordinator_Example' do
   pod 'SegueCoordinator', :path => '../'
   
-  end
 end

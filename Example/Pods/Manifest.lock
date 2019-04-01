@@ -1,16 +1,16 @@
 PODS:
-  - SegueCoordinator (0.5.0)
+  - SegueCoordinator (0.8.1)
 
 DEPENDENCIES:
   - SegueCoordinator (from `../`)
 
 EXTERNAL SOURCES:
   SegueCoordinator:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  SegueCoordinator: 47fcf93d8fc52bbafd3931d6358ab6b6e81e6a72
+  SegueCoordinator: 8c074657be01a164dd8430cdc76680a2d984d0d7
 
-PODFILE CHECKSUM: 7253ee36f50d205d45f0a283cc8c6bec7504e919
+PODFILE CHECKSUM: 51898eaa949fce1bebd9d59a908baacd1bde8d48
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -61,6 +61,10 @@ class MainCoordinator: SegueCoordinator {
         // Push from modal controller
         push("Fourth", type: FourthViewController.self) {
             $0.title = "Fourth"
+            $0.onUnwindToRoot = { self.unwindToFirst(type: RootViewController.self) }
+            $0.onUnwindToThird = { self.unwindToFirst(type: ThirdViewController.self) }
+            $0.onUnwindToFourth = { self.unwindToFirst(type: FourthViewController.self) }
+            $0.onUnwindToFirstNavigation = { self.unwindToFirst(type: UINavigationController.self) }
         }
     }
 
@@ -68,6 +72,10 @@ class MainCoordinator: SegueCoordinator {
         // Push from modal controller
         segue("ShowFourth", type: FourthViewController.self) {
             $0.title = "Fourth"
+            $0.onUnwindToRoot = { self.unwindToFirst(type: RootViewController.self) }
+            $0.onUnwindToThird = { self.unwindToFirst(type: ThirdViewController.self) }
+            $0.onUnwindToFourth = { self.unwindToFirst(type: FourthViewController.self) }
+            $0.onUnwindToFirstNavigation = { self.unwindToFirst(type: UINavigationController.self) }
         }
     }
 }
