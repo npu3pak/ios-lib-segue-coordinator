@@ -2,7 +2,6 @@
 import UIKit
 
 public extension SegueCoordinator {
-
     /**
      This method will search the controller by its type. Search for view controller starting on the navigation stack of the root navigation controller. Then the search will be continued on the navigation stack of the presented view controller and so on. This method will return the first view controller that will fulfill the conditions of the search. In other words, it returns the farthest to the current view controller in the navigation stack.
 

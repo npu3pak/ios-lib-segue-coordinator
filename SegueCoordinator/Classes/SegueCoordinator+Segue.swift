@@ -32,13 +32,13 @@ public extension SegueCoordinator {
 
         do {
             try NSExceptionCatch.catchException {
-                self.currentController.pendingSegueCoordinator = self
-                self.currentController.performSegue(withIdentifier: segueId, sender: self)
+                self.topController.pendingSegueCoordinator = self
+                self.topController.performSegue(withIdentifier: segueId, sender: self)
             }
         } catch _ {
-            currentController.pendingSegueCoordinator = nil
+            topController.pendingSegueCoordinator = nil
             seguePreparationActions.removeValue(forKey: segueId)
-            print("Unable to execute segue \(segueId) from \(currentController)")
+            print("Unable to execute segue \(segueId) from \(topController)")
         }
     }
 
@@ -48,7 +48,7 @@ public extension SegueCoordinator {
         }
 
         seguePreparationActions.removeValue(forKey: segueId)
-        currentController.pendingSegueCoordinator = nil
+        topController.pendingSegueCoordinator = nil
 
         let nextController: UIViewController
         if let targetNavigationController = segue.destination as? UINavigationController {

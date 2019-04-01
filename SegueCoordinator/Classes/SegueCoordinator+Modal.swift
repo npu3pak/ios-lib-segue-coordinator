@@ -55,11 +55,11 @@ public extension SegueCoordinator {
             modalNavController.modalPresentationStyle = style
             // We should wrap before preparation callback to give access to modal navigationController from prepareController()
             prepareController(controller)
-            currentNavigationController.present(modalNavController, animated: animated, completion: nil)
+            topNavigationController.present(modalNavController, animated: animated, completion: nil)
         } else {
             controller.modalPresentationStyle = style
             prepareController(controller)
-            currentNavigationController.present(controller, animated: animated, completion: nil)
+            topNavigationController.present(controller, animated: animated, completion: nil)
         }
     }
 }

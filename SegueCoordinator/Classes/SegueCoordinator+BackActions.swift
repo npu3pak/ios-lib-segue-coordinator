@@ -10,7 +10,7 @@ public extension SegueCoordinator {
      */
 
     func closeModal(animated: Bool = true, _ completion: @escaping (() -> Void) = {}) {
-        currentController.dismiss(animated: animated, completion: completion)
+        topController.dismiss(animated: animated, completion: completion)
     }
 
     /**
@@ -20,7 +20,7 @@ public extension SegueCoordinator {
      */
 
     func pop(animated: Bool = true) {
-        currentNavigationController.popViewController(animated: animated)
+        topNavigationController.popViewController(animated: animated)
     }
 
     /**
@@ -30,7 +30,7 @@ public extension SegueCoordinator {
      */
 
     func popToController(_ controller: UIViewController, animated: Bool = true) {
-        currentNavigationController.popToViewController(controller, animated: animated)
+        topNavigationController.popToViewController(controller, animated: animated)
     }
 
 }

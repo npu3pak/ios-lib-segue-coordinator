@@ -30,7 +30,7 @@ public extension SegueCoordinator {
 
     func setController<T: UIViewController>(_ controller: T, prepareController: (_ controller: T) -> Void) {
         prepareController(controller)
-        currentNavigationController.viewControllers = [controller]
+        topNavigationController.viewControllers = [controller]
     }
 
 }

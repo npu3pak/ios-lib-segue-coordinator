@@ -3,7 +3,10 @@ import UIKit
 
 public extension SegueCoordinator {
 
-    var currentController: UIViewController {
+    /**
+     Returns top view controller.
+    */
+    var topController: UIViewController {
         // View controllers are presented from Navigation Controller if it exists
         var controller: UIViewController = rootNavigationController
 
@@ -18,7 +21,10 @@ public extension SegueCoordinator {
         }
     }
 
-    var currentNavigationController: UINavigationController {
+    /**
+     Returns navigation controller of top view controller if it exists. Returns navigation controller of top presenting view controller otherwise.
+     */
+    var topNavigationController: UINavigationController {
         var navigationController = rootNavigationController
         var controller: UIViewController = rootNavigationController
 
