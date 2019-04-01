@@ -312,9 +312,56 @@ open class SegueCoordinator {
         currentNavigationController.popToViewController(controller, animated: animated)
     }
 
+    // MARK: - Search
+
+    public func findFirst<T: UIViewController>(type: T) -> T? {
+        return findFirst(where: { $0 is T }) as? T
+    }
+
+    public func findFirst(where predicate: (UIViewController) -> Bool) -> UIViewController? {
+        var controller: UIViewController? = rootNavigationController
+
+        repeat {
+            if predicate(controller!) {
+                return controller!
+            }
+            if let navigationController = controller as? UINavigationController {
+                if let target = navigationController.viewControllers.first(where: predicate) {
+                    return target
+                }
+            }
+            controller = controller?.presentedViewController
+        } while controller != nil
+
+        return nil
+    }
+
+    public func findLast<T: UIViewController>(type: T) -> T? {
+        return findLast(where: { $0 is T }) as? T
+    }
+
+    public func findLast(where predicate: (UIViewController) -> Bool) -> UIViewController? {
+        var result: UIViewController?
+        var controller: UIViewController? = rootNavigationController
+
+        repeat {
+            if predicate(controller!) {
+                result = controller!
+            }
+            if let navigationController = controller as? UINavigationController {
+                if let target = navigationController.viewControllers.last(where: predicate) {
+                    result = target
+                }
+            }
+            controller = controller?.presentedViewController
+        } while controller != nil
+
+        return result
+    }
+
     // MARK: - Utility
 
-    var currentController: UIViewController {
+    public var currentController: UIViewController {
         // View controllers are presented from Navigation Controller if it exists
         var controller: UIViewController = rootNavigationController
 
@@ -329,7 +376,7 @@ open class SegueCoordinator {
         }
     }
 
-    var currentNavigationController: UINavigationController {
+    public var currentNavigationController: UINavigationController {
         var navigationController = rootNavigationController
         var controller: UIViewController = rootNavigationController
 
