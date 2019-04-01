@@ -1,9 +1,3 @@
-//
-//  SegueCoordinator+BackActions.swift
-//  Pods-SegueCoordinator_Example
-//
-//  Created by Евгений Сафронов on 01/04/2019.
-//
 
 import UIKit
 

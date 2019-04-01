@@ -1,9 +1,3 @@
-//
-//  SegueCoordinator.swift
-//  Pods
-//
-//  Created by Евгений Сафронов on 25.01.17.
-//
 
 import UIKit
 

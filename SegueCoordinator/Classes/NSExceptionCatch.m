@@ -1,10 +1,3 @@
-//
-//  NSExceptionCatch.m
-//  Pods
-//
-//  Created by Евгений Сафронов on 25.01.17.
-//
-//
 
 #import "NSExceptionCatch.h"
 

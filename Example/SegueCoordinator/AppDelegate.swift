@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  SegueCoordinator
-//
-//  Created by Евгений Сафронов on 01/25/2017.
-//  Copyright (c) 2017 Евгений Сафронов. All rights reserved.
-//
 
 import UIKit
 
