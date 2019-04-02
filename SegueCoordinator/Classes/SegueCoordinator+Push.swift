@@ -1,11 +1,7 @@
-//
-//  SegueCoordinator+Push.swift
-//  Pods-SegueCoordinator_Example
-//
-//  Created by Евгений Сафронов on 01/04/2019.
-//
 
 import UIKit
+
+// MARK: Push
 
 public extension SegueCoordinator {
     /**
@@ -51,7 +47,7 @@ public extension SegueCoordinator {
 
     func pushController<T: UIViewController>(_ controller: T, animated: Bool = true, prepareController: (_ controller: T) -> Void) {
         prepareController(controller)
-        currentNavigationController.pushViewController(controller, animated: animated)
+        topNavigationController.pushViewController(controller, animated: animated)
     }
 }
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SegueCoordinator'
-  s.version          = '0.8.1'
+  s.version          = '0.9.0'
   s.summary          = 'Create separate classes that will handle navigation instead of view controllers'
   s.homepage         = 'https://github.com/npu3pak/ios-lib-segue-coordinator'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

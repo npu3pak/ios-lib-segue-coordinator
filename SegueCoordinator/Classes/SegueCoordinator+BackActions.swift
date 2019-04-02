@@ -1,11 +1,7 @@
-//
-//  SegueCoordinator+BackActions.swift
-//  Pods-SegueCoordinator_Example
-//
-//  Created by Евгений Сафронов on 01/04/2019.
-//
 
 import UIKit
+
+// MARK: Back actions
 
 public extension SegueCoordinator {
     /**
@@ -16,7 +12,7 @@ public extension SegueCoordinator {
      */
 
     func closeModal(animated: Bool = true, _ completion: @escaping (() -> Void) = {}) {
-        currentController.dismiss(animated: animated, completion: completion)
+        topController.dismiss(animated: animated, completion: completion)
     }
 
     /**
@@ -26,7 +22,7 @@ public extension SegueCoordinator {
      */
 
     func pop(animated: Bool = true) {
-        currentNavigationController.popViewController(animated: animated)
+        topNavigationController.popViewController(animated: animated)
     }
 
     /**
@@ -36,7 +32,7 @@ public extension SegueCoordinator {
      */
 
     func popToController(_ controller: UIViewController, animated: Bool = true) {
-        currentNavigationController.popToViewController(controller, animated: animated)
+        topNavigationController.popToViewController(controller, animated: animated)
     }
 
 }

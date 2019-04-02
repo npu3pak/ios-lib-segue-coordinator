@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SegueCoordinator  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SegueCoordinator  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SegueCoordinator Docs</a> (69% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SegueCoordinator Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SegueCoordinator  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/SegueCoordinator.html">SegueCoordinator</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='seguecoordinator' class='heading'>SegueCoordinator</h1>
+
+<p><a href="http://cocoapods.org/pods/SegueCoordinator"><img src="https://img.shields.io/cocoapods/v/SegueCoordinator.svg?style=flat" alt="Version"></a>
+<a href="http://cocoapods.org/pods/SegueCoordinator"><img src="https://img.shields.io/cocoapods/l/SegueCoordinator.svg?style=flat" alt="License"></a>
+<a href="http://cocoapods.org/pods/SegueCoordinator"><img src="https://img.shields.io/cocoapods/p/SegueCoordinator.svg?style=flat" alt="Platform"></a></p>
+
+<p>Alternative to Application Coordinator pattern. Create separate classes that will handle navigation instead of view controllers.</p>
+<h3 id='remove-navigation-from-view-controllers' class='heading'>Remove navigation from view controllers.</h3>
+
+<p>Controllers no longer need to know anything about each other. If the controller needs to show some data in another controller, it calls a closure and passes data into it. SegueCoordinator handles this closure, shows the desired controller and populates it with data.</p>
+<h3 id='split-application-into-parts' class='heading'>Split application into parts.</h3>
+
+<p>You can create multiple coordinators for different business processes and reuse them. SegueCoordinator can become a good entry point for these processes.</p>
+<h3 id='remove-the-boilerplate-code-increase-readability' class='heading'>Remove the boilerplate code. Increase readability.</h3>
+
+<p>SegueCoordinator allows you to perform typical navigation tasks like <strong>push, segue, modal</strong> in a compact and consistent manner.</p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 9+</li>
+<li>Swift 5</li>
+<li>XCode 10.2+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>SegueCoordinator is available through <a href="http://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'SegueCoordinator'</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='1-prepare-controllers' class='heading'>1. Prepare controllers</h3>
+
+<p>Create Main.storyboard with initial ListViewController and DetailsViewController. Add segue with identifier <q>ShowDetails</q> from list to details.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ListViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">onShowDetails</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)?</span>
+
+    <span class="kd">func</span> <span class="nf">showDetails</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">onShowDetails</span><span class="p">?(</span><span class="s">"Data"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">DetailsViewController</span><span class="p">:</span> <span class="kt">UIViewController</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">details</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="c1">// show details text here</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+
+<p><strong>IMPORTANT</strong></p>
+
+<p>If you override prepareForSegue method, be sure to call super.prepareForSegue</p>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="k">for</span> <span class="nv">segue</span><span class="p">:</span> <span class="kt">UIStoryboardSegue</span><span class="p">,</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">prepare</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="n">segue</span><span class="p">,</span> <span class="nv">sender</span><span class="p">:</span> <span class="n">sender</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='2-create-coordinator' class='heading'>2. Create coordinator</h3>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SegueCoordinator</span>
+
+<span class="kd">class</span> <span class="kt">MainCoordinator</span><span class="p">:</span> <span class="kt">SegueCoordinator</span> <span class="p">{</span>
+    <span class="nf">init</span><span class="p">(</span><span class="nv">rootNavigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">storyboardName</span><span class="p">:</span> <span class="s">"Main"</span><span class="p">,</span> <span class="nv">rootNavigationController</span><span class="p">:</span> <span class="n">rootNavigationController</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">start</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nf">setInitial</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">ListViewController</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$0</span><span class="o">.</span><span class="n">onShowDetails</span> <span class="o">=</span>  <span class="p">{</span> <span class="p">[</span><span class="k">unowned</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span> <span class="k">self</span><span class="o">.</span><span class="nf">showDetails</span><span class="p">(</span><span class="nv">$0</span><span class="p">)</span> <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">showDetails</span><span class="p">(</span><span class="n">_</span> <span class="nv">details</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">segue</span><span class="p">(</span><span class="s">"ShowDetails"</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">DetailsViewController</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$0</span><span class="o">.</span><span class="n">details</span> <span class="o">=</span> <span class="n">details</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='3-configure-appdelegate' class='heading'>3. Configure AppDelegate</h3>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AppDelegate</span><span class="p">:</span> <span class="kt">UIResponder</span><span class="p">,</span> <span class="kt">UIApplicationDelegate</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span>
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">mainCoordinator</span><span class="p">:</span> <span class="kt">MainCoordinator</span><span class="p">?</span>
+
+    <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplication</span><span class="o">.</span><span class="kt">LaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">rootNavigationController</span> <span class="o">=</span> <span class="kt">UINavigationController</span><span class="p">()</span>
+        <span class="n">window</span><span class="p">?</span><span class="o">.</span><span class="n">rootViewController</span> <span class="o">=</span> <span class="n">rootNavigationController</span>
+        <span class="n">window</span><span class="p">?</span><span class="o">.</span><span class="nf">makeKeyAndVisible</span><span class="p">()</span>
+
+        <span class="n">mainCoordinator</span> <span class="o">=</span> <span class="kt">MainCoordinator</span><span class="p">(</span><span class="nv">rootNavigationController</span><span class="p">:</span> <span class="n">rootNavigationController</span><span class="p">)</span>
+        <span class="n">mainCoordinator</span><span class="p">?</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Evgeniy Safronov, <a href="mailto:evsafronov.personal@yandex.ru">evsafronov.personal@yandex.ru</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>SegueCoordinator is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/npu3pak/ios-lib-segue-coordinator" target="_blank" rel="external">Evgeniy Safronov</a>. All rights reserved. (Last updated: 2019-04-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

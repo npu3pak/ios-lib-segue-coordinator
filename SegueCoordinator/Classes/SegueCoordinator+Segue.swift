@@ -1,12 +1,8 @@
-//
-//  SegueCoordinator+Segue.swift
-//  Pods-SegueCoordinator_Example
-//
-//  Created by Евгений Сафронов on 01/04/2019.
-//
 
 import UIKit
 import ObjectiveC
+
+// MARK: Segue
 
 public extension SegueCoordinator {
     /**
@@ -35,17 +31,8 @@ public extension SegueCoordinator {
 
     private func segue(_ segueId: String, prepareController: @escaping (UIViewController) -> Void) {
         seguePreparationActions[segueId] = prepareController
-
-        do {
-            try NSExceptionCatch.catchException {
-                self.currentController.pendingSegueCoordinator = self
-                self.currentController.performSegue(withIdentifier: segueId, sender: self)
-            }
-        } catch _ {
-            currentController.pendingSegueCoordinator = nil
-            seguePreparationActions.removeValue(forKey: segueId)
-            print("Unable to execute segue \(segueId) from \(currentController)")
-        }
+        topController.pendingSegueCoordinator = self
+        topController.performSegue(withIdentifier: segueId, sender: self)
     }
 
     fileprivate func prepareForSegue(_ segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +41,7 @@ public extension SegueCoordinator {
         }
 
         seguePreparationActions.removeValue(forKey: segueId)
-        currentController.pendingSegueCoordinator = nil
+        topController.pendingSegueCoordinator = nil
 
         let nextController: UIViewController
         if let targetNavigationController = segue.destination as? UINavigationController {

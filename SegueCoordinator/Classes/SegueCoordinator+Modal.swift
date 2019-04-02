@@ -1,11 +1,7 @@
-//
-//  SegueCoordinator+Modal.swift
-//  Pods-SegueCoordinator_Example
-//
-//  Created by Евгений Сафронов on 01/04/2019.
-//
 
 import UIKit
+
+// MARK: Modal
 
 public extension SegueCoordinator {
     /**
@@ -61,11 +57,11 @@ public extension SegueCoordinator {
             modalNavController.modalPresentationStyle = style
             // We should wrap before preparation callback to give access to modal navigationController from prepareController()
             prepareController(controller)
-            currentNavigationController.present(modalNavController, animated: animated, completion: nil)
+            topNavigationController.present(modalNavController, animated: animated, completion: nil)
         } else {
             controller.modalPresentationStyle = style
             prepareController(controller)
-            currentNavigationController.present(controller, animated: animated, completion: nil)
+            topNavigationController.present(controller, animated: animated, completion: nil)
         }
     }
 }
