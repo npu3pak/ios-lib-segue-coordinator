@@ -13,7 +13,7 @@
         <!--Initial View Controller-->
         <scene sceneID="RmY-8z-7tI">
             <objects>
-                <viewController id="tAe-IV-VEO" customClass="InitialViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Initial" id="tAe-IV-VEO" customClass="InitialViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OqS-zt-oLN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

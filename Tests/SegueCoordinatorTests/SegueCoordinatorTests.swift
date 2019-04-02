@@ -63,4 +63,49 @@ class SegueCoordinatorTests: XCTestCase {
     func  testInstantiate() {
         _ = coordinator.instantiate("A", type: AViewController.self)
     }
+
+    // MARK: - Push
+
+    func testPushInitial() {
+        let e = expectation(description: "Waiting for appear")
+        coordinator.pushInitial(type: InitialViewController.self, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+
+        XCTAssert(coordinator.topController is InitialViewController)
+    }
+
+    func testPush() {
+        let e = expectation(description: "Waiting for appear")
+        coordinator.push("A", type: AViewController.self, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
+    func testPushController() {
+        let aViewController = coordinator.instantiate("A", type: AViewController.self)
+
+        let e = expectation(description: "Waiting for appear")
+        coordinator.pushController(aViewController, prepareController: { $0.onDidAppear = e.fulfill } )
+        waitForExpectations(timeout: 1, handler: nil)
+
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
+    func testPushAfterPush() {
+        let waitA = expectation(description: "Waiting for A")
+        coordinator.push("A", type: AViewController.self, prepareController: { $0.onDidAppear = waitA.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssert(coordinator.topController is AViewController)
+
+        let waitB = expectation(description: "Waiting for B")
+        coordinator.push("B", type: BViewController.self, prepareController: { $0.onDidAppear = waitB.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssert(coordinator.topController is BViewController)
+
+        let waitC = expectation(description: "Waiting for C")
+        coordinator.push("C", type: CViewController.self, prepareController: { $0.onDidAppear = waitC.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssert(coordinator.topController is CViewController)
+    }
 }
