@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: Modal
+
 public extension SegueCoordinator {
     /**
      Create the initial view controller from the storyboard and present it modally from the current navigation controller.

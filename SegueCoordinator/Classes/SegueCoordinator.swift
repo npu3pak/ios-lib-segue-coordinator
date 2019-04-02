@@ -3,10 +3,14 @@ import UIKit
 
 open class SegueCoordinator {
 
+    // MARK: Properties
+
     public let storyboard: UIStoryboard
     public let rootNavigationController: UINavigationController
 
     var seguePreparationActions = [String: (UIViewController) -> Void]()
+
+    // MARK: Initializers
 
     /**
      Typically, you should override this initializer and specify storyboard name.

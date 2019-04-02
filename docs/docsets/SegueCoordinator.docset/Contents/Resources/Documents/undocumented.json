@@ -1,0 +1,89 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": null,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": 4,
+      "symbol": "SegueCoordinator",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": 8,
+      "symbol": "SegueCoordinator.storyboard",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evsafronov/Projects/GitHub/SegueCoordinator/SegueCoordinator/Classes/SegueCoordinator.swift",
+      "line": 9,
+      "symbol": "SegueCoordinator.rootNavigationController",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/evsafronov/Projects/GitHub/SegueCoordinator"
+}

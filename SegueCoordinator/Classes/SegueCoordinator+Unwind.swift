@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: Unwind
+
 public extension SegueCoordinator {
     /**
       This method will make a transition to the farthest matching controller. It performs searching for the first view controller matching the specified type. Then it closes all modal view controllers above the found view controller's stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.

@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: Back actions
+
 public extension SegueCoordinator {
     /**
      Dismiss current modal view controller.

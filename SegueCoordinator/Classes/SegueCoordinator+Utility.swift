@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: Utility
+
 public extension SegueCoordinator {
 
     /**

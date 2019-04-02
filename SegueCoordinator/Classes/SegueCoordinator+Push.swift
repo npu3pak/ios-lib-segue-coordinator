@@ -1,6 +1,8 @@
 
 import UIKit
 
+// MARK: Push
+
 public extension SegueCoordinator {
     /**
      Create the initial view controller from the storyboard and push it to the stack of the current navigation controller.

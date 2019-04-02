@@ -1,7 +1,25 @@
 
 import UIKit
 
+// MARK: Set
+
 public extension SegueCoordinator {
+
+    /**
+     Create the initial view controller from the storyboard and make it the root of the current navigation controller.
+     All other presented controllers will be removed from navigation stack.
+
+     - Parameter type: Expected type of view controller.
+     - Parameter prepareController: The block to execute after controller will be created.
+     Pass any data and dependencies into view controller here.
+     - Parameter controller: Created view controller
+     */
+
+    func setInitial<T: UIViewController>(type: T.Type, prepareController: (_ controller: T) -> Void) {
+        let controller = storyboard.instantiateInitialViewController() as! T
+        setController(controller, prepareController: prepareController)
+    }
+
     /**
      Create the view controller from the storyboard by identifier and make it the root of the current navigation controller.
      All other presented controllers will be removed from navigation stack.

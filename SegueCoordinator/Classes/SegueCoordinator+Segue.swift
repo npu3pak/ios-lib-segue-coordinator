@@ -2,6 +2,8 @@
 import UIKit
 import ObjectiveC
 
+// MARK: Segue
+
 public extension SegueCoordinator {
     /**
      Perform segue from currently presented view controller
