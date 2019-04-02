@@ -20,6 +20,8 @@
 		6F6AA37A5151E6B860B31CD7 /* Pods_SegueCoordinator_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CADBDEC5FE2345F191EC7FC /* Pods_SegueCoordinator_Example.framework */; };
 		C74CE12445310A2546BC43F4 /* Pods_SegueCoordinatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */; };
 		DB17AD90225118F60055A9AF /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB17AD8F225118F60055A9AF /* FourthViewController.swift */; };
+		DBE342A22253591000134C60 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE342A12253591000134C60 /* InitialViewController.swift */; };
+		DBE342A322535A2800134C60 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE342A12253591000134C60 /* InitialViewController.swift */; };
 		DBF0B5F222534F9100EFC7C1 /* SegueCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0B5F122534F9100EFC7C1 /* SegueCoordinatorTests.swift */; };
 		DBF0B5FB225351C300EFC7C1 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0B5FA225351C300EFC7C1 /* AViewController.swift */; };
 		DBF0B5FD225351D100EFC7C1 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF0B5FC225351D100EFC7C1 /* BViewController.swift */; };
@@ -38,13 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DBF0B5F422534F9100EFC7C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
-			remoteInfo = SegueCoordinator_Example;
-		};
 		DBF0B6222253550B00EFC7C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
@@ -77,6 +72,7 @@
 		B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DBAF04EA8EF00590CA7178 /* Pods-SegueCoordinatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB17AD8F225118F60055A9AF /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		DBE342A12253591000134C60 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		DBF0B5EF22534F9100EFC7C1 /* SegueCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegueCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF0B5F122534F9100EFC7C1 /* SegueCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueCoordinatorTests.swift; sourceTree = "<group>"; };
 		DBF0B5F322534F9100EFC7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -234,6 +230,7 @@
 		DBF0B5F9225351B300EFC7C1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DBE342A12253591000134C60 /* InitialViewController.swift */,
 				DBF0B5FA225351C300EFC7C1 /* AViewController.swift */,
 				DBF0B5FC225351D100EFC7C1 /* BViewController.swift */,
 				DBF0B5FE225351DB00EFC7C1 /* CViewController.swift */,
@@ -295,7 +292,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				DBF0B5F522534F9100EFC7C1 /* PBXTargetDependency */,
 				DBF0B6232253550B00EFC7C1 /* PBXTargetDependency */,
 			);
 			name = SegueCoordinatorTests;
@@ -493,6 +489,7 @@
 				40BDDE611E39ACC100ABF10D /* SecondViewController.swift in Sources */,
 				40BDDE631E39ACC900ABF10D /* ThirdViewController.swift in Sources */,
 				40BDDE5F1E39ACB500ABF10D /* FirstViewController.swift in Sources */,
+				DBE342A22253591000134C60 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE342A322535A2800134C60 /* InitialViewController.swift in Sources */,
 				DBF0B5FB225351C300EFC7C1 /* AViewController.swift in Sources */,
 				DBF0B60B2253532900EFC7C1 /* TestCoordinator.swift in Sources */,
 				DBF0B605225351F000EFC7C1 /* FViewController.swift in Sources */,
@@ -524,11 +522,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DBF0B5F522534F9100EFC7C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* SegueCoordinatorExample */;
-			targetProxy = DBF0B5F422534F9100EFC7C1 /* PBXContainerItemProxy */;
-		};
 		DBF0B6232253550B00EFC7C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DBF0B60F225354F000EFC7C1 /* SegueCoordinatorTestsHost */;

@@ -10,4 +10,10 @@ import UIKit
 
 class GViewController: UIViewController {
 
+    var onDidAppear: (() -> Void)?
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        onDidAppear?()
+    }
 }
