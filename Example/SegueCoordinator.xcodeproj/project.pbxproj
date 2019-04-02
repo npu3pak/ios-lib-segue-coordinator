@@ -12,6 +12,7 @@
 		40BDDE5F1E39ACB500ABF10D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE5E1E39ACB500ABF10D /* FirstViewController.swift */; };
 		40BDDE611E39ACC100ABF10D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE601E39ACC100ABF10D /* SecondViewController.swift */; };
 		40BDDE631E39ACC900ABF10D /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BDDE621E39ACC900ABF10D /* ThirdViewController.swift */; };
+		5DFEBA2BD6DC84CEAD177901 /* Pods_SegueCoordinatorExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5532C5ABFF4C5843727F224A /* Pods_SegueCoordinatorExample.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -54,18 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0607B2CFFBBA269079A2412E /* Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests/Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		14B5C274B36D982B2F1DF60F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		249589E2795DD76141D80ADB /* Pods-SegueCoordinator_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		34F82451EE334AE9E6AC4D2D /* Pods-SegueCoordinatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests.release.xcconfig"; sourceTree = "<group>"; };
 		4012361C1E39B5F7004549DE /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		40BDDE5C1E39ACAC00ABF10D /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		40BDDE5E1E39ACB500ABF10D /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		40BDDE601E39ACC100ABF10D /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		40BDDE621E39ACC900ABF10D /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		5F7AD44E968BBEE9F73FF5E7 /* Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests/Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5F7C5BF111DEA57BBD03DB3F /* Pods-SegueCoordinator_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Tests/Pods-SegueCoordinator_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* SegueCoordinator_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueCoordinator_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C9278C75D67DCA80F203B4B /* Pods-SegueCoordinatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample.release.xcconfig"; sourceTree = "<group>"; };
+		5532C5ABFF4C5843727F224A /* Pods_SegueCoordinatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* SegueCoordinatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SegueCoordinatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,7 +75,6 @@
 		8CADBDEC5FE2345F191EC7FC /* Pods_SegueCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEF528BB5C3046B6AA9E8D8 /* SegueCoordinator.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SegueCoordinator.podspec; path = ../SegueCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B607741D972909C87BD82155 /* Pods-SegueCoordinator_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D8DBAF04EA8EF00590CA7178 /* Pods-SegueCoordinatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DB17AD8F225118F60055A9AF /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		DBF0B5EF22534F9100EFC7C1 /* SegueCoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegueCoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,8 +96,8 @@
 		DBF0B619225354F100EFC7C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBF0B61C225354F100EFC7C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBF0B61E225354F100EFC7C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC60A687B858A29A7E9A573E /* Pods-SegueCoordinator_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinator_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F8B9D51A47AF2CEE660471D3 /* Pods_SegueCoordinator_Example_SegueCoordinator_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Example_SegueCoordinator_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3D828E6152A0B1206A9FA8 /* Pods-SegueCoordinatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F6AA37A5151E6B860B31CD7 /* Pods_SegueCoordinator_Example.framework in Frameworks */,
+				5DFEBA2BD6DC84CEAD177901 /* Pods_SegueCoordinatorExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +156,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* SegueCoordinator_Example.app */,
+				607FACD01AFB9204008FA782 /* SegueCoordinatorExample.app */,
 				DBF0B5EF22534F9100EFC7C1 /* SegueCoordinatorTests.xctest */,
 				DBF0B610225354F000EFC7C1 /* SegueCoordinatorTestsHost.app */,
 			);
@@ -204,6 +203,7 @@
 				88F44967F4CC7E505D001258 /* Pods_SegueCoordinator_Tests.framework */,
 				F8B9D51A47AF2CEE660471D3 /* Pods_SegueCoordinator_Example_SegueCoordinator_ExampleTests.framework */,
 				B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */,
+				5532C5ABFF4C5843727F224A /* Pods_SegueCoordinatorExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,14 +211,10 @@
 		9F01D58034228B9D667FC513 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B607741D972909C87BD82155 /* Pods-SegueCoordinator_Example.debug.xcconfig */,
-				EC60A687B858A29A7E9A573E /* Pods-SegueCoordinator_Example.release.xcconfig */,
-				5F7C5BF111DEA57BBD03DB3F /* Pods-SegueCoordinator_Tests.debug.xcconfig */,
-				249589E2795DD76141D80ADB /* Pods-SegueCoordinator_Tests.release.xcconfig */,
-				5F7AD44E968BBEE9F73FF5E7 /* Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.debug.xcconfig */,
-				0607B2CFFBBA269079A2412E /* Pods-SegueCoordinator_Example-SegueCoordinator_ExampleTests.release.xcconfig */,
 				D8DBAF04EA8EF00590CA7178 /* Pods-SegueCoordinatorTests.debug.xcconfig */,
 				34F82451EE334AE9E6AC4D2D /* Pods-SegueCoordinatorTests.release.xcconfig */,
+				FA3D828E6152A0B1206A9FA8 /* Pods-SegueCoordinatorExample.debug.xcconfig */,
+				4C9278C75D67DCA80F203B4B /* Pods-SegueCoordinatorExample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -231,7 +227,8 @@
 				DBF0B60A2253532900EFC7C1 /* TestCoordinator.swift */,
 				DBF0B5F322534F9100EFC7C1 /* Info.plist */,
 			);
-			path = SegueCoordinatorTests;
+			name = SegueCoordinatorTests;
+			path = ../Tests/SegueCoordinatorTests;
 			sourceTree = "<group>";
 		};
 		DBF0B5F9225351B300EFC7C1 /* Controllers */ = {
@@ -259,15 +256,16 @@
 				DBF0B61B225354F100EFC7C1 /* LaunchScreen.storyboard */,
 				DBF0B61E225354F100EFC7C1 /* Info.plist */,
 			);
-			path = SegueCoordinatorTestsHost;
+			name = SegueCoordinatorTestsHost;
+			path = ../Tests/SegueCoordinatorTestsHost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* SegueCoordinator_Example */ = {
+		607FACCF1AFB9204008FA782 /* SegueCoordinatorExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SegueCoordinator_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SegueCoordinatorExample" */;
 			buildPhases = (
 				7D4B07CB7C4563BCFD70ECFD /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -279,9 +277,9 @@
 			);
 			dependencies = (
 			);
-			name = SegueCoordinator_Example;
+			name = SegueCoordinatorExample;
 			productName = SegueCoordinator;
-			productReference = 607FACD01AFB9204008FA782 /* SegueCoordinator_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* SegueCoordinatorExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DBF0B5EE22534F9100EFC7C1 /* SegueCoordinatorTests */ = {
@@ -362,7 +360,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* SegueCoordinator_Example */,
+				607FACCF1AFB9204008FA782 /* SegueCoordinatorExample */,
 				DBF0B60F225354F000EFC7C1 /* SegueCoordinatorTestsHost */,
 				DBF0B5EE22534F9100EFC7C1 /* SegueCoordinatorTests */,
 			);
@@ -429,7 +427,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SegueCoordinator/SegueCoordinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -438,7 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinator_Example/Pods-SegueCoordinator_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D4B07CB7C4563BCFD70ECFD /* [CP] Check Pods Manifest.lock */ = {
@@ -452,7 +450,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SegueCoordinator_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SegueCoordinatorExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -528,7 +526,7 @@
 /* Begin PBXTargetDependency section */
 		DBF0B5F522534F9100EFC7C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* SegueCoordinator_Example */;
+			target = 607FACCF1AFB9204008FA782 /* SegueCoordinatorExample */;
 			targetProxy = DBF0B5F422534F9100EFC7C1 /* PBXContainerItemProxy */;
 		};
 		DBF0B6232253550B00EFC7C1 /* PBXTargetDependency */ = {
@@ -681,7 +679,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B607741D972909C87BD82155 /* Pods-SegueCoordinator_Example.debug.xcconfig */;
+			baseConfigurationReference = FA3D828E6152A0B1206A9FA8 /* Pods-SegueCoordinatorExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SegueCoordinator/Info.plist;
@@ -695,7 +693,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC60A687B858A29A7E9A573E /* Pods-SegueCoordinator_Example.release.xcconfig */;
+			baseConfigurationReference = 4C9278C75D67DCA80F203B4B /* Pods-SegueCoordinatorExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SegueCoordinator/Info.plist;
@@ -722,7 +720,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SegueCoordinatorTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Tests/SegueCoordinatorTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -750,7 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SegueCoordinatorTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Tests/SegueCoordinatorTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
@@ -778,7 +776,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SegueCoordinatorTestsHost/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Tests/SegueCoordinatorTestsHost/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -805,7 +803,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M8NLKHKFZX;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = SegueCoordinatorTestsHost/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../Tests/SegueCoordinatorTestsHost/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
@@ -829,7 +827,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SegueCoordinator_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SegueCoordinatorExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,

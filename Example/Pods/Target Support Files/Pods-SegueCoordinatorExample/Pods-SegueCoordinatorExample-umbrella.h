@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SegueCoordinator_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SegueCoordinator_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_SegueCoordinatorExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_SegueCoordinatorExampleVersionString[];
 

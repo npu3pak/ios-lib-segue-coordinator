@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SegueCoordinator_Example.app"
-               BlueprintName = "SegueCoordinator_Example"
+               BuildableName = "SegueCoordinatorExample.app"
+               BlueprintName = "SegueCoordinatorExample"
                ReferencedContainer = "container:SegueCoordinator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BuildableName = "SegueCoordinatorExample.app"
+            BlueprintName = "SegueCoordinatorExample"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,8 +71,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BuildableName = "SegueCoordinatorExample.app"
+            BlueprintName = "SegueCoordinatorExample"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,8 +90,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BuildableName = "SegueCoordinatorExample.app"
+            BlueprintName = "SegueCoordinatorExample"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
