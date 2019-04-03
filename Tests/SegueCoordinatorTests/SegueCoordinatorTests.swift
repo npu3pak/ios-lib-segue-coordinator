@@ -67,17 +67,13 @@ class SegueCoordinatorTests: XCTestCase {
     // MARK: - Push
 
     func testPushInitial() {
-        let e = expectation(description: "Waiting for appear")
-        coordinator.pushInitial(type: InitialViewController.self, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        pushInitialSync(type: InitialViewController.self)
 
         XCTAssert(coordinator.topController is InitialViewController)
     }
 
     func testPush() {
-        let e = expectation(description: "Waiting for appear")
-        coordinator.push("A", type: AViewController.self, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        pushSync("A", type: AViewController.self)
 
         XCTAssert(coordinator.topController is AViewController)
     }
@@ -93,19 +89,39 @@ class SegueCoordinatorTests: XCTestCase {
     }
 
     func testPushAfterPush() {
-        let waitA = expectation(description: "Waiting for A")
-        coordinator.push("A", type: AViewController.self, prepareController: { $0.onDidAppear = waitA.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        pushSync("A", type: AViewController.self)
         XCTAssert(coordinator.topController is AViewController)
 
-        let waitB = expectation(description: "Waiting for B")
-        coordinator.push("B", type: BViewController.self, prepareController: { $0.onDidAppear = waitB.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        pushSync("B", type: BViewController.self)
         XCTAssert(coordinator.topController is BViewController)
 
-        let waitC = expectation(description: "Waiting for C")
-        coordinator.push("C", type: CViewController.self, prepareController: { $0.onDidAppear = waitC.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        pushSync("C", type: CViewController.self)
         XCTAssert(coordinator.topController is CViewController)
+    }
+
+    // MARK: - Synchronous transition methods
+
+    private func pushInitialSync<T: PTestableController>(type: T.Type) {
+        let e = expectation(description: "Waiting for appear")
+        coordinator.pushInitial(type: type, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    private func pushSync<T: PTestableController>(_ storyboardId: String, type: T.Type) {
+        let e = expectation(description: "Waiting \(storyboardId) for appear")
+        coordinator.push(storyboardId, type: type, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    private func modalInitialSync<T: PTestableController>(type: T.Type) {
+        let e = expectation(description: "Waiting for appear")
+        coordinator.modalInitial(type: type, style: .formSheet, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+
+    private func modalSync<T: PTestableController>(_ storyboardId: String, type: T.Type) {
+        let e = expectation(description: "Waiting \(storyboardId) for appear")
+        coordinator.modal(storyboardId, type: type, style: .formSheet, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }

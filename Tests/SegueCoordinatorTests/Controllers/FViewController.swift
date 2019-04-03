@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FViewController: UIViewController {
+class FViewController: UIViewController, PTestableController {
 
     var onDidAppear: (() -> Void)?
 
