@@ -166,13 +166,7 @@ class SegueCoordinatorTests: XCTestCase {
     }
 
     func testPop() {
-        pushSync("A", type: AViewController.self)
-        pushSync("B", type: BViewController.self)
-        modalSync("C", type: CViewController.self)
-        pushSync("D", type: DViewController.self)
-        modalSync("E", type: EViewController.self)
-        modalSync("F", type: FViewController.self)
-        pushSync("G", type: GViewController.self)
+        buildStack("pA pB mC pD mE mF pG")
 
         // pA pB mC pD mE mF pG
         XCTAssert(coordinator.topController is GViewController)
@@ -210,27 +204,78 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssert(coordinator.topController is AViewController)
     }
 
+    func testCloseModal() {
+        buildStack("pA mB pC uD mE uF uG")
+
+        // pA mB pC uD mE uF uG
+        XCTAssert(coordinator.topController is GViewController)
+
+        closeModalSync()
+        // pA mB pC uD mE uF
+        XCTAssert(coordinator.topController is FViewController)
+
+        closeModalSync()
+        // pA mB pC uD mE
+        XCTAssert(coordinator.topController is EViewController)
+
+        closeModalSync()
+        // pA mB pC uD
+        XCTAssert(coordinator.topController is DViewController)
+
+        closeModalSync()
+        // pA mB pC
+        XCTAssert(coordinator.topController is CViewController)
+
+        closeModalSync()
+        // pA
+        XCTAssert(coordinator.topController is AViewController)
+
+        closeModalSync()
+        // pA
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
     // MARK: - Synchronous transition methods
 
-    private func pushInitialSync<T: PTestableController>(type: T.Type) {
+    /*
+     m - wrapped modal
+     u - unwrapped modal
+     p - push
+    */
+    private func buildStack(_ stack: String) {
+        let commands: [(action: String, id: String)] = stack.split(separator: " ").map {
+            let item = NSString(string: String($0))
+            return (action: item.substring(to: 1), id: item.substring(from: 1))
+        }
+        for (action, id) in commands {
+            switch action {
+            case "m": modalSync(id, type: TestableController.self)
+            case "u": modalSync(id, type: TestableController.self, wrap: false)
+            case "p": pushSync(id, type: TestableController.self)
+            default: break
+            }
+        }
+    }
+
+    private func pushInitialSync<T: TestableController>(type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for appear")
         coordinator.pushInitial(type: type, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
-    private func pushSync<T: PTestableController>(_ storyboardId: String, type: T.Type) {
+    private func pushSync<T: TestableController>(_ storyboardId: String, type: T.Type) {
         let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
         coordinator.push(storyboardId, type: type, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
-    private func modalInitialSync<T: PTestableController>(type: T.Type, wrap: Bool = true) {
+    private func modalInitialSync<T: TestableController>(type: T.Type, wrap: Bool = true) {
         let e = XCTestExpectation(description: "Waiting for appear")
         coordinator.modalInitial(type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
-    private func modalSync<T: PTestableController>(_ storyboardId: String, type: T.Type, wrap: Bool = true) {
+    private func modalSync<T: TestableController>(_ storyboardId: String, type: T.Type, wrap: Bool = true) {
         let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
         coordinator.modal(storyboardId, type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)

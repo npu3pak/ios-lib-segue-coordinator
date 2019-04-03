@@ -8,12 +8,6 @@
 
 import UIKit
 
-class InitialViewController: UIViewController, PTestableController {
+class InitialViewController: TestableController {
     
-    var onDidAppear: (() -> Void)?
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        onDidAppear?()
-    }
 }

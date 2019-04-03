@@ -8,12 +8,6 @@
 
 import UIKit
 
-class FViewController: UIViewController, PTestableController {
-
-    var onDidAppear: (() -> Void)?
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        onDidAppear?()
-    }
+class FViewController: TestableController {
+    
 }
