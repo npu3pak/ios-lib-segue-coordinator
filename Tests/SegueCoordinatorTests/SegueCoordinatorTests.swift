@@ -165,29 +165,80 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssert(coordinator.topController is DViewController)
     }
 
+    func testPop() {
+        pushSync("A", type: AViewController.self)
+        pushSync("B", type: BViewController.self)
+        modalSync("C", type: CViewController.self)
+        pushSync("D", type: DViewController.self)
+        modalSync("E", type: EViewController.self)
+        modalSync("F", type: FViewController.self)
+        pushSync("G", type: GViewController.self)
+
+        // pA pB mC pD mE mF pG
+        XCTAssert(coordinator.topController is GViewController)
+
+        coordinator.pop()
+        // pA pB mC pD mE mF
+        XCTAssert(coordinator.topController is FViewController)
+
+        coordinator.pop()
+        // pA pB mC pD mE mF
+        XCTAssert(coordinator.topController is FViewController)
+
+        closeModalSync()
+        // pA pB mC pD mE
+        XCTAssert(coordinator.topController is EViewController)
+
+        closeModalSync()
+        // pA pB mC pD
+        XCTAssert(coordinator.topController is DViewController)
+
+        coordinator.pop()
+        // pA pB mC
+        XCTAssert(coordinator.topController is CViewController)
+
+        closeModalSync()
+        // pA pB
+        XCTAssert(coordinator.topController is BViewController)
+
+        coordinator.pop()
+        // pA
+        XCTAssert(coordinator.topController is AViewController)
+
+        coordinator.pop()
+        // pA
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
     // MARK: - Synchronous transition methods
 
     private func pushInitialSync<T: PTestableController>(type: T.Type) {
-        let e = expectation(description: "Waiting for appear")
+        let e = XCTestExpectation(description: "Waiting for appear")
         coordinator.pushInitial(type: type, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        wait(for: [e], timeout: 1)
     }
 
     private func pushSync<T: PTestableController>(_ storyboardId: String, type: T.Type) {
-        let e = expectation(description: "Waiting \(storyboardId) for appear")
+        let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
         coordinator.push(storyboardId, type: type, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        wait(for: [e], timeout: 1)
     }
 
     private func modalInitialSync<T: PTestableController>(type: T.Type, wrap: Bool = true) {
-        let e = expectation(description: "Waiting for appear")
+        let e = XCTestExpectation(description: "Waiting for appear")
         coordinator.modalInitial(type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        wait(for: [e], timeout: 1)
     }
 
     private func modalSync<T: PTestableController>(_ storyboardId: String, type: T.Type, wrap: Bool = true) {
-        let e = expectation(description: "Waiting \(storyboardId) for appear")
+        let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
         coordinator.modal(storyboardId, type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
-        waitForExpectations(timeout: 1, handler: nil)
+        wait(for: [e], timeout: 1)
+    }
+
+    private func closeModalSync() {
+        let e = XCTestExpectation(description: "Waiting for closing modal")
+        coordinator.closeModal(animated: true, completion: e.fulfill )
+        wait(for: [e], timeout: 1)
     }
 }
