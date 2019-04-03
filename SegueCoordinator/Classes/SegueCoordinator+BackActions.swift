@@ -40,6 +40,7 @@ public extension SegueCoordinator {
 
      - Parameter type: Type of required view controller.
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
+     - Parameter completion: The block to execute after unwind transitions are finished.
      */
     func unwindToFirst<T: UIViewController>(type: T.Type, animated: Bool = true, completion: (() -> Void)? = nil) {
         unwindToFirst(animated: animated, where: {$0 is T}, completion: completion)
@@ -50,6 +51,7 @@ public extension SegueCoordinator {
 
      - Parameter type: Type of required view controller.
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
+     - Parameter completion: The block to execute after unwind transitions are finished.
      */
     func unwindToLast<T: UIViewController>(type: T.Type, animated: Bool = true, completion: (() -> Void)? = nil) {
         unwindToLast(animated: animated, where: {$0 is T}, completion: completion)
@@ -61,6 +63,7 @@ public extension SegueCoordinator {
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
      - Parameter predicate: Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.
      - Parameter controller: Controller to check for the searching conditions.
+     - Parameter completion: The block to execute after unwind transitions are finished.
      */
     func unwindToFirst(animated: Bool = true, where predicate: (UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findFirst(where: predicate) else {
@@ -77,6 +80,7 @@ public extension SegueCoordinator {
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
      - Parameter predicate: Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.
      - Parameter controller: Controller to check for the searching conditions.
+     - Parameter completion: The block to execute after unwind transitions are finished.
      */
     func unwindToLast(animated: Bool = true, where predicate: (_ controller: UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findLast(where: predicate) else {
@@ -92,6 +96,7 @@ public extension SegueCoordinator {
 
      - Parameter controller: controller to navigate to
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
+     - Parameter completion: The block to execute after unwind transitions are finished.
      */
     func unwindToController(_ controller: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
         func popStack() {
