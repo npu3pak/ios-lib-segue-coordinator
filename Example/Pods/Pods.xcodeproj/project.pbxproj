@@ -7,25 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1434ADEA6A436E275756E9982BF94537 /* SegueCoordinator+BackActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761FCD45857700599C76EC66398C30AE /* SegueCoordinator+BackActions.swift */; };
-		1E426BBEC8C724BC5B89FB113F6CF01A /* SegueCoordinator+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6AE3E9BCE6F92128E5C4870A3E9E18A /* SegueCoordinator+Instantiate.swift */; };
+		18825234F98BF4E9EE38E2C3725BB901 /* SegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9794C29AAFF25AAE533D3377B2AD870D /* SegueCoordinator.swift */; };
+		2A2EC9437944840346B55D91F9DD63D5 /* SegueCoordinator+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B68B670B4F6A51A50B7DDF8E17C08F7 /* SegueCoordinator+Search.swift */; };
+		2F1DCFB60DEA0CFFD05AAFC79B396B46 /* SegueCoordinator+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4507BEB1CD9E16266825166B1469D /* SegueCoordinator+Set.swift */; };
 		39A1E71A147ED4FA32C63CD51353A7F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		4ADC55807BF63B8ABCD43D5856807C71 /* SegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76DCE1169588EE68C44A1D607B4ACB /* SegueCoordinator.swift */; };
+		3CE24ACE5A1ED1E44333215A2132641A /* SegueCoordinator+BackActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C4A3233ADF503E780A874666A8EDEB /* SegueCoordinator+BackActions.swift */; };
+		4D40CED90CD026923F533520E5BA4674 /* SegueCoordinator+Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CE28CCB076069C43FEC868F74A458 /* SegueCoordinator+Segue.swift */; };
 		6263F3C1406C6419F975AE35AC2B2FF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		65E620AC709A07035C25F969F466A65C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		67DC14DF0B83B6A28AA1511771D6B675 /* Pods-SegueCoordinatorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B43B4B92D733D34066A82B859452E8B /* Pods-SegueCoordinatorTests-dummy.m */; };
-		7657443C91389ADC865F87685514B63C /* SegueCoordinator+Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1871889A07933A9B605A59B26D7EEE0 /* SegueCoordinator+Set.swift */; };
+		7355BDB8CE337CBD8CC77F612EEBF676 /* SegueCoordinator+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C53B2C9B1EBE3787FDDAFB0C86412E /* SegueCoordinator+Push.swift */; };
+		7356A443C7E9A8AB9C197B805269E70D /* SegueCoordinator+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972563B9EA1D8DCD55CCC22299EB577 /* SegueCoordinator+Utility.swift */; };
 		7C4A428F24CEEA0CE2DF88095D969789 /* Pods-SegueCoordinatorExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E88746B896BF24121AA470A81617D54 /* Pods-SegueCoordinatorExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D4DDF8927DF0D21FEAB02A7D062EA43 /* SegueCoordinator+Unwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956433710D719B8293C8F229C58063E3 /* SegueCoordinator+Unwind.swift */; };
-		869BB3AB872FBDA15F0F59465AC7C262 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA84E74F037AD2CD948EFBB53B67C3F6 /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		869BB3AB872FBDA15F0F59465AC7C262 /* SegueCoordinator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F9A39883B61C68A70E49EC79408FC1B7 /* SegueCoordinator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FF07FA98D1664CB6AC6E57805F69197 /* Pods-SegueCoordinatorExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFA7850C0723BE77395A3F289127630 /* Pods-SegueCoordinatorExample-dummy.m */; };
-		9D7B8D6BE10B5A43DDDB5826CE65A434 /* SegueCoordinator+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC33398B955CF39950D4234D016EB64 /* SegueCoordinator+Push.swift */; };
-		D9E33E5D43E6F8A81F353397ACE47398 /* SegueCoordinator+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD76EFCF836484805D29837FB710DF /* SegueCoordinator+Utility.swift */; };
-		DB682A3EAFE3D850985E0062CFF8CD5C /* SegueCoordinator+Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE62879DEFC1E54AB91B7ACA0F3D1908 /* SegueCoordinator+Segue.swift */; };
+		B7E0582397C67685254767A759E11C4F /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0A7E2DC3C0478C22C74C7D6D75D775 /* SegueCoordinator-dummy.m */; };
+		D2CEC626644561C51C47EA5D6EAB337E /* SegueCoordinator+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF0553A1C6ED6EF6F045D6FD985BFE /* SegueCoordinator+Modal.swift */; };
+		DB5B39747AE76400116868264B71EA67 /* SegueCoordinator+Instantiate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE2AFDFBCBDE10F4ABDCC15847D88A0 /* SegueCoordinator+Instantiate.swift */; };
 		EECF386B4702EBDAB83801097A2EA883 /* Pods-SegueCoordinatorTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C47BC57A308F7DCC67662D72F999472 /* Pods-SegueCoordinatorTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F2A3A7CA2302791A6E23EE2CB11D04F0 /* SegueCoordinator+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8429C291FC19F2608D4C6672F18871D /* SegueCoordinator+Modal.swift */; };
-		F55C7415E33C2BFEB8806247E73652FA /* SegueCoordinator+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620BC1975660A849F6A98E88CEF6EDAE /* SegueCoordinator+Search.swift */; };
-		FE43FC2D8DF5301AC6FC25E7E66206FA /* SegueCoordinator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A04A3BE340A435053D13E0CBADE01CF1 /* SegueCoordinator-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,79 +45,78 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02FBC88720982563A942C9A2C2A7AE31 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
-		0911E95526895EEDC634C8623ED05DC6 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
+		0117A3791212F45CF238375F7C6BCDE1 /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
+		06BA08551EA8880BBDE1E743158786AE /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
+		08914C3BD206577000566829E38037E9 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
+		09C53B2C9B1EBE3787FDDAFB0C86412E /* SegueCoordinator+Push.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Push.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Push.swift"; sourceTree = "<group>"; };
+		09CD9437091B0FF532727FAEB4540811 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B0A7E2DC3C0478C22C74C7D6D75D775 /* SegueCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SegueCoordinator-dummy.m"; sourceTree = "<group>"; };
 		0B358992FF6F1CFD3BCDFFD94F428483 /* Pods-SegueCoordinatorExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinatorExample.debug.xcconfig"; sourceTree = "<group>"; };
-		0B58AFED4995A69E81862A30463C121E /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
 		0F43A67EA01FFE2E0F5506534F8CEA83 /* Pods-SegueCoordinatorTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinatorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0F7BD62682F0B0E9978D36651C35B628 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/search.json; sourceTree = "<group>"; };
-		14267C06E688AC8B11C845FD4CDCB13E /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
-		1EFDFBABAB34CD7AA1E06C6EAFE60960 /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
-		20AF29890DCA1C531FF75D98E5D6FFFA /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		279025400BEEC269DF34ACE1EC696358 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		1EEF91CC0F3766A485358894AF1FE40B /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/img/dash.png; sourceTree = "<group>"; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2B43B4B92D733D34066A82B859452E8B /* Pods-SegueCoordinatorTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinatorTests-dummy.m"; sourceTree = "<group>"; };
 		2C47BC57A308F7DCC67662D72F999472 /* Pods-SegueCoordinatorTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinatorTests-umbrella.h"; sourceTree = "<group>"; };
-		30EC111BD067DA54F5958622D5AAFF95 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = index.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
+		3317FA7AF8314B19A6DA1E809E2C9AED /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/img/gh.png; sourceTree = "<group>"; };
 		359F5748F38F03F24405CE7FD4504BDB /* Pods-SegueCoordinatorExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinatorExample-frameworks.sh"; sourceTree = "<group>"; };
-		35AA370FD9B7849DE01E4501755D1826 /* SegueCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = SegueCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		37FDB9C284D450A3B6FB329FE2243D6D /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
-		39304CCA633C21707A632064D9A7DA22 /* Pods_SegueCoordinatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3BE1959C1D31DC3967AC746DECCBB499 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		378CE28CCB076069C43FEC868F74A458 /* SegueCoordinator+Segue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Segue.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Segue.swift"; sourceTree = "<group>"; };
+		386917B80D5E556B24E591730EAE9469 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
+		39304CCA633C21707A632064D9A7DA22 /* Pods_SegueCoordinatorExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinatorExample.framework; path = "Pods-SegueCoordinatorExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AF4507BEB1CD9E16266825166B1469D /* SegueCoordinator+Set.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Set.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Set.swift"; sourceTree = "<group>"; };
 		3FFE92633F439C28FDD8136BC9EF9525 /* Pods-SegueCoordinatorExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinatorExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		474CD811BB1E52DDB4119B8355E4F3A0 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/badge.svg; sourceTree = "<group>"; };
-		498448D795D045E0BEA1F72178B5C6AC /* SegueCoordinator.tgz */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = SegueCoordinator.tgz; path = docs/docsets/SegueCoordinator.tgz; sourceTree = "<group>"; };
+		45F39E66055F6C0D2CA92AC5E3779126 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/SegueCoordinator.docset/Contents/Info.plist; sourceTree = "<group>"; };
+		4617A49B8D0629C020B38AB0AFBFC2CC /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; name = Classes.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		484CE1FFD1EEA70D2BAAF5F033BDA215 /* SegueCoordinator.tgz */ = {isa = PBXFileReference; includeInIndex = 1; name = SegueCoordinator.tgz; path = docs/docsets/SegueCoordinator.tgz; sourceTree = "<group>"; };
+		4850F235D45CAB4E233C461DEFEE83D7 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
+		4B68B670B4F6A51A50B7DDF8E17C08F7 /* SegueCoordinator+Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Search.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Search.swift"; sourceTree = "<group>"; };
 		4E88746B896BF24121AA470A81617D54 /* Pods-SegueCoordinatorExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SegueCoordinatorExample-umbrella.h"; sourceTree = "<group>"; };
-		52AD76EFCF836484805D29837FB710DF /* SegueCoordinator+Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Utility.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Utility.swift"; sourceTree = "<group>"; };
-		57D90A2DC771C802607D3FD5B8FFD768 /* SegueCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegueCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5920718EA15B98AA0E1E9C53747BA158 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		620BC1975660A849F6A98E88CEF6EDAE /* SegueCoordinator+Search.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Search.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Search.swift"; sourceTree = "<group>"; };
-		659F31D1EF49EE7DB55875F7A9288AAB /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = Classes.html; path = docs/Classes.html; sourceTree = "<group>"; };
-		668BE6AED540FE1F8ED48B141AD54832 /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = jazzy.css; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/css/jazzy.css; sourceTree = "<group>"; };
-		6927E33C2F6DC228D662C66EF0A835D0 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
+		4FE79C4B6B95282E84A2A81C984D6CE0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		55F90FA73EB334F600AC8BA1EFE1AE83 /* SegueCoordinator.html */ = {isa = PBXFileReference; includeInIndex = 1; name = SegueCoordinator.html; path = docs/Classes/SegueCoordinator.html; sourceTree = "<group>"; };
+		57D90A2DC771C802607D3FD5B8FFD768 /* SegueCoordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SegueCoordinator.framework; path = SegueCoordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60B1D0DCD9FC7C63F2028DF4A7FBA5A3 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
 		6A36A385A6C2C23E980EBEF263143315 /* Pods-SegueCoordinatorTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinatorTests-resources.sh"; sourceTree = "<group>"; };
+		6AC0BD3273D013CE6B36FBE306144ECC /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/index.html; sourceTree = "<group>"; };
 		6DF36BCFE175AE0BF6F3C5FB839D1DBA /* Pods-SegueCoordinatorExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinatorExample.release.xcconfig"; sourceTree = "<group>"; };
-		6EC33398B955CF39950D4234D016EB64 /* SegueCoordinator+Push.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Push.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Push.swift"; sourceTree = "<group>"; };
-		72B8B49B64217AEEDB186B2711C070C7 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = badge.svg; path = docs/badge.svg; sourceTree = "<group>"; };
-		7371E2D6BBE45E5F5103379654A97512 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/js/jquery.min.js; sourceTree = "<group>"; };
-		761FCD45857700599C76EC66398C30AE /* SegueCoordinator+BackActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+BackActions.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+BackActions.swift"; sourceTree = "<group>"; };
-		79E6FF34C463C6A6D2808A8895C8291C /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jazzy.js; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
-		79FBBB557B221A5CBEB4C7257A58F6BF /* SegueCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-prefix.pch"; sourceTree = "<group>"; };
+		7541FAD029EABC08A2E249A3FDFAD9A9 /* dash.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = dash.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/dash.png; sourceTree = "<group>"; };
+		790199049D6B1AFE35615F9FDDB23E90 /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/carat.png; sourceTree = "<group>"; };
+		79CE7F4BB03A1FFCC96DA407DA344730 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
+		79E948F6B2E1BE9B8EFCC3F467E33CEB /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/js/jazzy.js; sourceTree = "<group>"; };
 		7A690EC1B952015F6C26D718E9D2A4A7 /* Pods-SegueCoordinatorTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinatorTests-frameworks.sh"; sourceTree = "<group>"; };
-		7F6AD3A45B3A8A1036D85163EDAE8663 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/css/highlight.css; sourceTree = "<group>"; };
 		82BF5E0884682BAE1331FA7AC943C08E /* Pods-SegueCoordinatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinatorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8601F04137178649B4ED5E6AA4B1A1F6 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = undocumented.json; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/undocumented.json; sourceTree = "<group>"; };
 		86D1D4899050D61D178773CE83E4C84E /* Pods-SegueCoordinatorExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SegueCoordinatorExample-resources.sh"; sourceTree = "<group>"; };
-		905BA4CBC357F2B19BDD04C35C712A64 /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
-		956433710D719B8293C8F229C58063E3 /* SegueCoordinator+Unwind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Unwind.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Unwind.swift"; sourceTree = "<group>"; };
-		989875D6F680FC79BC3E3D98B54EE03E /* SegueCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SegueCoordinator.xcconfig; sourceTree = "<group>"; };
-		98D6161F1EF94102E73D37B58E394C73 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
-		98DBC54D2228B16BF554DACFE26EF275 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9AB18D01DC0D5E898F36652F08A0388A /* SegueCoordinator.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = SegueCoordinator.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/Classes/SegueCoordinator.html; sourceTree = "<group>"; };
-		9E9384ED1662F9CF751F0C9697E235D8 /* SegueCoordinator.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = SegueCoordinator.html; path = docs/Classes/SegueCoordinator.html; sourceTree = "<group>"; };
-		A04A3BE340A435053D13E0CBADE01CF1 /* SegueCoordinator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SegueCoordinator-dummy.m"; sourceTree = "<group>"; };
+		879F0AF1D45A189BE192950312D8A2DE /* SegueCoordinator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-prefix.pch"; sourceTree = "<group>"; };
+		8A7B7276E3B527F36CDB62D82E2C7D7B /* jazzy.css */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.css; path = docs/css/jazzy.css; sourceTree = "<group>"; };
+		9794C29AAFF25AAE533D3377B2AD870D /* SegueCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegueCoordinator.swift; path = SegueCoordinator/Classes/SegueCoordinator.swift; sourceTree = "<group>"; };
+		9796EBC2424ABFD7002CF9DC54549919 /* SegueCoordinator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SegueCoordinator.modulemap; sourceTree = "<group>"; };
+		9AFE29CD3AA5B4ECFD4C2ADFDDEBC337 /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
+		A3A8E2B4C0E364CD8F1C72861B417AE9 /* search.json */ = {isa = PBXFileReference; includeInIndex = 1; name = search.json; path = docs/search.json; sourceTree = "<group>"; };
 		A4D6DF5556423CBA1FF07C2AD2CEC031 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC00605226C7E87B7E8D4FDCE781179B /* Pods-SegueCoordinatorExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SegueCoordinatorExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AF76DCE1169588EE68C44A1D607B4ACB /* SegueCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegueCoordinator.swift; path = SegueCoordinator/Classes/SegueCoordinator.swift; sourceTree = "<group>"; };
-		B68323C940B2E6BB20B700D684DD0CBF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = docs/docsets/SegueCoordinator.docset/Contents/Info.plist; sourceTree = "<group>"; };
-		B8429C291FC19F2608D4C6672F18871D /* SegueCoordinator+Modal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Modal.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Modal.swift"; sourceTree = "<group>"; };
-		C44C25DDACB628CD1360B5FEA66360DD /* Classes.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html.documentation; name = Classes.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/Classes.html; sourceTree = "<group>"; };
+		ACC8DE67C3E4B305098BD6C32885FCC7 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/undocumented.json; sourceTree = "<group>"; };
+		AD1B0BC93152AC346BAFA4F7A903FF61 /* badge.svg */ = {isa = PBXFileReference; includeInIndex = 1; name = badge.svg; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/badge.svg; sourceTree = "<group>"; };
+		B4C4A3233ADF503E780A874666A8EDEB /* SegueCoordinator+BackActions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+BackActions.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+BackActions.swift"; sourceTree = "<group>"; };
+		B972563B9EA1D8DCD55CCC22299EB577 /* SegueCoordinator+Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Utility.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Utility.swift"; sourceTree = "<group>"; };
+		BC9B0FFB1AAFBA795C6C069D651AF703 /* SegueCoordinator.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = SegueCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D00968DD754ED2EAF179ADD94775DB3E /* jquery.min.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = jquery.min.js; path = docs/js/jquery.min.js; sourceTree = "<group>"; };
-		D0A1C25DE13C9138958208F5371CFAA7 /* highlight.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = highlight.css; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/css/highlight.css; sourceTree = "<group>"; };
-		DA84E74F037AD2CD948EFBB53B67C3F6 /* SegueCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-umbrella.h"; sourceTree = "<group>"; };
-		DE62879DEFC1E54AB91B7ACA0F3D1908 /* SegueCoordinator+Segue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Segue.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Segue.swift"; sourceTree = "<group>"; };
+		CEA502D08152BDBF0A63044FF3D4A9F0 /* SegueCoordinator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SegueCoordinator.xcconfig; sourceTree = "<group>"; };
+		D4E47789B74A175210D596BF471A8595 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D6702AE451AB1B1BC9D2E93753502080 /* jazzy.js */ = {isa = PBXFileReference; includeInIndex = 1; name = jazzy.js; path = docs/js/jazzy.js; sourceTree = "<group>"; };
 		DE80CA0067E080C4D167C2C65190E3E2 /* Pods-SegueCoordinatorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SegueCoordinatorTests.release.xcconfig"; sourceTree = "<group>"; };
-		E1871889A07933A9B605A59B26D7EEE0 /* SegueCoordinator+Set.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Set.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Set.swift"; sourceTree = "<group>"; };
-		E193C541981A6D70A9FFC441812EED8B /* Pods_SegueCoordinatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E193C541981A6D70A9FFC441812EED8B /* Pods_SegueCoordinatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SegueCoordinatorTests.framework; path = "Pods-SegueCoordinatorTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E4F71B6EBADD9675B0CC420818D773 /* Pods-SegueCoordinatorTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SegueCoordinatorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E5ECFA4268341E4584A4C99B829E0F89 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6AE3E9BCE6F92128E5C4870A3E9E18A /* SegueCoordinator+Instantiate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Instantiate.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Instantiate.swift"; sourceTree = "<group>"; };
+		E77F3AD6955FA98134B2E5D4251EB4B8 /* index.html */ = {isa = PBXFileReference; includeInIndex = 1; name = index.html; path = docs/index.html; sourceTree = "<group>"; };
+		E8BF0553A1C6ED6EF6F045D6FD985BFE /* SegueCoordinator+Modal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Modal.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Modal.swift"; sourceTree = "<group>"; };
+		EAD3FD195954740677BE4806AD563481 /* SegueCoordinator.html */ = {isa = PBXFileReference; includeInIndex = 1; name = SegueCoordinator.html; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/Classes/SegueCoordinator.html; sourceTree = "<group>"; };
 		ECFA7850C0723BE77395A3F289127630 /* Pods-SegueCoordinatorExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SegueCoordinatorExample-dummy.m"; sourceTree = "<group>"; };
 		ED3397CE04A3D66D7F2A801011304C37 /* Pods-SegueCoordinatorTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SegueCoordinatorTests.modulemap"; sourceTree = "<group>"; };
+		EFE2AFDFBCBDE10F4ABDCC15847D88A0 /* SegueCoordinator+Instantiate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SegueCoordinator+Instantiate.swift"; path = "SegueCoordinator/Classes/SegueCoordinator+Instantiate.swift"; sourceTree = "<group>"; };
+		F07057F3273E2FAC8C97013B3232AF81 /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; name = docSet.dsidx; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
 		F14E34395E7F0D7F972A083D442096EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F411473A6038CA3988BCC18D139B81E3 /* undocumented.json */ = {isa = PBXFileReference; includeInIndex = 1; name = undocumented.json; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/undocumented.json; sourceTree = "<group>"; };
+		F41A00FF02C79B25A11F97262BC3B67E /* gh.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = gh.png; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/Documents/img/gh.png; sourceTree = "<group>"; };
 		F53B7D99354379DAC37963D441CEB281 /* Pods-SegueCoordinatorExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SegueCoordinatorExample.modulemap"; sourceTree = "<group>"; };
-		FD998AD6B4601944415D41E49DBA97BF /* docSet.dsidx */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = docSet.dsidx; path = docs/docsets/SegueCoordinator.docset/Contents/Resources/docSet.dsidx; sourceTree = "<group>"; };
+		F834241BF778A3C3F04D1DE0FF54917A /* carat.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = carat.png; path = docs/img/carat.png; sourceTree = "<group>"; };
+		F9A39883B61C68A70E49EC79408FC1B7 /* SegueCoordinator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SegueCoordinator-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,18 +147,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CE736DC0CAAF7BEF8B822174C2D65E9 /* Support Files */ = {
+		1263AD37D9958DAF705F8EE6FA938A15 /* SegueCoordinator */ = {
 			isa = PBXGroup;
 			children = (
-				E5ECFA4268341E4584A4C99B829E0F89 /* Info.plist */,
-				905BA4CBC357F2B19BDD04C35C712A64 /* SegueCoordinator.modulemap */,
-				989875D6F680FC79BC3E3D98B54EE03E /* SegueCoordinator.xcconfig */,
-				A04A3BE340A435053D13E0CBADE01CF1 /* SegueCoordinator-dummy.m */,
-				79FBBB557B221A5CBEB4C7257A58F6BF /* SegueCoordinator-prefix.pch */,
-				DA84E74F037AD2CD948EFBB53B67C3F6 /* SegueCoordinator-umbrella.h */,
+				9794C29AAFF25AAE533D3377B2AD870D /* SegueCoordinator.swift */,
+				B4C4A3233ADF503E780A874666A8EDEB /* SegueCoordinator+BackActions.swift */,
+				EFE2AFDFBCBDE10F4ABDCC15847D88A0 /* SegueCoordinator+Instantiate.swift */,
+				E8BF0553A1C6ED6EF6F045D6FD985BFE /* SegueCoordinator+Modal.swift */,
+				09C53B2C9B1EBE3787FDDAFB0C86412E /* SegueCoordinator+Push.swift */,
+				4B68B670B4F6A51A50B7DDF8E17C08F7 /* SegueCoordinator+Search.swift */,
+				378CE28CCB076069C43FEC868F74A458 /* SegueCoordinator+Segue.swift */,
+				3AF4507BEB1CD9E16266825166B1469D /* SegueCoordinator+Set.swift */,
+				B972563B9EA1D8DCD55CCC22299EB577 /* SegueCoordinator+Utility.swift */,
+				37BEAABBA221476368A61BA904DDAFB3 /* Pod */,
+				9DD54395F935D50CAD0EECD296CFF894 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SegueCoordinator";
+			name = SegueCoordinator;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		26B579995D3C38F0C899F72AFABE2EB3 /* Pods-SegueCoordinatorTests */ = {
@@ -181,32 +184,43 @@
 			path = "Target Support Files/Pods-SegueCoordinatorTests";
 			sourceTree = "<group>";
 		};
-		4CEEA9C287AE78C0DA77E99925FF8B79 /* SegueCoordinator */ = {
+		37BEAABBA221476368A61BA904DDAFB3 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				AF76DCE1169588EE68C44A1D607B4ACB /* SegueCoordinator.swift */,
-				761FCD45857700599C76EC66398C30AE /* SegueCoordinator+BackActions.swift */,
-				E6AE3E9BCE6F92128E5C4870A3E9E18A /* SegueCoordinator+Instantiate.swift */,
-				B8429C291FC19F2608D4C6672F18871D /* SegueCoordinator+Modal.swift */,
-				6EC33398B955CF39950D4234D016EB64 /* SegueCoordinator+Push.swift */,
-				620BC1975660A849F6A98E88CEF6EDAE /* SegueCoordinator+Search.swift */,
-				DE62879DEFC1E54AB91B7ACA0F3D1908 /* SegueCoordinator+Segue.swift */,
-				E1871889A07933A9B605A59B26D7EEE0 /* SegueCoordinator+Set.swift */,
-				956433710D719B8293C8F229C58063E3 /* SegueCoordinator+Unwind.swift */,
-				52AD76EFCF836484805D29837FB710DF /* SegueCoordinator+Utility.swift */,
-				BAF7245F47C2119FA248400B0967E464 /* Pod */,
-				1CE736DC0CAAF7BEF8B822174C2D65E9 /* Support Files */,
+				08914C3BD206577000566829E38037E9 /* badge.svg */,
+				AD1B0BC93152AC346BAFA4F7A903FF61 /* badge.svg */,
+				F834241BF778A3C3F04D1DE0FF54917A /* carat.png */,
+				790199049D6B1AFE35615F9FDDB23E90 /* carat.png */,
+				0117A3791212F45CF238375F7C6BCDE1 /* Classes.html */,
+				4617A49B8D0629C020B38AB0AFBFC2CC /* Classes.html */,
+				7541FAD029EABC08A2E249A3FDFAD9A9 /* dash.png */,
+				1EEF91CC0F3766A485358894AF1FE40B /* dash.png */,
+				F07057F3273E2FAC8C97013B3232AF81 /* docSet.dsidx */,
+				F41A00FF02C79B25A11F97262BC3B67E /* gh.png */,
+				3317FA7AF8314B19A6DA1E809E2C9AED /* gh.png */,
+				79CE7F4BB03A1FFCC96DA407DA344730 /* highlight.css */,
+				60B1D0DCD9FC7C63F2028DF4A7FBA5A3 /* highlight.css */,
+				E77F3AD6955FA98134B2E5D4251EB4B8 /* index.html */,
+				6AC0BD3273D013CE6B36FBE306144ECC /* index.html */,
+				45F39E66055F6C0D2CA92AC5E3779126 /* Info.plist */,
+				8A7B7276E3B527F36CDB62D82E2C7D7B /* jazzy.css */,
+				4850F235D45CAB4E233C461DEFEE83D7 /* jazzy.css */,
+				D6702AE451AB1B1BC9D2E93753502080 /* jazzy.js */,
+				79E948F6B2E1BE9B8EFCC3F467E33CEB /* jazzy.js */,
+				9AFE29CD3AA5B4ECFD4C2ADFDDEBC337 /* jquery.min.js */,
+				386917B80D5E556B24E591730EAE9469 /* jquery.min.js */,
+				D4E47789B74A175210D596BF471A8595 /* LICENSE */,
+				4FE79C4B6B95282E84A2A81C984D6CE0 /* README.md */,
+				A3A8E2B4C0E364CD8F1C72861B417AE9 /* search.json */,
+				06BA08551EA8880BBDE1E743158786AE /* search.json */,
+				EAD3FD195954740677BE4806AD563481 /* SegueCoordinator.html */,
+				55F90FA73EB334F600AC8BA1EFE1AE83 /* SegueCoordinator.html */,
+				BC9B0FFB1AAFBA795C6C069D651AF703 /* SegueCoordinator.podspec */,
+				484CE1FFD1EEA70D2BAAF5F033BDA215 /* SegueCoordinator.tgz */,
+				F411473A6038CA3988BCC18D139B81E3 /* undocumented.json */,
+				ACC8DE67C3E4B305098BD6C32885FCC7 /* undocumented.json */,
 			);
-			name = SegueCoordinator;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		4F5EA0F4115E20D8CB427938E1F909C7 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4CEEA9C287AE78C0DA77E99925FF8B79 /* SegueCoordinator */,
-			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		5BCE7EE977749416622E0413EAA4C00A /* Targets Support Files */ = {
@@ -224,6 +238,20 @@
 				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		9DD54395F935D50CAD0EECD296CFF894 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09CD9437091B0FF532727FAEB4540811 /* Info.plist */,
+				9796EBC2424ABFD7002CF9DC54549919 /* SegueCoordinator.modulemap */,
+				CEA502D08152BDBF0A63044FF3D4A9F0 /* SegueCoordinator.xcconfig */,
+				0B0A7E2DC3C0478C22C74C7D6D75D775 /* SegueCoordinator-dummy.m */,
+				879F0AF1D45A189BE192950312D8A2DE /* SegueCoordinator-prefix.pch */,
+				F9A39883B61C68A70E49EC79408FC1B7 /* SegueCoordinator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SegueCoordinator";
 			sourceTree = "<group>";
 		};
 		A2701BFA2D9C837E2F4F56B3ED3BA366 /* Pods-SegueCoordinatorExample */ = {
@@ -244,45 +272,6 @@
 			path = "Target Support Files/Pods-SegueCoordinatorExample";
 			sourceTree = "<group>";
 		};
-		BAF7245F47C2119FA248400B0967E464 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				72B8B49B64217AEEDB186B2711C070C7 /* badge.svg */,
-				474CD811BB1E52DDB4119B8355E4F3A0 /* badge.svg */,
-				14267C06E688AC8B11C845FD4CDCB13E /* carat.png */,
-				3BE1959C1D31DC3967AC746DECCBB499 /* carat.png */,
-				659F31D1EF49EE7DB55875F7A9288AAB /* Classes.html */,
-				C44C25DDACB628CD1360B5FEA66360DD /* Classes.html */,
-				02FBC88720982563A942C9A2C2A7AE31 /* dash.png */,
-				20AF29890DCA1C531FF75D98E5D6FFFA /* dash.png */,
-				FD998AD6B4601944415D41E49DBA97BF /* docSet.dsidx */,
-				0911E95526895EEDC634C8623ED05DC6 /* gh.png */,
-				1EFDFBABAB34CD7AA1E06C6EAFE60960 /* gh.png */,
-				7F6AD3A45B3A8A1036D85163EDAE8663 /* highlight.css */,
-				D0A1C25DE13C9138958208F5371CFAA7 /* highlight.css */,
-				98D6161F1EF94102E73D37B58E394C73 /* index.html */,
-				30EC111BD067DA54F5958622D5AAFF95 /* index.html */,
-				B68323C940B2E6BB20B700D684DD0CBF /* Info.plist */,
-				37FDB9C284D450A3B6FB329FE2243D6D /* jazzy.css */,
-				668BE6AED540FE1F8ED48B141AD54832 /* jazzy.css */,
-				0B58AFED4995A69E81862A30463C121E /* jazzy.js */,
-				79E6FF34C463C6A6D2808A8895C8291C /* jazzy.js */,
-				D00968DD754ED2EAF179ADD94775DB3E /* jquery.min.js */,
-				7371E2D6BBE45E5F5103379654A97512 /* jquery.min.js */,
-				98DBC54D2228B16BF554DACFE26EF275 /* LICENSE */,
-				5920718EA15B98AA0E1E9C53747BA158 /* README.md */,
-				6927E33C2F6DC228D662C66EF0A835D0 /* search.json */,
-				0F7BD62682F0B0E9978D36651C35B628 /* search.json */,
-				9AB18D01DC0D5E898F36652F08A0388A /* SegueCoordinator.html */,
-				9E9384ED1662F9CF751F0C9697E235D8 /* SegueCoordinator.html */,
-				35AA370FD9B7849DE01E4501755D1826 /* SegueCoordinator.podspec */,
-				498448D795D045E0BEA1F72178B5C6AC /* SegueCoordinator.tgz */,
-				8601F04137178649B4ED5E6AA4B1A1F6 /* undocumented.json */,
-				279025400BEEC269DF34ACE1EC696358 /* undocumented.json */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		BFCBD7CAFB8E93071CDBE2F21B04588A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				24390EFD555DD124430DFF9724065945 /* Podfile */,
-				4F5EA0F4115E20D8CB427938E1F909C7 /* Development Pods */,
+				F8436E8892D90D7D1DC8DFF1BD5D898E /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				BFCBD7CAFB8E93071CDBE2F21B04588A /* Products */,
 				5BCE7EE977749416622E0413EAA4C00A /* Targets Support Files */,
@@ -310,6 +299,14 @@
 				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8436E8892D90D7D1DC8DFF1BD5D898E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1263AD37D9958DAF705F8EE6FA938A15 /* SegueCoordinator */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +344,7 @@
 			buildConfigurationList = 47C28EA885F568108894588EC120E215 /* Build configuration list for PBXNativeTarget "SegueCoordinator" */;
 			buildPhases = (
 				FFA2CB2361950B1D41AC38C1F7DF0F1D /* Headers */,
-				32398533CA7FA6F67A5EC20CFECA4D60 /* Sources */,
+				9F28E688F64CBCCB6D71E789950090F9 /* Sources */,
 				971193D88B556A2287688A85A62228E3 /* Frameworks */,
 				78AFD117E7BFF3487DACA17281E44D04 /* Resources */,
 			);
@@ -405,14 +402,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -452,29 +448,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32398533CA7FA6F67A5EC20CFECA4D60 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1434ADEA6A436E275756E9982BF94537 /* SegueCoordinator+BackActions.swift in Sources */,
-				1E426BBEC8C724BC5B89FB113F6CF01A /* SegueCoordinator+Instantiate.swift in Sources */,
-				F2A3A7CA2302791A6E23EE2CB11D04F0 /* SegueCoordinator+Modal.swift in Sources */,
-				9D7B8D6BE10B5A43DDDB5826CE65A434 /* SegueCoordinator+Push.swift in Sources */,
-				F55C7415E33C2BFEB8806247E73652FA /* SegueCoordinator+Search.swift in Sources */,
-				DB682A3EAFE3D850985E0062CFF8CD5C /* SegueCoordinator+Segue.swift in Sources */,
-				7657443C91389ADC865F87685514B63C /* SegueCoordinator+Set.swift in Sources */,
-				7D4DDF8927DF0D21FEAB02A7D062EA43 /* SegueCoordinator+Unwind.swift in Sources */,
-				D9E33E5D43E6F8A81F353397ACE47398 /* SegueCoordinator+Utility.swift in Sources */,
-				FE43FC2D8DF5301AC6FC25E7E66206FA /* SegueCoordinator-dummy.m in Sources */,
-				4ADC55807BF63B8ABCD43D5856807C71 /* SegueCoordinator.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4076FE5C2ADD41160A3FFE070DEC9141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				67DC14DF0B83B6A28AA1511771D6B675 /* Pods-SegueCoordinatorTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F28E688F64CBCCB6D71E789950090F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CE24ACE5A1ED1E44333215A2132641A /* SegueCoordinator+BackActions.swift in Sources */,
+				DB5B39747AE76400116868264B71EA67 /* SegueCoordinator+Instantiate.swift in Sources */,
+				D2CEC626644561C51C47EA5D6EAB337E /* SegueCoordinator+Modal.swift in Sources */,
+				7355BDB8CE337CBD8CC77F612EEBF676 /* SegueCoordinator+Push.swift in Sources */,
+				2A2EC9437944840346B55D91F9DD63D5 /* SegueCoordinator+Search.swift in Sources */,
+				4D40CED90CD026923F533520E5BA4674 /* SegueCoordinator+Segue.swift in Sources */,
+				2F1DCFB60DEA0CFFD05AAFC79B396B46 /* SegueCoordinator+Set.swift in Sources */,
+				7356A443C7E9A8AB9C197B805269E70D /* SegueCoordinator+Utility.swift in Sources */,
+				B7E0582397C67685254767A759E11C4F /* SegueCoordinator-dummy.m in Sources */,
+				18825234F98BF4E9EE38E2C3725BB901 /* SegueCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +535,7 @@
 		};
 		05DC07D8C42304DFE43AB56E78629273 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 989875D6F680FC79BC3E3D98B54EE03E /* SegueCoordinator.xcconfig */;
+			baseConfigurationReference = CEA502D08152BDBF0A63044FF3D4A9F0 /* SegueCoordinator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -607,7 +602,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -659,7 +653,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -734,7 +729,7 @@
 		};
 		980F419DCA4B6B537EA080745E50D2E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 989875D6F680FC79BC3E3D98B54EE03E /* SegueCoordinator.xcconfig */;
+			baseConfigurationReference = CEA502D08152BDBF0A63044FF3D4A9F0 /* SegueCoordinator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -767,7 +762,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
