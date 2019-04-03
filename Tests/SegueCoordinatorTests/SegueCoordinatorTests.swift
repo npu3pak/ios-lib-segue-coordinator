@@ -171,36 +171,28 @@ class SegueCoordinatorTests: XCTestCase {
         // pA pB mC pD mE mF pG
         XCTAssert(coordinator.topController is GViewController)
 
-        coordinator.pop()
-        // pA pB mC pD mE mF
+        coordinator.pop() // pA pB mC pD mE mF
         XCTAssert(coordinator.topController is FViewController)
 
-        coordinator.pop()
-        // pA pB mC pD mE mF
+        coordinator.pop() // pA pB mC pD mE mF
         XCTAssert(coordinator.topController is FViewController)
 
-        closeModalSync()
-        // pA pB mC pD mE
+        closeModalSync() // pA pB mC pD mE
         XCTAssert(coordinator.topController is EViewController)
 
-        closeModalSync()
-        // pA pB mC pD
+        closeModalSync() // pA pB mC pD
         XCTAssert(coordinator.topController is DViewController)
 
-        coordinator.pop()
-        // pA pB mC
+        coordinator.pop() // pA pB mC
         XCTAssert(coordinator.topController is CViewController)
 
-        closeModalSync()
-        // pA pB
+        closeModalSync() // pA pB
         XCTAssert(coordinator.topController is BViewController)
 
-        coordinator.pop()
-        // pA
+        coordinator.pop() // pA
         XCTAssert(coordinator.topController is AViewController)
 
-        coordinator.pop()
-        // pA
+        coordinator.pop() // pA
         XCTAssert(coordinator.topController is AViewController)
     }
 
@@ -210,38 +202,62 @@ class SegueCoordinatorTests: XCTestCase {
         // pA mB pC uD mE uF uG
         XCTAssert(coordinator.topController is GViewController)
 
-        closeModalSync()
-        // pA mB pC uD mE uF
+        closeModalSync() // pA mB pC uD mE uF
         XCTAssert(coordinator.topController is FViewController)
 
-        closeModalSync()
-        // pA mB pC uD mE
+        closeModalSync() // pA mB pC uD mE
         XCTAssert(coordinator.topController is EViewController)
 
-        closeModalSync()
-        // pA mB pC uD
+        closeModalSync() // pA mB pC uD
         XCTAssert(coordinator.topController is DViewController)
 
-        closeModalSync()
-        // pA mB pC
+        closeModalSync() // pA mB pC
         XCTAssert(coordinator.topController is CViewController)
 
-        closeModalSync()
-        // pA
+        closeModalSync() // pA
         XCTAssert(coordinator.topController is AViewController)
 
-        closeModalSync()
-        // pA
+        closeModalSync() // pA
         XCTAssert(coordinator.topController is AViewController)
     }
 
     func testUnwind() {
-        buildStack("pInitial pA pB pC pD pE pF pG")
-        coordinator.unwindToFirst(type: AViewController.self)
-        XCTAssert(coordinator.topController is AViewController)
+        buildStack("pInitial")
 
-        coordinator.unwindToFirst(type: InitialViewController.self, animated: false)
-        XCTAssert(coordinator.topController is InitialViewController, coordinator.rootNavigationController.viewControllers.description)
+        func clearStack() {
+            unwindToFirstSync(type: InitialViewController.self)
+            XCTAssert(coordinator.topController is InitialViewController)
+        }
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToFirstSync(type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+        clearStack()
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToFirstSync(type: GViewController.self)
+        XCTAssert(coordinator.topController is GViewController)
+        clearStack()
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToFirstSync(type: DViewController.self)
+        XCTAssert(coordinator.topController is DViewController)
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToFirstSync(type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToFirstSync(type: GViewController.self)
+        XCTAssert(coordinator.topController is GViewController)
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToFirstSync(type: DViewController.self)
+        XCTAssert(coordinator.topController is DViewController)
+        clearStack()
     }
 
     // MARK: - Synchronous transition methods
@@ -266,27 +282,33 @@ class SegueCoordinatorTests: XCTestCase {
         }
     }
 
+    private func unwindToFirstSync<T: TestableController>(type: T.Type) {
+        let e = XCTestExpectation(description: "Waiting for unwind")
+        coordinator.unwindToFirst(type: type, animated: false, completion: e.fulfill)
+        wait(for: [e], timeout: 1)
+    }
+
     private func pushInitialSync<T: TestableController>(type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for appear")
-        coordinator.pushInitial(type: type, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.pushInitial(type: type, animated: false, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
     private func pushSync<T: TestableController>(_ storyboardId: String, type: T.Type) {
         let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
-        coordinator.push(storyboardId, type: type, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.push(storyboardId, type: type, animated: false, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
     private func modalInitialSync<T: TestableController>(type: T.Type, wrap: Bool = true) {
         let e = XCTestExpectation(description: "Waiting for appear")
-        coordinator.modalInitial(type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.modalInitial(type: type, style: .formSheet, wrapInNavigationController: wrap, animated: false, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 
     private func modalSync<T: TestableController>(_ storyboardId: String, type: T.Type, wrap: Bool = true) {
         let e = XCTestExpectation(description: "Waiting \(storyboardId) for appear")
-        coordinator.modal(storyboardId, type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.modal(storyboardId, type: type, style: .formSheet, wrapInNavigationController: wrap, animated: false, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 

@@ -41,8 +41,8 @@ public extension SegueCoordinator {
      - Parameter type: Type of required view controller.
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
      */
-    func unwindToFirst<T: UIViewController>(type: T.Type, animated: Bool = true) {
-        unwindToFirst(animated: animated, where: {$0 is T})
+    func unwindToFirst<T: UIViewController>(type: T.Type, animated: Bool = true, completion: (() -> Void)? = nil) {
+        unwindToFirst(animated: animated, where: {$0 is T}, completion: completion)
     }
 
     /**
@@ -51,8 +51,8 @@ public extension SegueCoordinator {
      - Parameter type: Type of required view controller.
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
      */
-    func unwindToLast<T: UIViewController>(type: T.Type, animated: Bool = true) {
-        unwindToLast(animated: animated, where: {$0 is T})
+    func unwindToLast<T: UIViewController>(type: T.Type, animated: Bool = true, completion: (() -> Void)? = nil) {
+        unwindToLast(animated: animated, where: {$0 is T}, completion: completion)
     }
 
     /**
@@ -62,13 +62,13 @@ public extension SegueCoordinator {
      - Parameter predicate: Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.
      - Parameter controller: Controller to check for the searching conditions.
      */
-    func unwindToFirst(animated: Bool = true, where predicate: (UIViewController) -> Bool) {
+    func unwindToFirst(animated: Bool = true, where predicate: (UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findFirst(where: predicate) else {
             print("Unable to find view controller")
             return
         }
 
-        unwindToController(controller, animated: animated)
+        unwindToController(controller, animated: animated, completion: completion)
     }
 
     /**
@@ -78,13 +78,13 @@ public extension SegueCoordinator {
      - Parameter predicate: Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.
      - Parameter controller: Controller to check for the searching conditions.
      */
-    func unwindToLast(animated: Bool = true, where predicate: (_ controller: UIViewController) -> Bool) {
+    func unwindToLast(animated: Bool = true, where predicate: (_ controller: UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findLast(where: predicate) else {
             print("Unable to find view controller")
             return
         }
 
-        unwindToController(controller, animated: animated)
+        unwindToController(controller, animated: animated, completion: completion)
     }
 
     /**
@@ -93,19 +93,25 @@ public extension SegueCoordinator {
      - Parameter controller: controller to navigate to
      - Parameter animated: specify true if you want to animate the transition. Specify false otherwise.
      */
-    func unwindToController(_ controller: UIViewController, animated: Bool = true) {
-        if controller.presentedViewController != nil {
-            controller.dismiss(animated: animated, completion: nil)
-        }
-
-        if controller is UINavigationController {
-            return
-        }
-
-        if let navigationController = controller.navigationController {
-            if navigationController.viewControllers.contains(controller) {
-                navigationController.popToViewController(controller, animated: animated)
+    func unwindToController(_ controller: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
+        func popStack() {
+            if controller is UINavigationController {
+                completion?()
+                return
             }
+
+            if let navigationController = controller.navigationController {
+                if navigationController.viewControllers.contains(controller) {
+                    navigationController.popToViewController(controller, animated: animated)
+                }
+            }
+            completion?()
+        }
+
+        if controller.presentedViewController != nil {
+            controller.dismiss(animated: animated, completion: popStack)
+        } else {
+            popStack()
         }
     }
 }
