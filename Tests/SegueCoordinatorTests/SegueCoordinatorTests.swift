@@ -119,32 +119,7 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssert(coordinator.topController is AViewController)
     }
 
-    func testPushAndModal1() {
-        // mA pB mC pD mE pF mG
-
-        modalSync("A", type: AViewController.self)
-        XCTAssert(coordinator.topController is AViewController)
-
-        pushSync("B", type: BViewController.self)
-        XCTAssert(coordinator.topController is BViewController)
-
-        modalSync("C", type: CViewController.self)
-        XCTAssert(coordinator.topController is CViewController)
-
-        pushSync("D", type: DViewController.self)
-        XCTAssert(coordinator.topController is DViewController)
-
-        modalSync("E", type: EViewController.self)
-        XCTAssert(coordinator.topController is EViewController)
-
-        pushSync("F", type: FViewController.self)
-        XCTAssert(coordinator.topController is FViewController)
-
-        modalSync("G", type: GViewController.self)
-        XCTAssert(coordinator.topController is GViewController)
-    }
-
-    func testPushAndModal2() {
+    func testPushAndModal() {
         // mA mB pC pD mE mF pG
 
         modalSync("A", type: AViewController.self)
@@ -170,7 +145,24 @@ class SegueCoordinatorTests: XCTestCase {
     }
 
     func testUnwrappedModal() {
-        
+        modalSync("A", type: AViewController.self, wrap: false)
+        XCTAssert(coordinator.topController is AViewController)
+
+        modalSync("B", type: BViewController.self, wrap: false)
+        XCTAssert(coordinator.topController is BViewController)
+
+        modalSync("C", type: CViewController.self)
+        XCTAssert(coordinator.topController is CViewController)
+
+        modalSync("D", type: DViewController.self, wrap: false)
+        XCTAssert(coordinator.topController is DViewController)
+
+        // Push on unwrapped top view controller should do nothing
+        let e = expectation(description: "Transition should not happen")
+        e.isInverted = true
+        coordinator.push("E", type: EViewController.self, prepareController: { $0.onDidAppear = e.fulfill })
+        waitForExpectations(timeout: 1, handler: nil)
+        XCTAssert(coordinator.topController is DViewController)
     }
 
     // MARK: - Synchronous transition methods

@@ -24,9 +24,16 @@ public extension SegueCoordinator {
     }
 
     /**
+     Returns navigation controller of top view controller if it exists. Returns nil otherwise.
+     */
+    var topNavigationController: UINavigationController? {
+        return topController === rootNavigationController ? rootNavigationController : topController.navigationController
+    }
+
+    /**
      Returns navigation controller of top view controller if it exists. Returns navigation controller of top presenting view controller otherwise.
      */
-    var topNavigationController: UINavigationController {
+    var lastNavigationController: UINavigationController {
         var navigationController = rootNavigationController
         var controller: UIViewController = rootNavigationController
 
