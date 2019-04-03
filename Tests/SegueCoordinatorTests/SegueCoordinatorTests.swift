@@ -235,6 +235,15 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssert(coordinator.topController is AViewController)
     }
 
+    func testUnwind() {
+        buildStack("pInitial pA pB pC pD pE pF pG")
+        coordinator.unwindToFirst(type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+
+        coordinator.unwindToFirst(type: InitialViewController.self, animated: false)
+        XCTAssert(coordinator.topController is InitialViewController, coordinator.rootNavigationController.viewControllers.description)
+    }
+
     // MARK: - Synchronous transition methods
 
     /*
