@@ -68,13 +68,11 @@ class SegueCoordinatorTests: XCTestCase {
 
     func testPushInitial() {
         pushInitialSync(type: InitialViewController.self)
-
         XCTAssert(coordinator.topController is InitialViewController)
     }
 
     func testPush() {
         pushSync("A", type: AViewController.self)
-
         XCTAssert(coordinator.topController is AViewController)
     }
 
@@ -99,6 +97,82 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssert(coordinator.topController is CViewController)
     }
 
+    // MARK: - Modal
+
+    func testModalInitial() {
+        modalInitialSync(type: InitialViewController.self)
+        XCTAssert(coordinator.topController is InitialViewController)
+    }
+
+    func testModal() {
+        modalSync("A", type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
+    func testModalController() {
+        let aViewController = coordinator.instantiate("A", type: AViewController.self)
+
+        let e = expectation(description: "Waiting for appear")
+        coordinator.modalController(aViewController, style: .formSheet, prepareController: { $0.onDidAppear = e.fulfill } )
+        waitForExpectations(timeout: 1, handler: nil)
+
+        XCTAssert(coordinator.topController is AViewController)
+    }
+
+    func testPushAndModal1() {
+        // mA pB mC pD mE pF mG
+
+        modalSync("A", type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+
+        pushSync("B", type: BViewController.self)
+        XCTAssert(coordinator.topController is BViewController)
+
+        modalSync("C", type: CViewController.self)
+        XCTAssert(coordinator.topController is CViewController)
+
+        pushSync("D", type: DViewController.self)
+        XCTAssert(coordinator.topController is DViewController)
+
+        modalSync("E", type: EViewController.self)
+        XCTAssert(coordinator.topController is EViewController)
+
+        pushSync("F", type: FViewController.self)
+        XCTAssert(coordinator.topController is FViewController)
+
+        modalSync("G", type: GViewController.self)
+        XCTAssert(coordinator.topController is GViewController)
+    }
+
+    func testPushAndModal2() {
+        // mA mB pC pD mE mF pG
+
+        modalSync("A", type: AViewController.self)
+        XCTAssert(coordinator.topController is AViewController)
+
+        modalSync("B", type: BViewController.self)
+        XCTAssert(coordinator.topController is BViewController)
+
+        pushSync("C", type: CViewController.self)
+        XCTAssert(coordinator.topController is CViewController)
+
+        pushSync("D", type: DViewController.self)
+        XCTAssert(coordinator.topController is DViewController)
+
+        modalSync("E", type: EViewController.self)
+        XCTAssert(coordinator.topController is EViewController)
+
+        modalSync("F", type: FViewController.self)
+        XCTAssert(coordinator.topController is FViewController)
+
+        pushSync("G", type: GViewController.self)
+        XCTAssert(coordinator.topController is GViewController)
+    }
+
+    func testUnwrappedModal() {
+        
+    }
+
     // MARK: - Synchronous transition methods
 
     private func pushInitialSync<T: PTestableController>(type: T.Type) {
@@ -113,15 +187,15 @@ class SegueCoordinatorTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
 
-    private func modalInitialSync<T: PTestableController>(type: T.Type) {
+    private func modalInitialSync<T: PTestableController>(type: T.Type, wrap: Bool = true) {
         let e = expectation(description: "Waiting for appear")
-        coordinator.modalInitial(type: type, style: .formSheet, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.modalInitial(type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
         waitForExpectations(timeout: 1, handler: nil)
     }
 
-    private func modalSync<T: PTestableController>(_ storyboardId: String, type: T.Type) {
+    private func modalSync<T: PTestableController>(_ storyboardId: String, type: T.Type, wrap: Bool = true) {
         let e = expectation(description: "Waiting \(storyboardId) for appear")
-        coordinator.modal(storyboardId, type: type, style: .formSheet, prepareController: { $0.onDidAppear = e.fulfill })
+        coordinator.modal(storyboardId, type: type, style: .formSheet, wrapInNavigationController: wrap, prepareController: { $0.onDidAppear = e.fulfill })
         waitForExpectations(timeout: 1, handler: nil)
     }
 }
