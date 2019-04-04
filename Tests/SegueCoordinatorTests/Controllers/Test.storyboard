@@ -13,7 +13,7 @@
         <!--Initial View Controller-->
         <scene sceneID="RmY-8z-7tI">
             <objects>
-                <viewController storyboardIdentifier="Initial" id="tAe-IV-VEO" customClass="InitialViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Initial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tAe-IV-VEO" customClass="InitialViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OqS-zt-oLN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="UJ1-py-8T0">
             <objects>
-                <viewController storyboardIdentifier="A" id="LSY-fM-Xv6" customClass="AViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="A" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSY-fM-Xv6" customClass="AViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kci-Aw-9y0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--View Controller-->
         <scene sceneID="GHQ-ZG-1SO">
             <objects>
-                <viewController storyboardIdentifier="B" id="1iP-RP-m9f" customClass="BViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="B" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1iP-RP-m9f" customClass="BViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWe-hg-kTR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--View Controller-->
         <scene sceneID="2DY-En-JVO">
             <objects>
-                <viewController storyboardIdentifier="C" id="hvJ-Sj-POH" customClass="CViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="C" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hvJ-Sj-POH" customClass="CViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hOO-zW-vJU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
         <!--View Controller-->
         <scene sceneID="cz0-ER-Yi5">
             <objects>
-                <viewController storyboardIdentifier="D" id="NUJ-kT-YqD" customClass="DViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="D" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NUJ-kT-YqD" customClass="DViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8w6-wn-2qN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
         <!--View Controller-->
         <scene sceneID="sPS-0u-OK7">
             <objects>
-                <viewController storyboardIdentifier="E" id="3do-n1-Dgr" customClass="EViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="E" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3do-n1-Dgr" customClass="EViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WLM-Nf-YxX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
         <!--View Controller-->
         <scene sceneID="M6M-OB-3CF">
             <objects>
-                <viewController storyboardIdentifier="F" id="oix-1H-GqQ" customClass="FViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="F" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oix-1H-GqQ" customClass="FViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cxi-dY-x2Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -118,7 +118,7 @@
         <!--View Controller-->
         <scene sceneID="V1B-8O-aqX">
             <objects>
-                <viewController storyboardIdentifier="G" id="DkA-Wg-Rfn" customClass="GViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="G" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DkA-Wg-Rfn" customClass="GViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i9t-vJ-oSw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

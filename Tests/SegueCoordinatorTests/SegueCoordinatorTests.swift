@@ -167,100 +167,209 @@ class SegueCoordinatorTests: XCTestCase {
 
     func testPop() {
         buildStack("pA pB mC pD mE mF pG")
+        checkStack("pA pB mC pD mE mF pG")
 
-        // pA pB mC pD mE mF pG
-        XCTAssert(coordinator.topController is GViewController)
+        coordinator.pop()
+        checkStack("pA pB mC pD mE mF")
 
-        coordinator.pop() // pA pB mC pD mE mF
-        XCTAssert(coordinator.topController is FViewController)
+        coordinator.pop()
+        checkStack("pA pB mC pD mE mF")
 
-        coordinator.pop() // pA pB mC pD mE mF
-        XCTAssert(coordinator.topController is FViewController)
+        closeModalSync()
+        checkStack("pA pB mC pD mE")
 
-        closeModalSync() // pA pB mC pD mE
-        XCTAssert(coordinator.topController is EViewController)
+        closeModalSync()
+        checkStack("pA pB mC pD")
 
-        closeModalSync() // pA pB mC pD
-        XCTAssert(coordinator.topController is DViewController)
+        coordinator.pop()
+        checkStack("pA pB mC")
 
-        coordinator.pop() // pA pB mC
-        XCTAssert(coordinator.topController is CViewController)
+        closeModalSync()
+        checkStack("pA pB")
 
-        closeModalSync() // pA pB
-        XCTAssert(coordinator.topController is BViewController)
+        coordinator.pop()
+        checkStack("pA")
 
-        coordinator.pop() // pA
-        XCTAssert(coordinator.topController is AViewController)
-
-        coordinator.pop() // pA
-        XCTAssert(coordinator.topController is AViewController)
+        coordinator.pop()
+        checkStack("pA")
     }
 
     func testCloseModal() {
         buildStack("pA mB pC uD mE uF uG")
+        checkStack("pA mB pC uD mE uF uG")
 
-        // pA mB pC uD mE uF uG
-        XCTAssert(coordinator.topController is GViewController)
+        closeModalSync()
+        checkStack("pA mB pC uD mE uF")
 
-        closeModalSync() // pA mB pC uD mE uF
-        XCTAssert(coordinator.topController is FViewController)
+        closeModalSync()
+        checkStack("pA mB pC uD mE")
 
-        closeModalSync() // pA mB pC uD mE
-        XCTAssert(coordinator.topController is EViewController)
+        closeModalSync()
+        checkStack("pA mB pC uD")
 
-        closeModalSync() // pA mB pC uD
-        XCTAssert(coordinator.topController is DViewController)
+        closeModalSync()
+        checkStack("pA mB pC")
 
-        closeModalSync() // pA mB pC
-        XCTAssert(coordinator.topController is CViewController)
+        closeModalSync()
+        checkStack("pA")
 
-        closeModalSync() // pA
-        XCTAssert(coordinator.topController is AViewController)
-
-        closeModalSync() // pA
-        XCTAssert(coordinator.topController is AViewController)
+        closeModalSync()
+        checkStack("pA")
     }
 
-    func testUnwind() {
+    func testUnwindToFirst() {
         buildStack("pInitial")
 
         func clearStack() {
-            unwindToFirstSync(type: InitialViewController.self)
-            XCTAssert(coordinator.topController is InitialViewController)
+            unwindToFirstSync(InitialViewController.self)
+            checkStack("pInitial")
         }
 
         buildStack("pA pB pC pD pE pF pG")
-        unwindToFirstSync(type: AViewController.self)
-        XCTAssert(coordinator.topController is AViewController)
+        unwindToFirstSync(AViewController.self)
+        checkStack("pInitial pA")
         clearStack()
 
         buildStack("pA pB pC pD pE pF pG")
-        unwindToFirstSync(type: GViewController.self)
-        XCTAssert(coordinator.topController is GViewController)
+        unwindToFirstSync(GViewController.self)
+        checkStack("pInitial pA pB pC pD pE pF pG")
         clearStack()
 
         buildStack("pA pB pC pD pE pF pG")
-        unwindToFirstSync(type: DViewController.self)
-        XCTAssert(coordinator.topController is DViewController)
+        unwindToFirstSync(DViewController.self)
+        checkStack("pInitial pA pB pC pD")
         clearStack()
 
         buildStack("mA mB mC mD mE mF mG")
-        unwindToFirstSync(type: AViewController.self)
-        XCTAssert(coordinator.topController is AViewController)
+        unwindToFirstSync(AViewController.self)
+        checkStack("pInitial mA")
         clearStack()
 
         buildStack("mA mB mC mD mE mF mG")
-        unwindToFirstSync(type: GViewController.self)
-        XCTAssert(coordinator.topController is GViewController)
+        unwindToFirstSync(GViewController.self)
+        checkStack("pInitial mA mB mC mD mE mF mG")
         clearStack()
 
         buildStack("mA mB mC mD mE mF mG")
-        unwindToFirstSync(type: DViewController.self)
-        XCTAssert(coordinator.topController is DViewController)
+        unwindToFirstSync(DViewController.self)
+        checkStack("pInitial mA mB mC mD")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(AViewController.self)
+        checkStack("pInitial pA")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(BViewController.self)
+        checkStack("pInitial pA mB")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(CViewController.self)
+        checkStack("pInitial pA mB pC")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(DViewController.self)
+        checkStack("pInitial pA mB pC uD")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(EViewController.self)
+        checkStack("pInitial pA mB pC uD mE")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(FViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToFirstSync(GViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG")
+        clearStack()
+    }
+
+    func testUnwindToLast() {
+        buildStack("pInitial")
+
+        func clearStack() {
+            unwindToFirstSync(InitialViewController.self)
+            checkStack("pInitial")
+        }
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToLastSync(AViewController.self)
+        checkStack("pInitial pA")
+        clearStack()
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToLastSync(GViewController.self)
+        checkStack("pInitial pA pB pC pD pE pF pG")
+        clearStack()
+
+        buildStack("pA pB pC pD pE pF pG")
+        unwindToLastSync(DViewController.self)
+        checkStack("pInitial pA pB pC pD")
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToLastSync(AViewController.self)
+        checkStack("pInitial mA")
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToLastSync(GViewController.self)
+        checkStack("pInitial mA mB mC mD mE mF mG")
+        clearStack()
+
+        buildStack("mA mB mC mD mE mF mG")
+        unwindToLastSync(DViewController.self)
+        checkStack("pInitial mA mB mC mD")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(AViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(BViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF mE uD uC mB")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(CViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF mE uD uC")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(DViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF mE uD")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(EViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF mE")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(FViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG mF")
+        clearStack()
+
+        buildStack("pA mB pC uD mE mF pG pG mF mE uD uC mB pA")
+        unwindToLastSync(GViewController.self)
+        checkStack("pInitial pA mB pC uD mE mF pG pG")
         clearStack()
     }
 
     // MARK: - Synchronous transition methods
+
+    private func checkStack(_ expected: String) {
+        XCTAssertEqual(stackDescription, expected)
+    }
 
     /*
      m - wrapped modal
@@ -268,6 +377,8 @@ class SegueCoordinatorTests: XCTestCase {
      p - push
     */
     private func buildStack(_ stack: String) {
+        let initialStack = stackDescription
+
         let commands: [(action: String, id: String)] = stack.split(separator: " ").map {
             let item = NSString(string: String($0))
             return (action: item.substring(to: 1), id: item.substring(from: 1))
@@ -280,11 +391,53 @@ class SegueCoordinatorTests: XCTestCase {
             default: break
             }
         }
+        var resultStack = stackDescription
+        resultStack.removeFirst(initialStack.count)
+        resultStack = resultStack.trimmingCharacters(in: .whitespaces)
+        XCTAssertEqual(stack, resultStack)
     }
 
-    private func unwindToFirstSync<T: TestableController>(type: T.Type) {
+    /*
+     m - wrapped modal
+     u - unwrapped modal
+     p - push
+     */
+    private var stackDescription: String {
+        var commands = [(action: String, id: String)]()
+
+        var root: UIViewController? = coordinator.rootNavigationController
+        while root != nil {
+            if root!.presentingViewController == nil {
+                if let navigationController = root as? UINavigationController {
+                    for child in navigationController.viewControllers {
+                        commands.append(("p", child.restorationIdentifier!))
+                    }
+                }
+            } else {
+                if let navigationController = root as? UINavigationController {
+                    commands.append(("m", navigationController.viewControllers.first!.restorationIdentifier!))
+                    for child in navigationController.viewControllers.suffix(from: 1) {
+                        commands.append(("p", child.restorationIdentifier!))
+                    }
+                } else {
+                    commands.append(("u", root!.restorationIdentifier!))
+                }
+            }
+            root = root?.presentedViewController
+        }
+
+        return commands.map({"\($0.action)\($0.id)"}).joined(separator: " ")
+    }
+
+    private func unwindToFirstSync<T: TestableController>(_ type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for unwind")
         coordinator.unwindToFirst(type: type, animated: false, completion: e.fulfill)
+        wait(for: [e], timeout: 1)
+    }
+
+    private func unwindToLastSync<T: TestableController>(_ type: T.Type) {
+        let e = XCTestExpectation(description: "Waiting for unwind")
+        coordinator.unwindToLast(type: type, animated: false, completion: e.fulfill)
         wait(for: [e], timeout: 1)
     }
 
