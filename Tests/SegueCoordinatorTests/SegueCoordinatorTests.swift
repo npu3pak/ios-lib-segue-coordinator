@@ -365,6 +365,30 @@ class SegueCoordinatorTests: XCTestCase {
         clearStack()
     }
 
+    func testUnwindToController() {
+        buildStack("pInitial")
+
+        func clearStack() {
+            unwindToFirstSync(InitialViewController.self)
+            checkStack("pInitial")
+        }
+
+        buildStack("pA mB pC mD pE")
+        unwindToFirstSync(UINavigationController.self)
+        checkStack("pInitial pA")
+        clearStack()
+
+        buildStack("pA mB pC mD pE")
+        unwindToLastSync(UINavigationController.self)
+        checkStack("pInitial pA mB pC mD pE")
+        clearStack()
+
+        buildStack("pA mB pC uD")
+        unwindToLastSync(UINavigationController.self)
+        checkStack("pInitial pA mB pC")
+        clearStack()
+    }
+
     func testUnwindToNotExisting() {
         buildStack("pA pB pC pD pE pF pG")
 
@@ -414,6 +438,17 @@ class SegueCoordinatorTests: XCTestCase {
         XCTAssertEqual(coordinator.findLast(type: AViewController.self), a2)
         XCTAssertEqual(coordinator.findLast(type: BViewController.self), b2)
         XCTAssertEqual(coordinator.findLast(type: CViewController.self), c2)
+    }
+
+    func testTopController() {
+        buildStack("pA")
+        XCTAssert(coordinator.topController is AViewController)
+
+        buildStack("mB")
+        XCTAssert(coordinator.topController is BViewController)
+
+        buildStack("uC")
+        XCTAssert(coordinator.topController is CViewController)
     }
 
     // MARK: - Synchronous transition methods
@@ -486,13 +521,13 @@ class SegueCoordinatorTests: XCTestCase {
         wait(for: [e], timeout: 1)
     }
 
-    private func unwindToFirstSync<T: TestableController>(_ type: T.Type) {
+    private func unwindToFirstSync<T: UIViewController>(_ type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for unwind")
         coordinator.unwindToFirst(type: type, animated: false, completion: e.fulfill)
         wait(for: [e], timeout: 1)
     }
 
-    private func unwindToLastSync<T: TestableController>(_ type: T.Type) {
+    private func unwindToLastSync<T: UIViewController>(_ type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for unwind")
         coordinator.unwindToLast(type: type, animated: false, completion: e.fulfill)
         wait(for: [e], timeout: 1)
