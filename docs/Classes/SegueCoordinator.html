@@ -202,9 +202,60 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC10closeModal8animated_ySb_yyctF"></a>
-                    <a name="//apple_ref/swift/Method/closeModal(animated:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC10closeModal8animated_ySb_yyctF">closeModal(animated:_:)</a>
+                    <a name="/s:16SegueCoordinatorAAC3pop8animatedySb_tF"></a>
+                    <a name="//apple_ref/swift/Method/pop(animated:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC3pop8animatedySb_tF">pop(animated:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pops view controller from the stack of the current navigation controller.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the pop action will do nothing.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pop</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify true to animate the transition. Otherwise, specify false.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16SegueCoordinatorAAC10closeModal8animated10completionySb_yycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/closeModal(animated:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC10closeModal8animated10completionySb_yycSgtF">closeModal(animated:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -213,13 +264,18 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Dismiss current modal view controller.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t present modally the closeModal action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">closeModal</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">=</span> <span class="p">{})</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">closeModal</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -260,9 +316,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC3pop8animatedySb_tF"></a>
-                    <a name="//apple_ref/swift/Method/pop(animated:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC3pop8animatedySb_tF">pop(animated:)</a>
+                    <a name="/s:16SegueCoordinatorAAC13unwindToFirst4type8animated10completionyxm_SbyycSgtSo16UIViewControllerCRbzlF"></a>
+                    <a name="//apple_ref/swift/Method/unwindToFirst(type:animated:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC13unwindToFirst4type8animated10completionyxm_SbyycSgtSo16UIViewControllerCRbzlF">unwindToFirst(type:animated:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -270,14 +326,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Pops view controller from the stack of the current navigation controller.</p>
+                        <p>This method will make a transition to the farthest matching controller. It performs searching for the first view controller matching the specified type. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">pop</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">unwindToFirst</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -288,12 +344,36 @@
                             <tr>
                               <td>
                                 <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of required view controller.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
                                 <em>animated</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Specify true to animate the transition. Otherwise, specify false.</p>
+                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute after unwind transitions are finished.</p>
                                 </div>
                               </td>
                             </tr>
@@ -306,9 +386,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC15popToController_8animatedySo06UIViewE0C_SbtF"></a>
-                    <a name="//apple_ref/swift/Method/popToController(_:animated:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC15popToController_8animatedySo06UIViewE0C_SbtF">popToController(_:animated:)</a>
+                    <a name="/s:16SegueCoordinatorAAC12unwindToLast4type8animated10completionyxm_SbyycSgtSo16UIViewControllerCRbzlF"></a>
+                    <a name="//apple_ref/swift/Method/unwindToLast(type:animated:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC12unwindToLast4type8animated10completionyxm_SbyycSgtSo16UIViewControllerCRbzlF">unwindToLast(type:animated:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -316,14 +396,84 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Pops view controllers from current navigation controller until the specified view controller is at the top of the navigation stack.</p>
+                        <p>This method will make a transition to the closest matching controller. It performs searching for the last view controller matching the specified type. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">popToController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">unwindToLast</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Type of required view controller.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute after unwind transitions are finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16SegueCoordinatorAAC13unwindToFirst8animated5where10completionySb_SbSo16UIViewControllerCXEyycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/unwindToFirst(animated:where:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC13unwindToFirst8animated5where10completionySb_SbSo16UIViewControllerCXEyycSgtF">unwindToFirst(animated:where:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method will make a transition to the farthest matching controller. It performs searching for the first view controller matching the specified predicate. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToFirst</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="k">where</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -339,7 +489,195 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Specify true to animate the transition. Otherwise, specify false.</p>
+                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Controller to check for the searching conditions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute after unwind transitions are finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16SegueCoordinatorAAC12unwindToLast8animated5where10completionySb_SbSo16UIViewControllerCXEyycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/unwindToLast(animated:where:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC12unwindToLast8animated5where10completionySb_SbSo16UIViewControllerCXEyycSgtF">unwindToLast(animated:where:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This method will make a transition to the closest matching controller. It performs searching for the last view controller matching the specified predicate. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToLast</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="k">where</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>predicate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Controller to check for the searching conditions.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute after unwind transitions are finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16SegueCoordinatorAAC18unwindToController_8animated10completionySo06UIViewE0C_SbyycSgtF"></a>
+                    <a name="//apple_ref/swift/Method/unwindToController(_:animated:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC18unwindToController_8animated10completionySo06UIViewE0C_SbyycSgtF">unwindToController(_:animated:completion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closes all modal view controllers above the specified view controller&rsquo;s stack and pops navigation stack to make it the top. In other words, the specified view controller becomes the top and visible.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>controller</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>controller to navigate to</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>animated</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to execute after unwind transitions are finished.</p>
                                 </div>
                               </td>
                             </tr>
@@ -833,6 +1171,11 @@ Pass any data and dependencies into view controller here.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Create the initial view controller from the storyboard and push it to the stack of the current navigation controller.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the push action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -916,6 +1259,11 @@ Pass any data and dependencies into view controller here.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Create the view controller from the storyboard by identifier and push it to the stack of the current navigation controller.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the push action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1011,6 +1359,11 @@ Pass any data and dependencies into view controller here.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Push view controller to the stack of the current navigation controller.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the push action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1094,9 +1447,9 @@ Pass any data and dependencies into view controller here.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC9findFirst4typexSgx_tSo16UIViewControllerCRbzlF"></a>
+                    <a name="/s:16SegueCoordinatorAAC9findFirst4typexSgxm_tSo16UIViewControllerCRbzlF"></a>
                     <a name="//apple_ref/swift/Method/findFirst(type:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC9findFirst4typexSgx_tSo16UIViewControllerCRbzlF">findFirst(type:)</a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC9findFirst4typexSgxm_tSo16UIViewControllerCRbzlF">findFirst(type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1111,7 +1464,7 @@ Pass any data and dependencies into view controller here.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">findFirst</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">findFirst</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -1206,9 +1559,9 @@ Pass any data and dependencies into view controller here.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC8findLast4typexSgx_tSo16UIViewControllerCRbzlF"></a>
+                    <a name="/s:16SegueCoordinatorAAC8findLast4typexSgxm_tSo16UIViewControllerCRbzlF"></a>
                     <a name="//apple_ref/swift/Method/findLast(type:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC8findLast4typexSgx_tSo16UIViewControllerCRbzlF">findLast(type:)</a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC8findLast4typexSgxm_tSo16UIViewControllerCRbzlF">findLast(type:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1223,7 +1576,7 @@ Pass any data and dependencies into view controller here.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">findLast</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">findLast</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 
                         </div>
                       </div>
@@ -1442,8 +1795,13 @@ Pass any data and dependencies into view controller here.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create the initial view controller from the storyboard and make it the root of the current navigation controller.
+                        <p>Create the initial view controller from the storyboard and make it the root of the rop navigation controller.
 All other presented controllers will be removed from navigation stack.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the set action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1514,8 +1872,13 @@ Pass any data and dependencies into view controller here.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create the view controller from the storyboard by identifier and make it the root of the current navigation controller.
+                        <p>Create the view controller from the storyboard by identifier and make it the root of the top navigation controller.
 All other presented controllers will be removed from navigation stack.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the set action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1598,8 +1961,13 @@ Pass any data and dependencies into view controller here.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Make view controller the root of the current navigation controller.
+                        <p>Make view controller the root of the top navigation controller.
 All other presented controllers will be removed from navigation stack.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>If the top view controller doesn&rsquo;t wrapped in navigation controller the set action will do nothing.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1661,331 +2029,6 @@ Pass any data and dependencies into view controller here.</p>
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Unwind"></a>
-                <a name="//apple_ref/swift/Section/Unwind" class="dashAnchor"></a>
-                <a href="#/Unwind">
-                  <h3 class="section-name">Unwind</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16SegueCoordinatorAAC13unwindToFirst4type8animatedyxm_SbtSo16UIViewControllerCRbzlF"></a>
-                    <a name="//apple_ref/swift/Method/unwindToFirst(type:animated:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC13unwindToFirst4type8animatedyxm_SbtSo16UIViewControllerCRbzlF">unwindToFirst(type:animated:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This method will make a transition to the farthest matching controller. It performs searching for the first view controller matching the specified type. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">unwindToFirst</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>type</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Type of required view controller.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16SegueCoordinatorAAC12unwindToLast4type8animatedyxm_SbtSo16UIViewControllerCRbzlF"></a>
-                    <a name="//apple_ref/swift/Method/unwindToLast(type:animated:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC12unwindToLast4type8animatedyxm_SbtSo16UIViewControllerCRbzlF">unwindToLast(type:animated:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This method will make a transition to the closest matching controller. It performs searching for the last view controller matching the specified type. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">unwindToLast</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">type</span><span class="p">:</span> <span class="kt">T</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>type</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Type of required view controller.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16SegueCoordinatorAAC13unwindToFirst8animated5whereySb_SbSo16UIViewControllerCXEtF"></a>
-                    <a name="//apple_ref/swift/Method/unwindToFirst(animated:where:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC13unwindToFirst8animated5whereySb_SbSo16UIViewControllerCXEtF">unwindToFirst(animated:where:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This method will make a transition to the farthest matching controller. It performs searching for the first view controller matching the specified predicate. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToFirst</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="k">where</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>predicate</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>controller</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Controller to check for the searching conditions.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16SegueCoordinatorAAC12unwindToLast8animated5whereySb_SbSo16UIViewControllerCXEtF"></a>
-                    <a name="//apple_ref/swift/Method/unwindToLast(animated:where:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC12unwindToLast8animated5whereySb_SbSo16UIViewControllerCXEtF">unwindToLast(animated:where:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>This method will make a transition to the closest matching controller. It performs searching for the last view controller matching the specified predicate. Then it closes all modal view controllers above the found view controller&rsquo;s stack and pops navigation stack to make the found view controller the top. In other words, the found view controller becomes the top and visible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToLast</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="k">where</span> <span class="nv">predicate</span><span class="p">:</span> <span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>predicate</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Searching conditions. Returns true if the view controller passed in its argument fulfills conditions of the search. Returns false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>controller</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Controller to check for the searching conditions.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:16SegueCoordinatorAAC18unwindToController_8animatedySo06UIViewE0C_SbtF"></a>
-                    <a name="//apple_ref/swift/Method/unwindToController(_:animated:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC18unwindToController_8animatedySo06UIViewE0C_SbtF">unwindToController(_:animated:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closes all modal view controllers above the specified view controller&rsquo;s stack and pops navigation stack to make it the top. In other words, the specified view controller becomes the top and visible.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">unwindToController</span><span class="p">(</span><span class="n">_</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>controller</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>controller to navigate to</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>animated</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>specify true if you want to animate the transition. Specify false otherwise.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
                 <a name="/Utility"></a>
                 <a name="//apple_ref/swift/Section/Utility" class="dashAnchor"></a>
                 <a href="#/Utility">
@@ -2023,9 +2066,9 @@ Pass any data and dependencies into view controller here.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:16SegueCoordinatorAAC23topNavigationControllerSo012UINavigationE0Cvp"></a>
+                    <a name="/s:16SegueCoordinatorAAC23topNavigationControllerSo012UINavigationE0CSgvp"></a>
                     <a name="//apple_ref/swift/Property/topNavigationController" class="dashAnchor"></a>
-                    <a class="token" href="#/s:16SegueCoordinatorAAC23topNavigationControllerSo012UINavigationE0Cvp">topNavigationController</a>
+                    <a class="token" href="#/s:16SegueCoordinatorAAC23topNavigationControllerSo012UINavigationE0CSgvp">topNavigationController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2033,14 +2076,14 @@ Pass any data and dependencies into view controller here.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns navigation controller of top view controller if it exists. Returns navigation controller of top presenting view controller otherwise.</p>
+                        <p>Returns navigation controller of top view controller if it exists. Returns nil otherwise.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">topNavigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">topNavigationController</span><span class="p">:</span> <span class="kt">UINavigationController</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -2052,7 +2095,7 @@ Pass any data and dependencies into view controller here.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/npu3pak/ios-lib-segue-coordinator" target="_blank" rel="external">Evgeniy Safronov</a>. All rights reserved. (Last updated: 2019-04-02)</p>
+          <p>&copy; 2019 <a class="link" href="https://github.com/npu3pak/ios-lib-segue-coordinator" target="_blank" rel="external">Evgeniy Safronov</a>. All rights reserved. (Last updated: 2019-04-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -7,6 +7,8 @@ public extension SegueCoordinator {
     /**
      Create the initial view controller from the storyboard and push it to the stack of the current navigation controller.
 
+     - Warning: If the top view controller doesn't wrapped in navigation controller the push action will do nothing.
+
      - Parameter type: Expected type of view controller.
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
      - Parameter prepareController: The block to execute after controller will be created.
@@ -21,6 +23,8 @@ public extension SegueCoordinator {
 
     /**
      Create the view controller from the storyboard by identifier and push it to the stack of the current navigation controller.
+
+     - Warning: If the top view controller doesn't wrapped in navigation controller the push action will do nothing.
 
      - Parameter storyboardId: Storyboard ID of view controller specified with identity inspector in Interface Builder.
      - Parameter type: Expected type of view controller.
@@ -38,6 +42,8 @@ public extension SegueCoordinator {
     /**
      Push view controller to the stack of the current navigation controller.
 
+     - Warning: If the top view controller doesn't wrapped in navigation controller the push action will do nothing.
+
      - Parameter controller: Controller to be presented.
      - Parameter animated: Specify true to animate the transition. Otherwise, specify false.
      - Parameter prepareController: The block to execute before controller will be presented.
@@ -47,7 +53,8 @@ public extension SegueCoordinator {
 
     func pushController<T: UIViewController>(_ controller: T, animated: Bool = true, prepareController: (_ controller: T) -> Void) {
         prepareController(controller)
-        topNavigationController.pushViewController(controller, animated: animated)
+
+        topNavigationController?.pushViewController(controller, animated: animated)
     }
 }
 

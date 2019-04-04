@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SegueCoordinator_Example.app"
-               BlueprintName = "SegueCoordinator_Example"
-               ReferencedContainer = "container:SegueCoordinator.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SegueCoordinator_Tests.xctest"
-               BlueprintName = "SegueCoordinator_Tests"
+               BlueprintIdentifier = "DBF0B60F225354F000EFC7C1"
+               BuildableName = "SegueCoordinatorTestsHost.app"
+               BlueprintName = "SegueCoordinatorTestsHost"
                ReferencedContainer = "container:SegueCoordinator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SegueCoordinator_Tests.xctest"
-               BlueprintName = "SegueCoordinator_Tests"
+               BlueprintIdentifier = "DBF0B5EE22534F9100EFC7C1"
+               BuildableName = "SegueCoordinatorTests.xctest"
+               BlueprintName = "SegueCoordinatorTests"
                ReferencedContainer = "container:SegueCoordinator.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BlueprintIdentifier = "DBF0B60F225354F000EFC7C1"
+            BuildableName = "SegueCoordinatorTestsHost.app"
+            BlueprintName = "SegueCoordinatorTestsHost"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -79,9 +66,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BlueprintIdentifier = "DBF0B60F225354F000EFC7C1"
+            BuildableName = "SegueCoordinatorTestsHost.app"
+            BlueprintName = "SegueCoordinatorTestsHost"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -98,9 +85,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SegueCoordinator_Example.app"
-            BlueprintName = "SegueCoordinator_Example"
+            BlueprintIdentifier = "DBF0B60F225354F000EFC7C1"
+            BuildableName = "SegueCoordinatorTestsHost.app"
+            BlueprintName = "SegueCoordinatorTestsHost"
             ReferencedContainer = "container:SegueCoordinator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

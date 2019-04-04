@@ -11,7 +11,7 @@ public extension SegueCoordinator {
      - Returns: view controller if it was found, nil otherwise.
     */
 
-    func findFirst<T: UIViewController>(type: T) -> T? {
+    func findFirst<T: UIViewController>(type: T.Type) -> T? {
         return findFirst(where: { $0 is T }) as? T
     }
 
@@ -46,7 +46,7 @@ public extension SegueCoordinator {
      - Parameter type: Type of required view controller.
      - Returns: view controller if it was found, nil otherwise.
      */
-    func findLast<T: UIViewController>(type: T) -> T? {
+    func findLast<T: UIViewController>(type: T.Type) -> T? {
         return findLast(where: { $0 is T }) as? T
     }
 

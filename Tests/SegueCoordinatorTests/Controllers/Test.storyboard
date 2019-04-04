@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tAe-IV-VEO">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="RmY-8z-7tI">
+            <objects>
+                <viewController storyboardIdentifier="Initial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tAe-IV-VEO" customClass="InitialViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OqS-zt-oLN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BlG-kE-lzU"/>
+                    </view>
+                    <connections>
+                        <segue destination="LSY-fM-Xv6" kind="show" identifier="ShowA" id="JqO-LE-AtR"/>
+                        <segue destination="gie-7Z-GeM" kind="show" identifier="ShowAInNavigationController" id="ym7-Jd-sZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F6F-HT-YOf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5724" y="116"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UJ1-py-8T0">
+            <objects>
+                <viewController storyboardIdentifier="A" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LSY-fM-Xv6" customClass="AViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kci-Aw-9y0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rz9-AI-J7i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cED-n0-Rqz"/>
+                    <connections>
+                        <segue destination="1iP-RP-m9f" kind="show" identifier="ShowB" id="A5a-Hv-yLk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nck-96-z1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4551" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jdg-BW-Xa1">
+            <objects>
+                <navigationController id="gie-7Z-GeM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wNt-7J-xrs">
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LSY-fM-Xv6" kind="relationship" relationship="rootViewController" id="4oJ-uy-QM1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmn-HT-3HL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5389" y="1041"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GHQ-ZG-1SO">
+            <objects>
+                <viewController storyboardIdentifier="B" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1iP-RP-m9f" customClass="BViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWe-hg-kTR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dhh-Ps-2QO"/>
+                    </view>
+                    <connections>
+                        <segue destination="hvJ-Sj-POH" kind="show" identifier="ShowC" id="mnH-EI-ixb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xm-am-7hF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3806" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2DY-En-JVO">
+            <objects>
+                <viewController storyboardIdentifier="C" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hvJ-Sj-POH" customClass="CViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOO-zW-vJU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="M5M-0Q-SGY"/>
+                    </view>
+                    <connections>
+                        <segue destination="NUJ-kT-YqD" kind="show" identifier="ShowD" id="4PX-37-OcG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YTZ-Zp-VoD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3053" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cz0-ER-Yi5">
+            <objects>
+                <viewController storyboardIdentifier="D" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NUJ-kT-YqD" customClass="DViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8w6-wn-2qN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YLD-C2-iQb"/>
+                    </view>
+                    <connections>
+                        <segue destination="3do-n1-Dgr" kind="show" identifier="ShowE" id="S3S-7Q-zs1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUn-cn-y4h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2293" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sPS-0u-OK7">
+            <objects>
+                <viewController storyboardIdentifier="E" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3do-n1-Dgr" customClass="EViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLM-Nf-YxX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9MP-Xq-ZkI"/>
+                    </view>
+                    <connections>
+                        <segue destination="oix-1H-GqQ" kind="show" identifier="ShowF" id="x1r-0I-DuT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJW-5e-a5p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1541" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M6M-OB-3CF">
+            <objects>
+                <viewController storyboardIdentifier="F" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oix-1H-GqQ" customClass="FViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cxi-dY-x2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JNV-YH-cEr"/>
+                    </view>
+                    <connections>
+                        <segue destination="DkA-Wg-Rfn" kind="show" identifier="ShowG" id="wja-Oy-Gj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmC-92-RAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-804" y="108"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V1B-8O-aqX">
+            <objects>
+                <viewController storyboardIdentifier="G" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DkA-Wg-Rfn" customClass="GViewController" customModule="SegueCoordinatorTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9t-vJ-oSw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9rg-lr-KKe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE2-rg-K4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="108"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4oJ-uy-QM1"/>
+    </inferredMetricsTieBreakers>
+</document>
