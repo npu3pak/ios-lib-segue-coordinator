@@ -365,6 +365,57 @@ class SegueCoordinatorTests: XCTestCase {
         clearStack()
     }
 
+    func testUnwindToNotExisting() {
+        buildStack("pA pB pC pD pE pF pG")
+
+        unwindToFirstSync(InitialViewController.self)
+        checkStack("pA pB pC pD pE pF pG")
+
+        unwindToLastSync(InitialViewController.self)
+        checkStack("pA pB pC pD pE pF pG")
+    }
+
+    func testSegue() {
+        pushInitialSync(type: InitialViewController.self)
+        segueSync("ShowAInNavigationController")
+        checkStack("pInitial mA")
+
+        unwindToFirstSync(InitialViewController.self)
+        segueSync("ShowA")
+        segueSync("ShowB")
+        segueSync("ShowC")
+        segueSync("ShowD")
+        segueSync("ShowE")
+        segueSync("ShowF")
+        segueSync("ShowG")
+        checkStack("pInitial pA pB pC pD pE pF pG")
+    }
+
+    func testSearch() {
+        let a1 = coordinator.instantiate("A", type: AViewController.self)
+        let b1 = coordinator.instantiate("B", type: BViewController.self)
+        let c1 = coordinator.instantiate("C", type: CViewController.self)
+        let a2 = coordinator.instantiate("A", type: AViewController.self)
+        let b2 = coordinator.instantiate("B", type: BViewController.self)
+        let c2 = coordinator.instantiate("C", type: CViewController.self)
+
+        pushControllerSync(a1)
+        pushControllerSync(b1)
+        pushControllerSync(c1)
+        pushControllerSync(a2)
+        pushControllerSync(b2)
+        pushControllerSync(c2)
+
+        checkStack("pA pB pC pA pB pC")
+
+        XCTAssertEqual(coordinator.findFirst(type: AViewController.self), a1)
+        XCTAssertEqual(coordinator.findFirst(type: BViewController.self), b1)
+        XCTAssertEqual(coordinator.findFirst(type: CViewController.self), c1)
+        XCTAssertEqual(coordinator.findLast(type: AViewController.self), a2)
+        XCTAssertEqual(coordinator.findLast(type: BViewController.self), b2)
+        XCTAssertEqual(coordinator.findLast(type: CViewController.self), c2)
+    }
+
     // MARK: - Synchronous transition methods
 
     private func checkStack(_ expected: String) {
@@ -429,6 +480,12 @@ class SegueCoordinatorTests: XCTestCase {
         return commands.map({"\($0.action)\($0.id)"}).joined(separator: " ")
     }
 
+    func segueSync(_ segueId: String) {
+        let e = XCTestExpectation(description: "Waiting for segue \(segueId)")
+        coordinator.segue(segueId, type: TestableController.self, prepareController: { $0.onDidAppear = e.fulfill })
+        wait(for: [e], timeout: 1)
+    }
+
     private func unwindToFirstSync<T: TestableController>(_ type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for unwind")
         coordinator.unwindToFirst(type: type, animated: false, completion: e.fulfill)
@@ -444,6 +501,12 @@ class SegueCoordinatorTests: XCTestCase {
     private func pushInitialSync<T: TestableController>(type: T.Type) {
         let e = XCTestExpectation(description: "Waiting for appear")
         coordinator.pushInitial(type: type, animated: false, prepareController: { $0.onDidAppear = e.fulfill })
+        wait(for: [e], timeout: 1)
+    }
+
+    private func pushControllerSync(_ controller: TestableController) {
+        let e = XCTestExpectation(description: "Waiting \(controller.description) for appear")
+        coordinator.pushController(controller, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }
 

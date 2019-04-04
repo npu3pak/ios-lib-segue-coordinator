@@ -26,9 +26,9 @@ public extension SegueCoordinator {
      - Parameter completion: The block to execute after the view controller is dismissed.
      */
 
-    func closeModal(animated: Bool = true, completion: @escaping (() -> Void) = {}) {
+    func closeModal(animated: Bool = true, completion: (() -> Void)? = nil) {
         guard let presentingController = topController.presentingViewController else {
-            completion()
+            completion?()
             return
         }
 
@@ -68,6 +68,7 @@ public extension SegueCoordinator {
     func unwindToFirst(animated: Bool = true, where predicate: (UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findFirst(where: predicate) else {
             print("Unable to find view controller")
+            completion?()
             return
         }
 
@@ -85,6 +86,7 @@ public extension SegueCoordinator {
     func unwindToLast(animated: Bool = true, where predicate: (_ controller: UIViewController) -> Bool, completion: (() -> Void)? = nil) {
         guard let controller = findLast(where: predicate) else {
             print("Unable to find view controller")
+            completion?()
             return
         }
 
