@@ -1,10 +1,3 @@
-//
-//  MainCoordinator.swift
-//  SegueCoordinator
-//
-//  Created by Евгений Сафронов on 26.01.17.
-//  Copyright © 2017 CocoaPods. All rights reserved.
-//
 
 import SegueCoordinator
 
@@ -51,7 +44,31 @@ class MainCoordinator: SegueCoordinator {
         // Display controller with identifier "Third" modally
         modal("Third", type: ThirdViewController.self, style: .formSheet) {
             $0.onCancel = { [unowned self] in self.closeModal() }
+            $0.onShowFourthWithPush = { [unowned self] in self.showFourthWithPush() }
+            $0.onShowFourthWithSegue = { [unowned self] in self.showFourthWithSegue() }
             $0.title = "Third"
+        }
+    }
+
+    func showFourthWithPush() {
+        // Push from modal controller
+        push("Fourth", type: FourthViewController.self) {
+            $0.title = "Fourth"
+            $0.onUnwindToRoot = { self.unwindToFirst(type: RootViewController.self) }
+            $0.onUnwindToThird = { self.unwindToFirst(type: ThirdViewController.self) }
+            $0.onUnwindToFourth = { self.unwindToFirst(type: FourthViewController.self) }
+            $0.onUnwindToFirstNavigation = { self.unwindToFirst(type: UINavigationController.self) }
+        }
+    }
+
+    func showFourthWithSegue() {
+        // Push from modal controller
+        segue("ShowFourth", type: FourthViewController.self) {
+            $0.title = "Fourth"
+            $0.onUnwindToRoot = { self.unwindToFirst(type: RootViewController.self) }
+            $0.onUnwindToThird = { self.unwindToFirst(type: ThirdViewController.self) }
+            $0.onUnwindToFourth = { self.unwindToFirst(type: FourthViewController.self) }
+            $0.onUnwindToFirstNavigation = { self.unwindToFirst(type: UINavigationController.self) }
         }
     }
 }
