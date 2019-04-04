@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/cocoapods/l/SegueCoordinator.svg?style=flat)](http://cocoapods.org/pods/SegueCoordinator)
 [![Platform](https://img.shields.io/cocoapods/p/SegueCoordinator.svg?style=flat)](http://cocoapods.org/pods/SegueCoordinator)
 
+[Complete API reference](https://npu3pak.github.io/ios-lib-segue-coordinator/Classes/SegueCoordinator.html)
+
 Alternative to Application Coordinator pattern. Create separate classes that will handle navigation instead of view controllers.
 
 ### Remove navigation from view controllers.
@@ -112,6 +114,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
+
+## Complete API reference
+
+https://npu3pak.github.io/ios-lib-segue-coordinator/Classes/SegueCoordinator.html
 
 ## Example
 
