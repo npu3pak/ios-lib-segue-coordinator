@@ -450,6 +450,14 @@ class SegueCoordinatorTests: XCTestCase {
         buildStack("uC")
         XCTAssert(coordinator.topController is CViewController)
     }
+    
+    // MARK: - Errors
+    
+    func testNotExistingSegue() {
+        buildStack("pA")
+        notExpectedSegueSync("NotExpectedId")
+        checkStack("pA")
+    }
 
     // MARK: - Synchronous transition methods
 
@@ -517,6 +525,13 @@ class SegueCoordinatorTests: XCTestCase {
 
     func segueSync(_ segueId: String) {
         let e = XCTestExpectation(description: "Waiting for segue \(segueId)")
+        coordinator.segue(segueId, type: TestableController.self, prepareController: { $0.onDidAppear = e.fulfill })
+        wait(for: [e], timeout: 1)
+    }
+
+    func notExpectedSegueSync(_ segueId: String) {
+        let e = XCTestExpectation(description: "Waiting for not expecting segue \(segueId)")
+        e.isInverted = true
         coordinator.segue(segueId, type: TestableController.self, prepareController: { $0.onDidAppear = e.fulfill })
         wait(for: [e], timeout: 1)
     }

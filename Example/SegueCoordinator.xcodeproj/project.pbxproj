@@ -17,7 +17,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		6F6AA37A5151E6B860B31CD7 /* Pods_SegueCoordinator_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CADBDEC5FE2345F191EC7FC /* Pods_SegueCoordinator_Example.framework */; };
 		C74CE12445310A2546BC43F4 /* Pods_SegueCoordinatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */; };
 		DB17AD90225118F60055A9AF /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB17AD8F225118F60055A9AF /* FourthViewController.swift */; };
 		DBCA5579225461AC00B12FDF /* TestableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCA5578225461AC00B12FDF /* TestableController.swift */; };
@@ -69,7 +68,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		60F22B1691CF31B695B1A106 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		88F44967F4CC7E505D001258 /* Pods_SegueCoordinator_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CADBDEC5FE2345F191EC7FC /* Pods_SegueCoordinator_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinator_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADEF528BB5C3046B6AA9E8D8 /* SegueCoordinator.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SegueCoordinator.podspec; path = ../SegueCoordinator.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SegueCoordinatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DBAF04EA8EF00590CA7178 /* Pods-SegueCoordinatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegueCoordinatorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F6AA37A5151E6B860B31CD7 /* Pods_SegueCoordinator_Example.framework in Frameworks */,
 				5DFEBA2BD6DC84CEAD177901 /* Pods_SegueCoordinatorExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +195,6 @@
 		8A82D40CCE38B54893A15ED9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CADBDEC5FE2345F191EC7FC /* Pods_SegueCoordinator_Example.framework */,
 				88F44967F4CC7E505D001258 /* Pods_SegueCoordinator_Tests.framework */,
 				F8B9D51A47AF2CEE660471D3 /* Pods_SegueCoordinator_Example_SegueCoordinator_ExampleTests.framework */,
 				B3309AF897F38E864B99F7CD /* Pods_SegueCoordinatorTests.framework */,
@@ -404,21 +400,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SegueCoordinator/SegueCoordinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SegueCoordinator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SegueCoordinatorTests/Pods-SegueCoordinatorTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		535E3CD2F93A3F9C7EA8378B /* [CP] Embed Pods Frameworks */ = {
@@ -427,7 +419,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SegueCoordinator/SegueCoordinator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -436,7 +428,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SegueCoordinatorExample/Pods-SegueCoordinatorExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D4B07CB7C4563BCFD70ECFD /* [CP] Check Pods Manifest.lock */ = {

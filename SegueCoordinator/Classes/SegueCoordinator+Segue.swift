@@ -32,7 +32,15 @@ public extension SegueCoordinator {
     private func segue(_ segueId: String, prepareController: @escaping (UIViewController) -> Void) {
         seguePreparationActions[segueId] = prepareController
         topController.pendingSegueCoordinator = self
-        topController.performSegue(withIdentifier: segueId, sender: self)
+        
+        do {
+            try NSExceptionCatcher.catchException {
+                topController.performSegue(withIdentifier: segueId, sender: self)
+            }
+        } catch {
+            print("Unable to perform segue \"\(segueId)\" from \(topController)")
+        }
+        
     }
 
     fileprivate func prepareForSegue(_ segue: UIStoryboardSegue, sender: Any?) {

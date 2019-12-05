@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "NSExceptionCatcher.h"
 
 FOUNDATION_EXPORT double SegueCoordinatorVersionNumber;
 FOUNDATION_EXPORT const unsigned char SegueCoordinatorVersionString[];
